@@ -1,0 +1,77 @@
+@import "variables";
+@import "mixins";
+
+body {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  background-color: $page-background;
+  color: $text-color;
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+ul {
+  @include reset-list;
+}
+
+.page_texts__heading {
+  color: $subheading-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: transparent;
+}
+.page_article__contents {
+  margin-inline-start: 15px;
+}
+
+small,
+time {
+  opacity: 0.5;
+}
+
+small {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: justify;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+
+time {
+font-size: 12px;
+line-height: 16px;
+mix-blend-mode: normal;
+}
+
+.main_header__paragraph,
+.quotes_article__paragraph a,
+.newsletter_button_subscribe {
+  border: 1px solid transparent;
+  border-radius: 2.94008px;
+  padding: 1rem;
+  background-color: $subheading-color;
+}
+@media(min-width: 760px) {
+  .main_header__container,
+  .page_article__contents {
+    max-width: 1114px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

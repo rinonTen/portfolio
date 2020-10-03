@@ -1,0 +1,204 @@
+@import "variables";
+
+.page_header {
+  position: absolute;
+  width: 100%;
+}
+
+.header_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page_header__logo img {
+  margin-left: 15px;
+}
+
+.page_header span {
+  display: none;
+}
+
+.page_header__heading {
+  margin-top: 8px;
+}
+.lang_dropdown_label {
+  display: none;
+}
+
+.select_languages {
+  display: block;
+  width: 43px;
+  margin-left: -3rem;
+  margin-top: 24px;
+  background-color: transparent;
+  color: $text-color;
+  border: none;
+}
+
+.page_article__title {
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 33px;
+  letter-spacing: 3px;
+}
+
+.page_article__heading_question {
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+}
+.p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+}
+
+
+.page_header__navigation {
+  padding: 1rem;
+  background-color: #f8f8f8;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  height: 571px;
+  box-shadow: 0 0 50px rgba(0,0,0,.5);
+  transform: translateX(-110%);
+  transition: transform 0.3s;
+}
+
+.page_header__navigation-images {
+  display: none;
+}
+
+.page_header__link {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $text-button-color;
+}
+
+.page_header__list {
+  margin-bottom: 2rem;
+}
+
+.page__language_form {
+  position: relative;
+  margin-right: 32px;
+}
+
+#menu_checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+body > [type="checkbox"]:checked ~ header .page_header__navigation {
+  transform: translateX(0);
+}
+.icon_menu {
+  background-image: url(../images/menu-icon.svg);
+  background-repeat: no-repeat;
+  color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 571px;
+  z-index: 2;
+  top: 21px;
+  left: 16px;
+}
+
+button.save_button {
+  display: block;
+  background-color: transparent;
+  margin-top: -27px;
+  margin-right: 16px;
+  height: 36px;
+  margin-right: 15.46px;
+  border-top: transparent;
+  border-bottom: transparent;
+  border-right: transparent;
+}
+
+@media(min-width: $desktop-breakpoint) {
+  .header_container {
+    max-width: 1114px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page_article__title {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 3px;
+  }
+
+  .page_article__heading_question {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+  .page_header__navigation {
+    position: unset;
+    width: 60%;
+    margin-left: 4rem;
+  }
+
+  .page_header__navigation__lists--desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page_header__navigation-images {
+    display: contents;
+
+    & .page_header__navigation__lists {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 15px;
+      margin-left: 16px;
+    }
+  }
+
+  .page_header__navigation__lists:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .page_header__navigation {
+    background-color: unset;
+    transform: unset;
+  }
+
+  .page_header__link {
+    color: $text-color;
+
+    & img {
+        max-width: 32px;
+        margin-right: 17px;
+    }
+  }
+
+  .select_languages  {
+    margin-left: 96px;
+  }
+  button.save_button {
+    margin-right: 0;
+    transform: translateX(160px);
+  }
+
+  .icon_menu {
+    display: none;
+  }
+}

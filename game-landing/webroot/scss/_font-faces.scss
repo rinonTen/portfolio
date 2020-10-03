@@ -1,0 +1,39 @@
+$fonts: (
+    (
+      name: "Open Sans Bold",
+      system-name: "Open-Sans-Bold",
+      family: 'Open Sans',
+      filename: 'OpenSans-bold',
+      weight: 700,
+      style: normal,
+    ),
+    (
+      name: "Open Sans Regular",
+      system-name: "Open-Sans-Regular",
+      family: 'Open Sans',
+      filename: 'opensans-regular',
+      weight: 400,
+      style: normal,
+    ),
+    (
+      name: "Babas Neue Regular",
+      system-name: "Bebas-Neue-Regular",
+      family: 'Bebas Neue',
+      filename: 'bebasneue-regular',
+      weight: 400,
+      style: normal,
+    ),
+  );
+
+  @each $font in $fonts {
+    @font-face {
+      font-family: map-get($font,  'family');
+      font-weight: map-get($font, 'weight');
+      font-style: map-get($font, 'style');
+      font-style: map-get($font, 'normal');
+      src: local(map-get($font, name)),
+           local(map-get($font, system-name)),
+           url('../fonts/#{map-get($font, "filename")}.woff2') format('woff2'),
+           url('../fonts/#{map-get($font, "filename")}.woff') format('woff');
+    }
+  }

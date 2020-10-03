@@ -1,0 +1,37 @@
+.newsletter_article {
+  background-image: url(../images/queen-sculpture.png);
+  background-repeat: no-repeat;
+  background-size: 230px;
+  background-position-y: -5vh;
+  background-position-x: calc(((230 - 30) / 2) * -1px);
+  padding-top: 30px;
+  padding-bottom: 61px;
+}
+
+.page_article__contents.newsletter_contents {
+  max-width: calc(100% - 119px);
+  margin-left: auto;
+}
+
+.newsletter_form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.newsletter_form_fieldset {
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.newsletter_form_fieldset label {
+  display: block;
+  line-height: 16px;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}

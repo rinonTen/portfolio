@@ -1,0 +1,114 @@
+@import "variables";
+
+.quotes_article_contents__testimonials {
+  padding-bottom: 46px;
+}
+.quotes_article__paragraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.quotes_article__paragraph a{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #1A1917;
+  border-radius: 2.94008px;
+}
+
+.testimonials__navigation {
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+.testimonials__navigation__comments {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 14px;
+}
+
+.testimonials__navigation__comments__list {
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.testimonials__navigation__comments .testimonials__navigation__comments__list:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimonials__navigation__comments .testimonials__navigation__comments__list:nth-of-type(2) {
+    padding-top: 0;
+    padding-bottom: 16px;
+    padding-left: 16px;
+}
+
+
+.testimonials__navigation__comments__list span {
+  display: none;
+}
+.testimonials__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials__paragraph {
+  margin-bottom: 0;
+}
+
+.testimonials__paragraph time {
+  display: block;
+  padding-top: 17px;
+}
+
+.testimonials__profile {
+   display: flex;
+}
+
+a svg{
+  fill: $text-color;
+  opacity: 0.5;
+}
+
+@media(min-width: $desktop-breakpoint) {
+  .quotes_article_contents {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .quotes_article_contents__testimonials {
+    margin-inline-start: auto;
+  }
+
+  .quotes_article_contents__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quotes_article_contents__paragraph {
+    max-width: 335px;
+  }
+
+  .quotes_article__paragraph {
+    justify-content: flex-start;
+  }
+
+  .testimonials__navigation__comments {
+    max-width: 453px;
+  }
+
+  .testimonials__navigation__comments:nth-of-type(2) {
+    max-width: 453px;
+    transform: translateX(-25%);
+  }
+
+  .testimonials__navigation__comments:nth-of-type(3) {
+    transform: translateX(calc(-25% / 3));
+  }
+}

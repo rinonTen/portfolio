@@ -1,0 +1,128 @@
+@import "variables";
+@import "mixins";
+
+.main_header {
+  background-image: url(../images/bg-header-2-modified.png);
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 30%;
+  background-size: cover;
+  padding-right: 1rem;
+  & span{
+    display: none;
+  }
+}
+
+.main_header__container {
+  @include flex-column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:  571px;
+ }
+.main_header__title {
+  font-family: 'Bebas Neue';
+  font-size: 33px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 160px;
+}
+ .main_header__sub-title {
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+}
+
+.main_header__link--button,
+.main_header__link {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #1A1917;
+}
+.main_header__link--button {
+  padding-right: 1rem;
+}
+
+.main_header__link {
+  padding-left: 1rem;
+  border-left: 0.642383px solid #1a191756;
+}
+
+.main_header__navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 143px;
+}
+
+.main_navigation__text {
+  margin-bottom: auto;
+}
+
+.main_navigation__paragraph__link {
+  background-image: url(../images/scroll-down.svg);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position-y: 24px;
+  background-position-x: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: justify;
+  text-transform: uppercase;
+  margin-left: 16px;
+  padding-bottom: 32px;
+}
+
+.main_header__navigation__lists {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+
+@media(min-width: $desktop-breakpoint) {
+  .main_header {
+    background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(6, 8, 31, 0) 0%, rgba(28, 27, 24, 0.80319) 73.22%, #08090A 99.74%),  url(../images/angelina-andreas-jungleruins-main-bg.png);
+    background-size: 100%;
+  }
+
+  .main_header__container {
+    height:  860px;
+
+    & div {
+      margin-top: auto;
+      margin-left: -64px;
+    }
+   }
+
+
+   .main_header__title {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80px;
+  }
+   .main_header__navigation {
+     width: unset;
+     align-items: center;
+   }
+  .main_header__navigation__lists {
+    display: none;
+  }
+
+  .main_navigation__text {
+    margin-bottom: 53px;
+}
+}

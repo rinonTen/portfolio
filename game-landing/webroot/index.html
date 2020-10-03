@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game landing page</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <input type="checkbox" id="menu_checkbox">
+  <header class="page_header">
+    <div class="header_container">
+      <h1 class="page_header__heading">
+        <a class="page_header__logo" href="/homepage">
+          <img src="./images/logo.svg" alt>
+          <span>Homepage</span>
+        </a>
+      </h1>
+      <nav class="page_header__navigation">
+        <ul class="page_header__navigation__lists page_header__navigation__lists--desktop">
+          <li class="page_header__list">
+            <a class="page_header__link" href="./main">
+              Main
+            </a>
+          </li>
+          <li class="page_header__list"><a class="page_header__link" href="./about">
+              About
+            </a>
+          </li>
+          <li class="page_header__list">
+            <a class="page_header__link" href="./features">
+              Game features
+            </a>
+          </li>
+          <li class="page_header__list">
+            <a class="page_header__link" href="./system">System
+              requirements
+            </a>
+          </li>
+          <li class="page_header__list">
+            <a class="page_header__link" href="./quotes">
+              Quotes
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <form class="page__language_form" action="." method="GET">
+        <label class="lang_dropdown_label" for="lang_dropdown">Language</label>
+        <select class="select_languages" name="lang" id="lang_dropdown">
+          <option lang="en" value="en" label="EN">
+          <option lang="ru" value="ru" label="Pусский">
+          <option lang="fr" value="fr" label="Français">
+          <option lang="de" value="de" label="Deutsch">
+        </select>
+        <button type="submit" class="save_button"><span>Save</span></button>
+        <label for="menu_checkbox" class="icon icon_menu">
+          Open the menu
+        </label>
+      </form>
+      <nav class="page_header__navigation-images">
+        <ul class="page_header__navigation__lists">
+          <li class="page_header__list">
+            <a class="page_header__link" href="./game-icon">
+              <img src="./images/yellow-ball.svg" alt>
+              <span>game icon</span>
+            </a>
+          </li>
+          <li class="page_header__list">
+            <a class="page_header__link" href="./steam-icon">
+              <img src="./images/Union.svg" alt="steam-icon"><span>Steam icon</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <header class="main_header">
+      <div class="main_header__container">
+        <div>
+          <h2 class="main_header__title">
+            Survive at all costs
+          </h2>
+          <h3 class="main_header__sub-title">
+            Experience new social battle royale game
+          </h3>
+        </div>
+        <p class="main_header__paragraph">
+          <a class="main_header__link--button" href="./sell">
+            Buy now on Steam
+          </a>
+          <a class="main_header__link" href="./cost">
+            $14.99
+          </a>
+        </p>
+        <nav class="main_header__navigation">
+          <p class="main_navigation__text">
+            <a class="main_navigation__paragraph__link">
+              the story
+            </a>
+          </p>
+          <ul class="main_header__navigation__lists">
+            <li class="page_list round-image-list">
+              <img src="./images/boullet-image-1.svg" alt>
+              <span>boullet-image</span>
+            </li>
+            <li class="page_list round-image-list"><img src="./images/boullet-image.svg" alt>
+              <span>boullet-image</span>
+            </li>
+            <li class="page_list round-image-list"><img src="./images/boullet-image.svg" alt>
+              <span>boullet-image</span>
+            </li>
+            <li class="page_list round-image-list"><img src="./images/boullet-image.svg" alt>
+              <span>boullet-image</span>
+            </li>
+            <li class="page_list round-image-list"><a href="./see-more"><img src="./images/arrow-switch.svg" alt></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <article class="page_article social-battle_article">
+      <div class="page_article__contents social-battle_article_contents">
+        <h2 class="page_article__heading_question">
+          What is SOS?
+        </h2>
+        <h3 class="page_article__title">
+          social battle royale game
+        </h3>
+        <div class="page_texts">
+          <p class="page_article__paragraph">
+            Each round, you and 15 other contestants compete to
+            escape a deadly island filled with monsters. The trick is: three people can survive. Will you run
+            solo or form friendships with others to escape?
+            Making the right decisions could be the
+            difference between life and death.
+          </p>
+          <nav class="social_battles_image_liders_nav">
+            <ul class="social_battles_image_liders">
+              <li class="slider_image">
+                <img class="social_battle_image" src="./images/nicebeach.png" alt>
+              </li>
+              <li class="slider_image">
+                <img class="social_battle_image" src="./images/trees-image.png" alt>
+              </li>
+              <li class="slider_image">
+                <img class="social_battle_image" src="./images/mmonument_image.png" alt>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </article>
+    <article class="page_article features-article">
+      <div class="page_article__contents features_article_contents">
+        <h2 class="page_article__heading_question">
+          What’s so special?
+        </h2>
+        <h3 class="page_article__title">
+          features
+        </h3>
+        <div class="page_texts">
+          <details open>
+            <summary class="page_texts__heading summary_heading1">Survive all costs
+            </summary>
+            <p class="page_article__paragraph page_texts__paragraph">
+              You have 30 minutes to find a relic, signal for extraction, and grab
+              one of three spots on the rescue chopper.
+            </p>
+          </details>
+          <details>
+            <summary class="page_texts__heading summary_heading2">
+              Create allies and enemies
+            </summary>
+            <p class="page_article__paragraph page_texts__paragraph">
+              You have 30 minutes to find a relic, signal for extraction, and grab
+              one of three spots on the rescue chopper.
+            </p>
+          </details>
+          <details>
+            <summary class="page_texts__heading summary_heading2">
+              Impress the audience
+            </summary>
+            <p class="page_article__paragraph page_texts__paragraph">
+              You have 30 minutes to find a relic, signal for extraction, and grab
+              one of three spots on the rescue chopper.
+            </p>
+          </details>
+        </div>
+      </div>
+    </article>
+    <article class="page_article requirements-article">
+      <div class="page_article__contents requirements_article_contents">
+        <header class="requirements_article_contents__heading">
+          <h2 class="page_article__heading_question">
+            Can my computer run this game?
+          </h2>
+          <h3 class="page_article__title">
+            System requirements
+          </h3>
+        </header>
+        <div class="page_texts requirements_article__texts">
+          <div class="page_texts">
+            <nav class="requirements_article__navigation">
+              <ul class="requirements_article__navigation_lists">
+                <li class="requirements_article__lists__info-list">
+                  <h4 class="page_texts__heading info-list__heading">
+                    Os:
+                  </h4>
+                  <p class="page_texts__paragraph info-list__paragraph">
+                    Windows 7 64-bit only
+                    (No OSX support at this time)
+                  </p>
+                </li>
+                <li class="requirements_article__lists__info-list">
+                  <h4 class="page_texts__heading info-list__heading">
+                    Processor:
+                  </h4>
+                  <p class="page_texts__paragraph info-list__paragraph">
+                    Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8GHZ
+                  </p>
+                </li>
+                <li class="requirements_article__lists__info-list">
+                  <h4 class="page_texts__heading info-list__heading">
+                    Memory:
+                  </h4>
+                  <p class="page_texts__paragraph info-list__paragraph">
+                    8 GB RAM
+                  </p>
+                </li>
+                <li class="requirements_article__lists__info-list">
+                  <h4 class="page_texts__heading info-list__heading">
+                    Storage:
+                  </h4>
+                  <p class="page_texts__paragraph info-list__paragraph">
+                    8 GB available space
+                  </p>
+                </li>
+                <li class="requirements_article__lists__info-list">
+                  <h4 class="page_texts__heading info-list__heading">
+                    Graphics:
+                  </h4>
+                  <p class="page_texts__paragraph info-list__paragraph">
+                    NVIDIA GeForce GTX 660 2GB or
+                    AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)
+                  </p>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="page_article quotes_article">
+      <div class="page_article__contents  quotes_article_contents">
+        <div class="quotes_article_contents__texts">
+          <h2 class="page_article__heading_question">
+            What people think?
+          </h2>
+          <h3 class="page_article__title">
+            Press quotes
+          </h3>
+          <p class="page_texts__paragraph quotes_article_contents__paragraph">
+            Our goal is to create a product and service that you’re satisfied with and use it every day. This is why
+            we’re
+            constantly working on our services to make it better every day and really listen to what our users has to
+            say.
+          </p>
+          <p class="quotes_article__paragraph">
+            <a href="./read-more">Read more testimonials</a>
+          </p>
+        </div>
+        <div class="quotes_article_contents__testimonials">
+          <nav class="testimonials__navigation">
+            <ul class="testimonials__navigation__comments">
+              <li class="testimonials__navigation__comments__list">
+                <a class="testimonials__profile" href="https://twitter.com/evan">
+                  <img src="./images/evan-lahti-profile.svg" alt="evan-profile">
+                  <span> profile</span>
+                </a>
+                <h4 class="page_texts__heading testimonials__name">
+                  Evan Lahti
+                  <small>
+                    PC Gamer
+                  </small>
+                </h4>
+                <a href="https://twitter.com">
+                  <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M21.9748 2.81639C21.2018 3.13839 20.3708 3.35339 19.4998 3.45139C20.3898 2.95139 21.0728 2.15939 21.3948 1.21739C20.5608 1.67939 19.6388 2.01539 18.6568 2.19739C17.8718 1.41139 16.7508 0.921387 15.5118 0.921387C13.1318 0.921387 11.2008 2.73039 11.2008 4.96039C11.2008 5.27739 11.2388 5.58639 11.3128 5.88139C7.7308 5.71239 4.5548 4.10439 2.4288 1.66139C2.0578 2.25839 1.8458 2.95139 1.8458 3.69239C1.8458 5.09239 2.6068 6.33039 3.7628 7.05439C3.0568 7.03239 2.3928 6.85139 1.8108 6.54839C1.8108 6.56639 1.8108 6.58139 1.8108 6.60039C1.8108 8.55739 3.2958 10.1894 5.2678 10.5604C4.9068 10.6524 4.5248 10.7004 4.1328 10.7004C3.8548 10.7004 3.5848 10.6764 3.3218 10.6304C3.8698 12.2334 5.4618 13.4024 7.3478 13.4354C5.8728 14.5184 4.0148 15.1634 1.9948 15.1634C1.6468 15.1634 1.3038 15.1444 0.966797 15.1074C2.8738 16.2524 5.1398 16.9224 7.5738 16.9224C15.5018 16.9224 19.8368 10.7664 19.8368 5.42939C19.8368 5.25339 19.8318 5.08039 19.8238 4.90639C20.6658 4.33639 21.3968 3.62539 21.9748 2.81639Z" />
+                  </svg>
+                </a>
+              </li>
+              <li class="testimonials__navigation__comments__list">
+                <p class="page_texts__paragraph testimonials__paragraph">
+                  <q>
+                    One of my gaming highlights of the year.
+                  </q>
+                  <time datetime="2018-10-18"> October 18, 2018</time>
+                </p>
+              </li>
+            </ul>
+            <ul class="testimonials__navigation__comments">
+              <li class="testimonials__navigation__comments__list">
+                <a class="testimonials__profile" href="https://twitter.com/jada"><img
+                    src="./images/jada-griffin-profile.svg" alt="jada-profile"><span>profile</span>
+                </a>
+                <h4 class="page_texts__heading testimonials__name">
+                  Jada Griffin
+                  <small>
+                    Nerdreactor
+                  </small>
+                </h4>
+                <a href="https://twitter.com">
+                  <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M21.9748 2.81639C21.2018 3.13839 20.3708 3.35339 19.4998 3.45139C20.3898 2.95139 21.0728 2.15939 21.3948 1.21739C20.5608 1.67939 19.6388 2.01539 18.6568 2.19739C17.8718 1.41139 16.7508 0.921387 15.5118 0.921387C13.1318 0.921387 11.2008 2.73039 11.2008 4.96039C11.2008 5.27739 11.2388 5.58639 11.3128 5.88139C7.7308 5.71239 4.5548 4.10439 2.4288 1.66139C2.0578 2.25839 1.8458 2.95139 1.8458 3.69239C1.8458 5.09239 2.6068 6.33039 3.7628 7.05439C3.0568 7.03239 2.3928 6.85139 1.8108 6.54839C1.8108 6.56639 1.8108 6.58139 1.8108 6.60039C1.8108 8.55739 3.2958 10.1894 5.2678 10.5604C4.9068 10.6524 4.5248 10.7004 4.1328 10.7004C3.8548 10.7004 3.5848 10.6764 3.3218 10.6304C3.8698 12.2334 5.4618 13.4024 7.3478 13.4354C5.8728 14.5184 4.0148 15.1634 1.9948 15.1634C1.6468 15.1634 1.3038 15.1444 0.966797 15.1074C2.8738 16.2524 5.1398 16.9224 7.5738 16.9224C15.5018 16.9224 19.8368 10.7664 19.8368 5.42939C19.8368 5.25339 19.8318 5.08039 19.8238 4.90639C20.6658 4.33639 21.3968 3.62539 21.9748 2.81639Z" />
+                  </svg>
+                </a>
+              </li>
+              <li class="testimonials__navigation__comments__list">
+                <p class="page_texts__paragraph testimonials__paragraph">
+                  <q>
+                    The next big thing in the world of streaming and survival games.
+                  </q>
+                  <time datetime="2018-12-18">December 21, 2018</time>
+                </p>
+              </li>
+            </ul>
+            <ul class="testimonials__navigation__comments">
+              <li class="testimonials__navigation__comments__list">
+                <a class="testimonials__profile" href="https://twitter.comaaron"><img
+                    src="./images/aaron-wiliams-profile.svg" alt=""><span>profile</span>
+                </a>
+                <h4 class="page_texts__heading testimonials__name">
+                  Aaron Williams
+                  <small>
+                    Uproxx
+                  </small>
+                </h4>
+                <a href="https://twitter.com">
+                  <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M21.9748 2.81639C21.2018 3.13839 20.3708 3.35339 19.4998 3.45139C20.3898 2.95139 21.0728 2.15939 21.3948 1.21739C20.5608 1.67939 19.6388 2.01539 18.6568 2.19739C17.8718 1.41139 16.7508 0.921387 15.5118 0.921387C13.1318 0.921387 11.2008 2.73039 11.2008 4.96039C11.2008 5.27739 11.2388 5.58639 11.3128 5.88139C7.7308 5.71239 4.5548 4.10439 2.4288 1.66139C2.0578 2.25839 1.8458 2.95139 1.8458 3.69239C1.8458 5.09239 2.6068 6.33039 3.7628 7.05439C3.0568 7.03239 2.3928 6.85139 1.8108 6.54839C1.8108 6.56639 1.8108 6.58139 1.8108 6.60039C1.8108 8.55739 3.2958 10.1894 5.2678 10.5604C4.9068 10.6524 4.5248 10.7004 4.1328 10.7004C3.8548 10.7004 3.5848 10.6764 3.3218 10.6304C3.8698 12.2334 5.4618 13.4024 7.3478 13.4354C5.8728 14.5184 4.0148 15.1634 1.9948 15.1634C1.6468 15.1634 1.3038 15.1444 0.966797 15.1074C2.8738 16.2524 5.1398 16.9224 7.5738 16.9224C15.5018 16.9224 19.8368 10.7664 19.8368 5.42939C19.8368 5.25339 19.8318 5.08039 19.8238 4.90639C20.6658 4.33639 21.3968 3.62539 21.9748 2.81639Z" />
+                  </svg>
+                </a>
+              </li>
+              <li class="testimonials__navigation__comments__list">
+                <p class="page_texts__paragraph testimonials__paragraph">
+                  <q>
+                    Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.
+                  </q>
+                  <time datetime="2018-12-24">December 24, 2018</time>
+                </p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </article>
+    <aside class="page_article newsletter_article">
+      <div class="page_article__contents newsletter_contents">
+        <h2 class="page_article__heading_question">
+          Want to stay in touch?
+        </h2>
+        <h3 class="page_article__title">
+          Newsletter subscribe
+        </h3>
+        <p class="page_texts__paragraph newsletter_article__paragraph">
+          In order to start receiving our news, all you have to do is enter your email address. Everything else will
+          be
+          taken care of by us. We will send you emails containing information about game. We don’t spam.
+        </p>
+      </div>
+      <div class="newsletter_contents">
+        <form class="newsletter_form" action="." method="POST">
+          <fieldset class="newsletter_form_fieldset">
+            <label for="email"> Your email address</label>
+            <input type="email" name="email" id="email" placeholder="aliciliniavopir@gmail.com">
+          </fieldset>
+          <button class="newsletter_button_subscribe" type="submit">Subscribe now</button>
+        </form>
+      </div>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <div class="page_article__contents footer_container">
+      <div class="footer_container_section">
+        <h1 class="page_logo">
+          <a class="page_logo_link" href="/homepage">
+            <img src="./images/logo.svg" alt>
+          </a>
+        </h1>
+        <nav class=" page_footer__navigation">
+          <ul class="page_footer__navigation__lists">
+            <li class="page_footer__list">
+              <a class="page_footer__link" href="./main">
+                Main
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="page_footer__link" href="./about">
+                About
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="page_footer__link" href="./features">
+                Game features
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="page_footer__link" href="./system">
+                System requirements
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="page_footer__link" href="./quotes">
+                Quotes
+              </a>
+            </li>
+          </ul>
+          <ul class="page_footer__navigation__lists social_meadia_links">
+            <li class="page_footer__list">
+              <a class="social_media__link" href="https://facebook.com">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.41481 19.5593H2.32381V10.0653H0.278809V6.79231H2.32381V4.82831C2.32381 2.15931 3.47881 0.570312 6.75681 0.570312H9.48681V3.84331H7.78181C6.50381 3.84331 6.41981 4.30131 6.41981 5.15531L6.41481 6.79231H9.50681L9.14481 10.0653H6.41481V19.5593Z" fill=""/>
+                </svg>
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="social_media__link" href="https://twitter.com">
+                <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.9748 2.81639C21.2018 3.13839 20.3708 3.35339 19.4998 3.45139C20.3898 2.95139 21.0728 2.15939 21.3948 1.21739C20.5608 1.67939 19.6388 2.01539 18.6568 2.19739C17.8718 1.41139 16.7508 0.921387 15.5118 0.921387C13.1318 0.921387 11.2008 2.73039 11.2008 4.96039C11.2008 5.27739 11.2388 5.58639 11.3128 5.88139C7.7308 5.71239 4.5548 4.10439 2.4288 1.66139C2.0578 2.25839 1.8458 2.95139 1.8458 3.69239C1.8458 5.09239 2.6068 6.33039 3.7628 7.05439C3.0568 7.03239 2.3928 6.85139 1.8108 6.54839C1.8108 6.56639 1.8108 6.58139 1.8108 6.60039C1.8108 8.55739 3.2958 10.1894 5.2678 10.5604C4.9068 10.6524 4.5248 10.7004 4.1328 10.7004C3.8548 10.7004 3.5848 10.6764 3.3218 10.6304C3.8698 12.2334 5.4618 13.4024 7.3478 13.4354C5.8728 14.5184 4.0148 15.1634 1.9948 15.1634C1.6468 15.1634 1.3038 15.1444 0.966797 15.1074C2.8738 16.2524 5.1398 16.9224 7.5738 16.9224C15.5018 16.9224 19.8368 10.7664 19.8368 5.42939C19.8368 5.25339 19.8318 5.08039 19.8238 4.90639C20.6658 4.33639 21.3968 3.62539 21.9748 2.81639Z" fill=""/>
+                </svg>
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="social_media__link" href="https://youtube.com">
+                <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.371 0.570312H5.7506C2.88726 0.570312 0.560791 2.93757 0.560791 5.85112V13.284C0.560791 16.2031 2.88726 18.5648 5.7506 18.5648H20.3656C23.2343 18.5648 25.5554 16.1975 25.5554 13.284V5.85112C25.5608 2.93757 23.2343 0.570312 20.371 0.570312ZM16.8569 9.9345L10.0185 13.2509C9.83411 13.3392 9.62804 13.2067 9.62804 12.997V6.15462C9.62804 5.94493 9.84496 5.81249 10.0239 5.9063L16.8623 9.43236C17.0684 9.5372 17.063 9.83518 16.8569 9.9345Z" fill=""/>
+                </svg>
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a class="social_media__link" href="https://messenger.com">
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7212 13.0119V8.94052V0.0668945H2.69993L0.572266 2.3636V14.4735H5.89141V18.2317H8.23184L10.785 15.5174H17.168L19.7212 13.0119ZM7.16792 12.8032H3.76367C3.52962 12.8032 3.33813 12.6153 3.33813 12.3857V2.15489C3.33813 1.92522 3.52962 1.7373 3.76367 1.7373H17.3807C17.6147 1.7373 17.8062 1.92522 17.8062 2.15489V10.089C17.8062 10.2038 17.7637 10.3082 17.6839 10.3865L15.3435 12.6832C15.2637 12.7615 15.152 12.8032 15.0403 12.8032H11.1307L7.83282 15.0269C7.76367 15.0738 7.67856 15.0999 7.59345 15.0999C7.5243 15.0999 7.46048 15.0843 7.39665 15.053C7.25303 14.9799 7.16792 14.839 7.16792 14.6824V12.8032Z" fill=""/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer_container_section">
+        <p class="page_texts__paragraph footer__paragraph">
+          <small>
+            © 2018 Outpost Games, Inc. All Rights Reserved
+          </small>
+        </p>
+        <nav class="page_footer__navigation page_footer__navigation-info">
+          <ul class="page_navigation__lists">
+            <li class="page_footer__list">
+              <a href="https://game.privacy">
+                Privacy Policy
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a href="https://game.terms-service">
+                | Terms of Services |
+              </a>
+            </li>
+            <li class="page_footer__list">
+              <a href="https://game.code-conduct">
+                Code of Conduct
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "game-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "css": "node-sass webroot/scss -o webroot/css",
+    "css:watch": "npm run css && node-sass webroot/scss -w -o webroot/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganamavo/game-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganamavo/game-landing-page/issues"
+  },
+  "homepage": "https://github.com/ganamavo/game-landing-page#readme"
+}

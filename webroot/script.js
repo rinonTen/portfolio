@@ -27,7 +27,8 @@ let portfolio = [
         requirement: "",
         screenshot: "",
         url: "https://ganamavo.github.io/front-end-finals/",
-    }
+    },
+    
 ]
 // Grab the container of all portfolio
 const portfolioContainer = document.querySelector(".portfolio_container");

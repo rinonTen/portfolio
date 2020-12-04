@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+
+.page_header {
+    background-color: #0f0e1769;
+}
+
+.header_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .header_nav {
+    display: none;
+} */
+
+.page_article_container--desktop {
+    display: none;
+}
+ 

@@ -33853,7 +33853,125 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"Pages/Header.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"PortfolioData.json":[function(require,module,exports) {
+module.exports = [{
+  "id": 1,
+  "title": "Game landing page",
+  "description": "This website has multiple background-images and has to be built in mobile and desktop devices",
+  "requirement": "",
+  "screenshot": "",
+  "url": "https://ganamavo.github.io/game_landing_page/"
+}, {
+  "id": 2,
+  "title": "Responsive news site",
+  "description": "This is a page about news",
+  "requirement": "",
+  "screenshot": "./images/responsive_site.png",
+  "url": "https://ganamavo.github.io/responsive_news_site/"
+}, {
+  "id": 3,
+  "title": "Sports app",
+  "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
+  "requirement": "",
+  "screenshot": "",
+  "url": "https://ganamavo.github.io/front-end-assessment/"
+}, {
+  "id": 4,
+  "title": "Fotograph",
+  "description": "Build with only html, css and a little bit of Javascript for the images slideshow",
+  "requirement": "",
+  "screenshot": "",
+  "url": "https://ganamavo.github.io/front-end-finals/"
+}, {
+  "id": 5,
+  "title": "Birthday App",
+  "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
+  "requirement": "",
+  "screenshot": "",
+  "url": "https://birthday-web-app.netlify.app/"
+}, {
+  "id": 6,
+  "title": "",
+  "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
+  "requirement": "",
+  "screenshot": "",
+  "url": "https://birthday-web-app.netlify.app/"
+}];
+},{}],"GlobalContext.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GlobalContext = GlobalContext;
+exports.Context = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _PortfolioData = _interopRequireDefault(require("./PortfolioData.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Context = (0, _react.createContext)();
+exports.Context = Context;
+
+function GlobalContext(_ref) {
+  var children = _ref.children;
+
+  var _useReducer = (0, _react.useReducer)(function (state, action) {
+    switch (action.type) {
+      case "SET_PORTFOLIO_DATA":
+        {
+          return _objectSpread(_objectSpread({}, state), {}, {
+            worksArr: _PortfolioData.default
+          });
+        }
+
+      default:
+        break;
+    }
+  }, {
+    worksArr: []
+  }),
+      _useReducer2 = _slicedToArray(_useReducer, 2),
+      state = _useReducer2[0],
+      dispatch = _useReducer2[1];
+
+  (0, _react.useEffect)(function () {
+    dispatch({
+      type: "SET_PORTFOLIO_DATA"
+    });
+  }, []);
+  return /*#__PURE__*/_react.default.createElement(Context.Provider, {
+    value: {
+      state: state,
+      dispatch: dispatch
+    }
+  }, children);
+}
+},{"react":"node_modules/react/index.js","./PortfolioData.json":"PortfolioData.json"}],"Pages/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33911,7 +34029,88 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Homepage() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Homepage"));
+  return /*#__PURE__*/_react.default.createElement("section", {
+    className: "page_section homepage_section"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "section_container homepage_container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "image_container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: "./images/rhino.jpg",
+    alt: "Profile picture"
+  })), /*#__PURE__*/_react.default.createElement("article", {
+    className: "section_article homepage_article"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "definition_container"
+  }, /*#__PURE__*/_react.default.createElement("dl", {
+    className: "homepage_def homepage_def--info"
+  }, /*#__PURE__*/_react.default.createElement("dt", {
+    className: "homepage_def--info--name"
+  }, "Rinon Tendrinomena"), /*#__PURE__*/_react.default.createElement("dd", {
+    className: "homepage_def--info--job"
+  }, "Front-end developer")), /*#__PURE__*/_react.default.createElement("dl", {
+    className: "homepage_def homepage_def--info"
+  }, /*#__PURE__*/_react.default.createElement("dt", {
+    className: "homepage_def--info--email"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "mailto:https://mail.google.com/mail/u/1/#inbox"
+  }, "rinon.ten@onja.org")), /*#__PURE__*/_react.default.createElement("dt", {
+    className: "homepage_def--info--phone"
+  }, "+261340513341"))), /*#__PURE__*/_react.default.createElement("p", {
+    className: "section_paragraph homepage_paragraph"
+  }, "Self-motivated developer, who is willing to learn and create outstanding UI applications."))));
+}
+},{"react":"node_modules/react/index.js"}],"Components/WorksComponent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = WorksComponent;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function WorksComponent(_ref) {
+  var title = _ref.title,
+      description = _ref.description,
+      requirement = _ref.requirement,
+      id = _ref.id,
+      screenshot = _ref.screenshot,
+      url = _ref.url;
+  return /*#__PURE__*/_react.default.createElement("section", {
+    className: "page_section work_section"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "section_container work_container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "section_div work_section__div"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "image_container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: "./images/blog-template.jpg",
+    alt: "".concat(title, "'s screenshot")
+  })), /*#__PURE__*/_react.default.createElement("article", {
+    className: "page_article work_section_article"
+  }, /*#__PURE__*/_react.default.createElement("h2", {
+    className: " page_heading work_section_heading"
+  }, title), /*#__PURE__*/_react.default.createElement("p", {
+    className: "page_container work_section_paragraph"
+  }, description), /*#__PURE__*/_react.default.createElement("div", {
+    className: "button_container"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    className: "page_link demo_link",
+    href: url
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "demo-btn",
+    type: "button"
+  }, "Demo")), /*#__PURE__*/_react.default.createElement("a", {
+    className: "page_link github_link",
+    href: "http://code"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "code-btn",
+    type: "button"
+  }, "Code")))))));
 }
 },{"react":"node_modules/react/index.js"}],"Pages/Works.js":[function(require,module,exports) {
 "use strict";
@@ -33921,14 +34120,34 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Works;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
+
+var _WorksComponent = _interopRequireDefault(require("../Components/WorksComponent"));
+
+var _GlobalContext = require("../GlobalContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function Works() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "This is my work"));
+  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch;
+
+  var worksArr = state.worksArr;
+  var worksElements = worksArr.map(function (work) {
+    return /*#__PURE__*/_react.default.createElement(_WorksComponent.default, _extends({
+      key: work.id
+    }, work));
+  });
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, worksElements);
 }
-},{"react":"node_modules/react/index.js"}],"Pages/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Components/WorksComponent":"Components/WorksComponent.js","../GlobalContext":"GlobalContext.js"}],"Pages/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33966,12 +34185,14 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _GlobalContext = require("./GlobalContext");
+
 var _App = _interopRequireDefault(require("./Pages/App"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null)), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Pages/App":"Pages/App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_GlobalContext.GlobalContext, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null))), document.getElementById("root"));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./GlobalContext":"GlobalContext.js","./Pages/App":"Pages/App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33999,7 +34220,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50101" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59782" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

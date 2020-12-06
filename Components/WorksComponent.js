@@ -3,6 +3,7 @@ import React from 'react'
 export default function WorksComponent({ title, description, requirement, id, screenshot, url }) {
     return (
         <section className="page_section work_section">
+            <a href={url}>
             <div className="section_container work_container">
                 <div className="section_div work_section__div">
                     <div className="image_container">
@@ -24,6 +25,7 @@ export default function WorksComponent({ title, description, requirement, id, sc
                     </article>
                 </div>
             </div>
+            </a>
         </section>
     )
 }

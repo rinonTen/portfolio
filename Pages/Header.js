@@ -20,6 +20,9 @@ export default function Header() {
                         <Link to="/works" className="nav_tabs_link">Works</Link>
                     </li>
                     <li className="nav_tabs_list">
+                        <Link to="/blog" className="nav_tabs_link">Blog</Link>
+                    </li>
+                    <li className="nav_tabs_list">
                         <Link to="/contact" className="nav_tabs_link">Contact</Link>
                     </li>
                 </ul>

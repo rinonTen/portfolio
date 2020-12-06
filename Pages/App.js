@@ -6,8 +6,9 @@ import Works from './Works';
 
 export default function App() {
     return (
-        <div>
+        <>
             <Header />
+            <main className="page_container main_container">
             <Switch>
                 <Route exact path='/'>
                     <Homepage />
@@ -16,6 +17,7 @@ export default function App() {
                     <Works />
                 </Route>
             </Switch> 
-        </div>
+            </main>
+        </>
     )
 }

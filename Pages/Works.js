@@ -9,8 +9,8 @@ export default function Works() {
          return <WorksComponent key={work.id} {...work} />
      })
     return (
-        <>
+        <div className="page_container works_container">
             {worksElements}
-        </>
+        </div>
     )
 }

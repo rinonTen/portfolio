@@ -33855,47 +33855,75 @@ if ("development" !== "production") {
 }
 },{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"PortfolioData.json":[function(require,module,exports) {
 module.exports = [{
-  "id": 1,
-  "title": "Game landing page",
-  "description": "This website has multiple background-images and has to be built in mobile and desktop devices",
-  "requirement": "",
+  "id": 10,
+  "title": "WindBnb",
+  "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
+  "requirement": "Build with React",
   "screenshot": "",
-  "url": "https://ganamavo.github.io/game_landing_page/"
+  "url": "https://windbnb-clone.netlify.app/"
 }, {
-  "id": 2,
-  "title": "Responsive news site",
-  "description": "This is a page about news",
-  "requirement": "",
-  "screenshot": "./images/responsive_site.png",
-  "url": "https://ganamavo.github.io/responsive_news_site/"
+  "id": 4,
+  "title": "Fotograph",
+  "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
+  "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
+  "screenshot": "",
+  "url": "https://ganamavo.github.io/front-end-finals/"
+}, {
+  "id": 6,
+  "title": "Country quiz",
+  "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
+  "requirement": "Build with React hooks",
+  "screenshot": "",
+  "url": "https://rhino-quotegenerator.netlify.app/"
+}, {
+  "id": 9,
+  "title": "Edie Homepage",
+  "description": "A personal website for marketing.",
+  "requirement": "Build with HTML and SASS",
+  "screenshot": "",
+  "url": "https://edie-homepage-site.netlify.app/"
 }, {
   "id": 3,
   "title": "Sports app",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
-  "requirement": "",
+  "requirement": "Build only with HTML and SASS",
   "screenshot": "",
   "url": "https://ganamavo.github.io/front-end-assessment/"
 }, {
-  "id": 4,
-  "title": "Fotograph",
-  "description": "Build with only html, css and a little bit of Javascript for the images slideshow",
-  "requirement": "",
+  "id": 2,
+  "title": "Responsive news site",
+  "description": "This is a news website",
+  "requirement": "Build with HTML and SASS",
+  "screenshot": "./images/responsive_site.png",
+  "url": "https://ganamavo.github.io/responsive_news_site/"
+}, {
+  "id": 1,
+  "title": "Game landing page",
+  "description": "This website has multiple background-images and has to be built in mobile and desktop devices",
+  "requirement": "Build with HTML and CSS",
   "screenshot": "",
-  "url": "https://ganamavo.github.io/front-end-finals/"
+  "url": "https://ganamavo.github.io/game_landing_page/"
 }, {
   "id": 5,
   "title": "Birthday App",
   "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
-  "requirement": "",
+  "requirement": "Build with Vanilla javascript",
   "screenshot": "",
   "url": "https://birthday-web-app.netlify.app/"
 }, {
-  "id": 6,
-  "title": "",
-  "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
-  "requirement": "",
+  "id": 7,
+  "title": "Hit Parade",
+  "description": "This a songs-project: it shows few songs with the artists. It also enables us to click on a specific songs to get its details like the lyrics.",
+  "requirement": "Working with Router in React",
   "screenshot": "",
-  "url": "https://birthday-web-app.netlify.app/"
+  "url": "https://hitparade-site.netlify.app/"
+}, {
+  "id": 8,
+  "title": "Team Page",
+  "description": "A page that shows few images of people who work in one team",
+  "requirement": "Build with HTML and CSS",
+  "screenshot": "",
+  "url": "https://rhino-team-page.netlify.app/"
 }];
 },{}],"GlobalContext.js":[function(require,module,exports) {
 "use strict";
@@ -33916,37 +33944,19 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Context = (0, _react.createContext)();
+const Context = (0, _react.createContext)();
 exports.Context = Context;
 
-function GlobalContext(_ref) {
-  var children = _ref.children;
-
-  var _useReducer = (0, _react.useReducer)(function (state, action) {
+function GlobalContext({
+  children
+}) {
+  const [state, dispatch] = (0, _react.useReducer)((state, action) => {
     switch (action.type) {
       case "SET_PORTFOLIO_DATA":
         {
-          return _objectSpread(_objectSpread({}, state), {}, {
+          return { ...state,
             worksArr: _PortfolioData.default
-          });
+          };
         }
 
       default:
@@ -33954,20 +33964,16 @@ function GlobalContext(_ref) {
     }
   }, {
     worksArr: []
-  }),
-      _useReducer2 = _slicedToArray(_useReducer, 2),
-      state = _useReducer2[0],
-      dispatch = _useReducer2[1];
-
-  (0, _react.useEffect)(function () {
+  });
+  (0, _react.useEffect)(() => {
     dispatch({
       type: "SET_PORTFOLIO_DATA"
     });
   }, []);
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
-      state: state,
-      dispatch: dispatch
+      state,
+      dispatch
     }
   }, children);
 }
@@ -34012,6 +34018,11 @@ function Header() {
   }, "Works")), /*#__PURE__*/_react.default.createElement("li", {
     className: "nav_tabs_list"
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/blog",
+    className: "nav_tabs_link"
+  }, "Blog")), /*#__PURE__*/_react.default.createElement("li", {
+    className: "nav_tabs_list"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/contact",
     className: "nav_tabs_link"
   }, "Contact"))))));
@@ -34042,23 +34053,21 @@ function Homepage() {
     className: "section_article homepage_article"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "definition_container"
-  }, /*#__PURE__*/_react.default.createElement("dl", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "homepage_def homepage_def--info"
-  }, /*#__PURE__*/_react.default.createElement("dt", {
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "homepage_def--info--name"
-  }, "Rinon Tendrinomena"), /*#__PURE__*/_react.default.createElement("dd", {
-    className: "homepage_def--info--job"
-  }, "Front-end developer")), /*#__PURE__*/_react.default.createElement("dl", {
+  }, "Front-end developer"))), /*#__PURE__*/_react.default.createElement("p", {
+    className: "section_paragraph homepage_paragraph"
+  }, "Self-motivated developer, who is willing to learn and create outstanding UI applications."), /*#__PURE__*/_react.default.createElement("div", {
     className: "homepage_def homepage_def--info"
-  }, /*#__PURE__*/_react.default.createElement("dt", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "homepage_def--info--email"
   }, /*#__PURE__*/_react.default.createElement("a", {
     href: "mailto:https://mail.google.com/mail/u/1/#inbox"
-  }, "rinon.ten@onja.org")), /*#__PURE__*/_react.default.createElement("dt", {
+  }, "rinon.ten@onja.org")), /*#__PURE__*/_react.default.createElement("span", {
     className: "homepage_def--info--phone"
-  }, "+261340513341"))), /*#__PURE__*/_react.default.createElement("p", {
-    className: "section_paragraph homepage_paragraph"
-  }, "Self-motivated developer, who is willing to learn and create outstanding UI applications."))));
+  }, "+261340513341")))));
 }
 },{"react":"node_modules/react/index.js"}],"Components/WorksComponent.js":[function(require,module,exports) {
 "use strict";
@@ -34072,15 +34081,18 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function WorksComponent(_ref) {
-  var title = _ref.title,
-      description = _ref.description,
-      requirement = _ref.requirement,
-      id = _ref.id,
-      screenshot = _ref.screenshot,
-      url = _ref.url;
+function WorksComponent({
+  title,
+  description,
+  requirement,
+  id,
+  screenshot,
+  url
+}) {
   return /*#__PURE__*/_react.default.createElement("section", {
     className: "page_section work_section"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: url
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "section_container work_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -34089,7 +34101,7 @@ function WorksComponent(_ref) {
     className: "image_container"
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: "./images/blog-template.jpg",
-    alt: "".concat(title, "'s screenshot")
+    alt: `${title}'s screenshot`
   })), /*#__PURE__*/_react.default.createElement("article", {
     className: "page_article work_section_article"
   }, /*#__PURE__*/_react.default.createElement("h2", {
@@ -34110,7 +34122,7 @@ function WorksComponent(_ref) {
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "code-btn",
     type: "button"
-  }, "Code")))))));
+  }, "Code"))))))));
 }
 },{"react":"node_modules/react/index.js"}],"Pages/Works.js":[function(require,module,exports) {
 "use strict";
@@ -34135,17 +34147,21 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function Works() {
-  var _useContext = (0, _react.useContext)(_GlobalContext.Context),
-      state = _useContext.state,
-      dispatch = _useContext.dispatch;
-
-  var worksArr = state.worksArr;
-  var worksElements = worksArr.map(function (work) {
+  const {
+    state,
+    dispatch
+  } = (0, _react.useContext)(_GlobalContext.Context);
+  const {
+    worksArr
+  } = state;
+  const worksElements = worksArr.map(work => {
     return /*#__PURE__*/_react.default.createElement(_WorksComponent.default, _extends({
       key: work.id
     }, work));
   });
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, worksElements);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "page_container works_container"
+  }, worksElements);
 }
 },{"react":"node_modules/react/index.js","../Components/WorksComponent":"Components/WorksComponent.js","../GlobalContext":"GlobalContext.js"}],"Pages/App.js":[function(require,module,exports) {
 "use strict";
@@ -34168,13 +34184,15 @@ var _Works = _interopRequireDefault(require("./Works"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("main", {
+    className: "page_container main_container"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_Homepage.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/works"
-  }, /*#__PURE__*/_react.default.createElement(_Works.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_Works.default, null)))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Header":"Pages/Header.js","./Homepage":"Pages/Homepage.js","./Works":"Pages/Works.js"}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -34220,7 +34238,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59782" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50736" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

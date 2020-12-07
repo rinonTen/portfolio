@@ -33890,19 +33890,12 @@ module.exports = [{
   "screenshot": "",
   "url": "https://ganamavo.github.io/front-end-assessment/"
 }, {
-  "id": 2,
-  "title": "Responsive news site",
-  "description": "This is a news website",
-  "requirement": "Build with HTML and SASS",
-  "screenshot": "./images/responsive_site.png",
-  "url": "https://ganamavo.github.io/responsive_news_site/"
-}, {
   "id": 1,
   "title": "Game landing page",
   "description": "This website has multiple background-images and has to be built in mobile and desktop devices",
   "requirement": "Build with HTML and CSS",
   "screenshot": "",
-  "url": "https://ganamavo.github.io/game_landing_page/"
+  "url": "https://game-landing-page.netlify.app/"
 }, {
   "id": 5,
   "title": "Birthday App",
@@ -34238,7 +34231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50736" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55610" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

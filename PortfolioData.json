@@ -39,13 +39,13 @@
         "screenshot": "",
         "url": "https://ganamavo.github.io/front-end-assessment/"
     },
-     {
-        "id": 1,
-        "title": "Game landing page",
-        "description": "This website has multiple background-images and has to be built in mobile and desktop devices",
-        "requirement": "Build with HTML and CSS",
-        "screenshot": "",
-        "url": "https://game-landing-page.netlify.app/"
+    {
+        "id": 2,
+        "title": "Responsive news site",
+        "description": "This is a news website",
+        "requirement": "Build with HTML and SASS",
+        "screenshot": "./images/responsive_site.png",
+        "url": "https://ganamavo.github.io/responsive_news_site/"
     },
     {
         "id": 5,
@@ -72,5 +72,3 @@
         "url": "https://rhino-team-page.netlify.app/"
     }
 ]
-
- 

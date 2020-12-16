@@ -33860,28 +33860,21 @@ module.exports = [{
   "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
   "requirement": "Build with React",
   "screenshot": "",
-  "url": "https://windbnb-clone.netlify.app/"
+  "url": "https://windbnb-rinon.netlify.app/"
 }, {
   "id": 4,
   "title": "Fotograph",
   "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
   "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
   "screenshot": "",
-  "url": "https://ganamavo.github.io/front-end-finals/"
+  "url": "https://photograph-rinon.netlify.app/"
 }, {
   "id": 6,
   "title": "Country quiz",
   "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
   "requirement": "Build with React hooks",
   "screenshot": "",
-  "url": "https://rhino-quotegenerator.netlify.app/"
-}, {
-  "id": 9,
-  "title": "Edie Homepage",
-  "description": "A personal website for marketing.",
-  "requirement": "Build with HTML and SASS",
-  "screenshot": "",
-  "url": "https://edie-homepage-site.netlify.app/"
+  "url": "https://birthday-app-rinon.netlify.app/"
 }, {
   "id": 3,
   "title": "Sports app",
@@ -33890,34 +33883,46 @@ module.exports = [{
   "screenshot": "",
   "url": "https://ganamavo.github.io/front-end-assessment/"
 }, {
-  "id": 2,
-  "title": "Responsive news site",
-  "description": "This is a news website",
-  "requirement": "Build with HTML and SASS",
-  "screenshot": "./images/responsive_site.png",
-  "url": "https://ganamavo.github.io/responsive_news_site/"
-}, {
   "id": 5,
   "title": "Birthday App",
   "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
   "requirement": "Build with Vanilla javascript",
   "screenshot": "",
-  "url": "https://birthday-web-app.netlify.app/"
-}, {
-  "id": 7,
-  "title": "Hit Parade",
-  "description": "This a songs-project: it shows few songs with the artists. It also enables us to click on a specific songs to get its details like the lyrics.",
-  "requirement": "Working with Router in React",
-  "screenshot": "",
-  "url": "https://hitparade-site.netlify.app/"
-}, {
-  "id": 8,
-  "title": "Team Page",
-  "description": "A page that shows few images of people who work in one team",
-  "requirement": "Build with HTML and CSS",
-  "screenshot": "",
-  "url": "https://rhino-team-page.netlify.app/"
-}];
+  "url": "https://birthday-app-rinon.netlify.app/"
+}]; // [
+//     {
+//         "id": 2,
+//         "title": "Responsive news site",
+//         "description": "This is a news website",
+//         "requirement": "Build with HTML and SASS",
+//         "screenshot": "./images/responsive_site.png",
+//         "url": "https://ganamavo.github.io/responsive_news_site/"
+//     },
+//     {
+//         "id": 9,
+//         "title": "Edie Homepage",
+//         "description": "A personal website for marketing.",
+//         "requirement": "Build with HTML and SASS",
+//         "screenshot": "",
+//         "url": "https://edie-homepage-site.netlify.app/"
+//     },
+//     {
+//         "id": 8,
+//         "title": "Team Page",
+//         "description": "A page that shows few images of people who work in one team",
+//         "requirement": "Build with HTML and CSS",
+//         "screenshot": "",
+//         "url": "https://rhino-team-page.netlify.app/"
+//     },
+//     {
+//         "id": 7,
+//         "title": "Hit Parade",
+//         "description": "This a songs-project: it shows few songs with the artists. It also enables us to click on a specific songs to get its details like the lyrics.",
+//         "requirement": "Working with Router in React",
+//         "screenshot": "",
+//         "url": "https://hitparade-site.netlify.app/"
+//     },
+// ];
 },{}],"GlobalContext.js":[function(require,module,exports) {
 "use strict";
 
@@ -34231,7 +34236,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55610" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54335" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

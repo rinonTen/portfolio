@@ -146,6 +146,22 @@ article.section_article.homepage_article {
     background-color: steelblue;
 }
 
+.image_container .work_screenshot {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: default;
+}
+
+.image_container .portfolio_image {
+    margin: 50px auto;
+    width: 100%;
+    object-fit: contain;
+    cursor: default;
+    max-height: 300px;
+}
+
 @media(min-width: 1114px) {
     .page_container.works_container {
         display: grid;
@@ -154,6 +170,10 @@ article.section_article.homepage_article {
         row-gap: 74px;
         margin-top: 32px;
     }
+}
+
+button.demo-btn, button.code-btn {
+    cursor: pointer;
 }
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

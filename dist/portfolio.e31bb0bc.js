@@ -33860,35 +33860,40 @@ module.exports = [{
   "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
   "requirement": "Build with React",
   "screenshot": "",
-  "url": "https://windbnb-rinon.netlify.app/"
+  "url": "https://windbnb-rinon.netlify.app/",
+  "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
   "id": 4,
   "title": "Fotograph",
   "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
   "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
-  "screenshot": "",
-  "url": "https://photograph-rinon.netlify.app/"
+  "screenshot": "fotograph",
+  "url": "https://photograph-rinon.netlify.app/",
+  "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
   "id": 6,
-  "title": "Country quiz",
+  "title": "Country Quiz",
   "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
   "requirement": "Build with React hooks",
   "screenshot": "",
-  "url": "https://birthday-app-rinon.netlify.app/"
+  "url": "https://birthday-app-project.netlify.app/",
+  "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
   "id": 3,
-  "title": "Sports app",
+  "title": "Sports App",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
   "requirement": "Build only with HTML and SASS",
   "screenshot": "",
-  "url": "https://ganamavo.github.io/front-end-assessment/"
+  "url": "https://sports-app-rinon.netlify.app",
+  "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
   "id": 5,
   "title": "Birthday App",
   "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
   "requirement": "Build with Vanilla javascript",
-  "screenshot": "",
-  "url": "https://birthday-app-rinon.netlify.app/"
+  "screenshot": "birthday",
+  "url": "https://birthday-app-rinon.netlify.app/",
+  "codeUrl": "https://windbnb-rinon.netlify.app/"
 }]; // [
 //     {
 //         "id": 2,
@@ -34025,7 +34030,9 @@ function Header() {
     className: "nav_tabs_link"
   }, "Contact"))))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Pages/Homepage.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"static/images/rinon.jpg":[function(require,module,exports) {
+module.exports = "/rinon.28e500ed.jpg";
+},{}],"Pages/Homepage.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34034,6 +34041,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = Homepage;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _rinon = _interopRequireDefault(require("../static/images/rinon.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34045,7 +34054,8 @@ function Homepage() {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "image_container"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: "./images/rhino.jpg",
+    className: "portfolio_image",
+    src: _rinon.default,
     alt: "Profile picture"
   })), /*#__PURE__*/_react.default.createElement("article", {
     className: "section_article homepage_article"
@@ -34067,7 +34077,11 @@ function Homepage() {
     className: "homepage_def--info--phone"
   }, "+261340513341")))));
 }
-},{"react":"node_modules/react/index.js"}],"Components/WorksComponent.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../static/images/rinon.jpg":"static/images/rinon.jpg"}],"static/images/birthday-app.png":[function(require,module,exports) {
+module.exports = "/birthday-app.65ce3b17.png";
+},{}],"static/images/photograf.png":[function(require,module,exports) {
+module.exports = "/photograf.72807786.png";
+},{}],"Components/WorksComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34077,7 +34091,17 @@ exports.default = WorksComponent;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _birthdayApp = _interopRequireDefault(require("../static/images/birthday-app.png"));
+
+var _photograf = _interopRequireDefault(require("../static/images/photograf.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const images = {
+  birthday: _birthdayApp.default,
+  fotograph: _photograf.default,
+  default: "https://i.picsum.photos/id/0/450/150.jpg?hmac=FqGsSttgluHt-th1J_aPKM0SdwR3X_ZV4IVVYSI3yn4"
+};
 
 function WorksComponent({
   title,
@@ -34085,12 +34109,12 @@ function WorksComponent({
   requirement,
   id,
   screenshot,
-  url
+  url,
+  codeUrl
 }) {
+  const image = images[screenshot] || images.default;
   return /*#__PURE__*/_react.default.createElement("section", {
     className: "page_section work_section"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: url
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "section_container work_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -34098,7 +34122,8 @@ function WorksComponent({
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "image_container"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: "./images/blog-template.jpg",
+    className: "work_screenshot",
+    src: image,
     alt: `${title}'s screenshot`
   })), /*#__PURE__*/_react.default.createElement("article", {
     className: "page_article work_section_article"
@@ -34110,19 +34135,21 @@ function WorksComponent({
     className: "button_container"
   }, /*#__PURE__*/_react.default.createElement("a", {
     className: "page_link demo_link",
-    href: url
+    href: url,
+    target: "_blank"
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "demo-btn",
     type: "button"
   }, "Demo")), /*#__PURE__*/_react.default.createElement("a", {
     className: "page_link github_link",
-    href: "http://code"
+    href: codeUrl,
+    target: "_blank"
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "code-btn",
     type: "button"
-  }, "Code"))))))));
+  }, "Code")))))));
 }
-},{"react":"node_modules/react/index.js"}],"Pages/Works.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../static/images/birthday-app.png":"static/images/birthday-app.png","../static/images/photograf.png":"static/images/photograf.png"}],"Pages/Works.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34208,7 +34235,7 @@ var _App = _interopRequireDefault(require("./Pages/App"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_GlobalContext.GlobalContext, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null))), document.getElementById("root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./GlobalContext":"GlobalContext.js","./Pages/App":"Pages/App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./GlobalContext":"GlobalContext.js","./Pages/App":"Pages/App.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34236,7 +34263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54335" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58644" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -34412,5 +34439,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/portfolio.e31bb0bc.js.map

@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import portfolioImage from '../static/images/rinon.jpg';
 
 export default function Homepage() {
     return (
         <section className="page_section homepage_section">
             <div className="section_container homepage_container">
                 <div className="image_container">
-                    <img src="./images/rhino.jpg" alt="Profile picture" />
+                    <img className="portfolio_image" src={portfolioImage} alt="Profile picture" />
                 </div>
                 <article className="section_article homepage_article">
                     <div className="definition_container">

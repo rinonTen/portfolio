@@ -5,15 +5,17 @@
         "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
         "requirement": "Build with React",
         "screenshot": "",
-        "url": "https://windbnb-rinon.netlify.app/"
+        "url": "https://windbnb-rinon.netlify.app/",
+        "codeUrl": "https://windbnb-rinon.netlify.app/"
     },
     {
         "id": 4,
         "title": "Fotograph",
         "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
         "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
-        "screenshot": "",
-        "url": "https://photograph-rinon.netlify.app/"
+        "screenshot": "fotograph",
+        "url": "https://photograph-rinon.netlify.app/",
+        "codeUrl": "https://windbnb-rinon.netlify.app/"
     },
     {
         "id": 6,
@@ -21,7 +23,8 @@
         "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
         "requirement": "Build with React hooks",
         "screenshot": "",
-        "url": "https://birthday-app-project.netlify.app/"
+        "url": "https://birthday-app-project.netlify.app/",
+        "codeUrl": "https://windbnb-rinon.netlify.app/"
     },
     
     {
@@ -30,15 +33,17 @@
         "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
         "requirement": "Build only with HTML and SASS",
         "screenshot": "",
-        "url": "https://sports-app-rinon.netlify.app"
+        "url": "https://sports-app-rinon.netlify.app",
+        "codeUrl": "https://windbnb-rinon.netlify.app/"
     },
     {
         "id": 5,
         "title": "Birthday App",
         "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
         "requirement": "Build with Vanilla javascript",
-        "screenshot": "",
-        "url": "https://birthday-app-rinon.netlify.app/"
+        "screenshot": "birthday",
+        "url": "https://birthday-app-rinon.netlify.app/",
+        "codeUrl": "https://windbnb-rinon.netlify.app/"
     }
 ]
 

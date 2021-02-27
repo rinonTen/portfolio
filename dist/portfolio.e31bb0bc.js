@@ -34119,13 +34119,7 @@ function WorksComponent({
     className: "section_container work_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "section_div work_section__div"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "image_container"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "work_screenshot",
-    src: image,
-    alt: `${title}'s screenshot`
-  })), /*#__PURE__*/_react.default.createElement("article", {
+  }, /*#__PURE__*/_react.default.createElement("article", {
     className: "page_article work_section_article"
   }, /*#__PURE__*/_react.default.createElement("h2", {
     className: " page_heading work_section_heading"
@@ -34147,7 +34141,13 @@ function WorksComponent({
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "code-btn",
     type: "button"
-  }, "Code")))))));
+  }, "Code")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "image_container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "work_screenshot",
+    src: image,
+    alt: `${title}'s screenshot`
+  })))));
 }
 },{"react":"node_modules/react/index.js","../static/images/birthday-app.png":"static/images/birthday-app.png","../static/images/photograf.png":"static/images/photograf.png"}],"Pages/Works.js":[function(require,module,exports) {
 "use strict";
@@ -34263,7 +34263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58644" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62625" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -110,14 +110,15 @@ article.section_article.homepage_article {
 /* Works's styles */
 
 .page_section.work_section {
-    background-color: rgba(192, 192, 192, 0.822);
-    padding: 16px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 32px;
     border-radius: 12px;
 }
 
 .page_heading.work_section_heading {
     font-size: 30px;
     line-height: normal;
+    color: #333333;
 }
 
 .button_container {
@@ -148,10 +149,11 @@ article.section_article.homepage_article {
 
 .image_container .work_screenshot {
     width: 100%;
-    height: 150px;
+    height: 300px;
     border-radius: 12px;
     object-fit: cover;
     cursor: default;
+    margin: 15px 0px;
 }
 
 .image_container .portfolio_image {

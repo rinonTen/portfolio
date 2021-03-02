@@ -1,10 +1,16 @@
 import React from 'react';
-import birthdayAppImage from '../static/images/birthday-app.png';
-import photografImage from '../static/images/photograf.png';
+import birthdayAppImage from '../static/images/shotsnapp-birthday-app.png';
+import photografImage from '../static/images/shotsnapp-fotograph.png';
+import netflixImage from '../static/images/shotsnapp-netflix.png';
+import sportsAppImage from '../static/images/shotsnapp-sports-app.png';
+import countryQuizImage from '../static/images/shotsnapp-country-quiz.png';
 
 const images = {
     birthday: birthdayAppImage,
     fotograph: photografImage,
+    netflix: netflixImage,
+    countryQuiz: countryQuizImage,
+    sports: sportsAppImage,
     default: "https://i.picsum.photos/id/0/450/150.jpg?hmac=FqGsSttgluHt-th1J_aPKM0SdwR3X_ZV4IVVYSI3yn4"
 }
 

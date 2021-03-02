@@ -1,5 +1,6 @@
 import React, {useState, useEffect, createContext, useReducer } from 'react'
-import WorksData from './PortfolioData.json'
+import WorksData from './PortfolioData.json';
+
 
 const Context = createContext();
 

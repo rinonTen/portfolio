@@ -110,14 +110,15 @@ article.section_article.homepage_article {
 /* Works's styles */
 
 .page_section.work_section {
-    background-color: rgba(192, 192, 192, 0.822);
-    padding: 16px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 32px;
     border-radius: 12px;
 }
 
 .page_heading.work_section_heading {
     font-size: 30px;
     line-height: normal;
+    color: #333333;
 }
 
 .button_container {
@@ -148,10 +149,11 @@ article.section_article.homepage_article {
 
 .image_container .work_screenshot {
     width: 100%;
-    height: 150px;
+    height: 300px;
     border-radius: 12px;
     object-fit: cover;
     cursor: default;
+    margin: 15px 0px;
 }
 
 .image_container .portfolio_image {
@@ -165,10 +167,16 @@ article.section_article.homepage_article {
 @media(min-width: 1114px) {
     .page_container.works_container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 16px;
         row-gap: 74px;
         margin-top: 32px;
+    }
+    .page_container.works_container .work_section__div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 32px;
+        row-gap: 74px;
     }
 }
 

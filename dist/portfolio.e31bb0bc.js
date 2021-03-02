@@ -33854,46 +33854,55 @@ if ("development" !== "production") {
   });
 }
 },{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"PortfolioData.json":[function(require,module,exports) {
-module.exports = [{
+module.exports = [// {
+//     "id": 10,
+//     "title": "WindBnb",
+//     "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
+//     "requirement": "Build with React",
+//     "screenshot": "",
+//     "url": "https://windbnb-rinon.netlify.app/",
+//     "codeUrl": "https://windbnb-rinon.netlify.app/"
+// },
+{
   "id": 10,
-  "title": "WindBnb",
-  "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
-  "requirement": "Build with React",
-  "screenshot": "",
-  "url": "https://windbnb-rinon.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "title": "Netflix Clone",
+  "description": "A clone of the popular Netflix service. Application includes fuzzy search, user authentication, styled and compound components.",
+  "requirement": "Built with React and Firebase",
+  "screenshot": "netflix",
+  "url": "https://netflix-clone-rinon.netlify.app/",
+  "codeUrl": "https://github.com/ganamavo/netflix-clone"
 }, {
   "id": 4,
   "title": "Fotograph",
   "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
-  "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
+  "requirement": "Built pnly with HTML, SASS and a little bit of Javascript for the images slideshow",
   "screenshot": "fotograph",
   "url": "https://photograph-rinon.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/front-end-finals"
 }, {
   "id": 6,
   "title": "Country Quiz",
   "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
-  "requirement": "Build with React hooks",
-  "screenshot": "",
-  "url": "https://birthday-app-project.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "requirement": "Built with React hooks",
+  "screenshot": "countryQuiz",
+  "url": "https://country-quiz-rinon.netlify.app/",
+  "codeUrl": "https://github.com/ganamavo/country-quiz"
 }, {
   "id": 3,
   "title": "Sports App",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
-  "requirement": "Build only with HTML and SASS",
-  "screenshot": "",
+  "requirement": "Built only with HTML and SASS",
+  "screenshot": "sports",
   "url": "https://sports-app-rinon.netlify.app",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/front-end-assessment"
 }, {
   "id": 5,
   "title": "Birthday App",
-  "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be signaled when the birthday is today",
-  "requirement": "Build with Vanilla javascript",
+  "description": "Birthday App is an web app that allows users to check a birthday, edit or delete a list. You'll be notified when the birthday is today",
+  "requirement": "Built with Vanilla javascript",
   "screenshot": "birthday",
-  "url": "https://birthday-app-rinon.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "url": "https://birthday-app-project.netlify.app/",
+  "codeUrl": "https://github.com/ganamavo/birthday-app"
 }]; // [
 //     {
 //         "id": 2,
@@ -34077,10 +34086,16 @@ function Homepage() {
     className: "homepage_def--info--phone"
   }, "+261340513341")))));
 }
-},{"react":"node_modules/react/index.js","../static/images/rinon.jpg":"static/images/rinon.jpg"}],"static/images/birthday-app.png":[function(require,module,exports) {
-module.exports = "/birthday-app.65ce3b17.png";
-},{}],"static/images/photograf.png":[function(require,module,exports) {
-module.exports = "/photograf.72807786.png";
+},{"react":"node_modules/react/index.js","../static/images/rinon.jpg":"static/images/rinon.jpg"}],"static/images/shotsnapp-birthday-app.png":[function(require,module,exports) {
+module.exports = "/shotsnapp-birthday-app.1f38db68.png";
+},{}],"static/images/shotsnapp-fotograph.png":[function(require,module,exports) {
+module.exports = "/shotsnapp-fotograph.2be8e337.png";
+},{}],"static/images/shotsnapp-netflix.png":[function(require,module,exports) {
+module.exports = "/shotsnapp-netflix.d8b32af9.png";
+},{}],"static/images/shotsnapp-sports-app.png":[function(require,module,exports) {
+module.exports = "/shotsnapp-sports-app.6362d1c6.png";
+},{}],"static/images/shotsnapp-country-quiz.png":[function(require,module,exports) {
+module.exports = "/shotsnapp-country-quiz.393229a6.png";
 },{}],"Components/WorksComponent.js":[function(require,module,exports) {
 "use strict";
 
@@ -34091,15 +34106,24 @@ exports.default = WorksComponent;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _birthdayApp = _interopRequireDefault(require("../static/images/birthday-app.png"));
+var _shotsnappBirthdayApp = _interopRequireDefault(require("../static/images/shotsnapp-birthday-app.png"));
 
-var _photograf = _interopRequireDefault(require("../static/images/photograf.png"));
+var _shotsnappFotograph = _interopRequireDefault(require("../static/images/shotsnapp-fotograph.png"));
+
+var _shotsnappNetflix = _interopRequireDefault(require("../static/images/shotsnapp-netflix.png"));
+
+var _shotsnappSportsApp = _interopRequireDefault(require("../static/images/shotsnapp-sports-app.png"));
+
+var _shotsnappCountryQuiz = _interopRequireDefault(require("../static/images/shotsnapp-country-quiz.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const images = {
-  birthday: _birthdayApp.default,
-  fotograph: _photograf.default,
+  birthday: _shotsnappBirthdayApp.default,
+  fotograph: _shotsnappFotograph.default,
+  netflix: _shotsnappNetflix.default,
+  countryQuiz: _shotsnappCountryQuiz.default,
+  sports: _shotsnappSportsApp.default,
   default: "https://i.picsum.photos/id/0/450/150.jpg?hmac=FqGsSttgluHt-th1J_aPKM0SdwR3X_ZV4IVVYSI3yn4"
 };
 
@@ -34119,13 +34143,7 @@ function WorksComponent({
     className: "section_container work_container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "section_div work_section__div"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "image_container"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    className: "work_screenshot",
-    src: image,
-    alt: `${title}'s screenshot`
-  })), /*#__PURE__*/_react.default.createElement("article", {
+  }, /*#__PURE__*/_react.default.createElement("article", {
     className: "page_article work_section_article"
   }, /*#__PURE__*/_react.default.createElement("h2", {
     className: " page_heading work_section_heading"
@@ -34147,9 +34165,15 @@ function WorksComponent({
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "code-btn",
     type: "button"
-  }, "Code")))))));
+  }, "Code")))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "image_container"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "work_screenshot",
+    src: image,
+    alt: `${title}'s screenshot`
+  })))));
 }
-},{"react":"node_modules/react/index.js","../static/images/birthday-app.png":"static/images/birthday-app.png","../static/images/photograf.png":"static/images/photograf.png"}],"Pages/Works.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../static/images/shotsnapp-birthday-app.png":"static/images/shotsnapp-birthday-app.png","../static/images/shotsnapp-fotograph.png":"static/images/shotsnapp-fotograph.png","../static/images/shotsnapp-netflix.png":"static/images/shotsnapp-netflix.png","../static/images/shotsnapp-sports-app.png":"static/images/shotsnapp-sports-app.png","../static/images/shotsnapp-country-quiz.png":"static/images/shotsnapp-country-quiz.png"}],"Pages/Works.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34263,7 +34287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58644" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58728" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

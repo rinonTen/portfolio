@@ -36792,13 +36792,13 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Container = _styledComponents.default.main`
+const Container = _styledComponents.default.section`
+    background-color: hsl(0,0%,98%);
 `;
 exports.Container = Container;
 const Group = _styledComponents.default.div``;
 exports.Group = Group;
-const Section = _styledComponents.default.section`
-    background-color: hsl(0,0%,98%);
+const Section = _styledComponents.default.div`
 `;
 exports.Section = Section;
 const SectionContainer = _styledComponents.default.div`
@@ -36821,6 +36821,7 @@ const Title = _styledComponents.default.h2`
     font-size: 18px;
     line-height: 60px; 
     color: #21243D;
+    margin-top: 0;
 
     @media(min-width: 1114px) {
         font-size: 22px;
@@ -36842,9 +36843,7 @@ const Article = _styledComponents.default.article`
     }
 `;
 exports.Article = Article;
-const ImageContainer = _styledComponents.default.div`
-   
-`;
+const ImageContainer = _styledComponents.default.div``;
 exports.ImageContainer = ImageContainer;
 const Image = _styledComponents.default.img`
     margin-right: 16px;
@@ -37054,15 +37053,15 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Container = _styledComponents.default.section``;
+const Container = _styledComponents.default.main``;
 exports.Container = Container;
-const SectionContainer = _styledComponents.default.div`
+const SectionContainer = _styledComponents.default.section`
     max-width: 1114px;
     margin-left: auto;
     margin-right: auto;
     padding: 16px;
     padding-bottom: 58px;
-
+    
   @media(min-width: 1114px) { 
          display: flex;
          justify-content: space-between;

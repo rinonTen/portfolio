@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const Container = styled.main`
+const Container = styled.section`
+    background-color: hsl(0,0%,98%);
 `;
 const Group = styled.div``;
-const Section = styled.section`
-    background-color: hsl(0,0%,98%);
+const Section = styled.div`
 `;
 const SectionContainer = styled.div`
     max-width: 1114px;
@@ -24,6 +24,7 @@ const Title = styled.h2`
     font-size: 18px;
     line-height: 60px; 
     color: #21243D;
+    margin-top: 0;
 
     @media(min-width: 1114px) {
         font-size: 22px;
@@ -43,9 +44,7 @@ const Article = styled.article`
         padding-bottom: 32px; 
     }
 `;
-const ImageContainer = styled.div`
-   
-`;
+const ImageContainer = styled.div``;
 const Image = styled.img`
     margin-right: 16px;
     width: 400px;

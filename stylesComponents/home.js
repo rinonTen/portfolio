@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-const Container = styled.section``;
-const SectionContainer = styled.div`
+const Container = styled.main``;
+const SectionContainer = styled.section`
     max-width: 1114px;
     margin-left: auto;
     margin-right: auto;
     padding: 16px;
     padding-bottom: 58px;
-
+    
   @media(min-width: 1114px) { 
          display: flex;
          justify-content: space-between;

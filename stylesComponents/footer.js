@@ -95,7 +95,7 @@ const ContactContainer = styled.div`
 `;
 const Logo = styled.figure`
     margin: 0;
-`;
+`; 
 const Span = styled.span`
     font-size: 16px;
     margin-left: 9px;

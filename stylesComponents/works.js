@@ -25,11 +25,13 @@ const Title = styled.h2`
     line-height: 60px; 
     color: #21243D;
     margin-top: 0;
+    padding-top: 16px;
 
     @media(min-width: 1114px) {
         font-size: 22px;
         margin-bottom: 0;
         line-height: 40px;
+        padding-top: 32px;
     }
 `;
 const Article = styled.article`

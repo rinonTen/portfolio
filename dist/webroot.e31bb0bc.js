@@ -36451,12 +36451,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.skills = exports.worksData = void 0;
 const worksData = [{
-  "id": 10,
-  "title": "WindBnb",
-  "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
-  "requirement": "Build with React",
-  "screenshot": "./images/airbnb-clone.png",
-  "url": "https://windbnb-rinon.netlify.app/",
+  "id": 6,
+  "title": "Country Quiz",
+  "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
+  "requirement": "Build with React hooks",
+  "screenshot": "./images/shotsnapp-country-quiz.png",
+  "url": "https://rhino-quotegenerator.netlify.app/",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
   "id": 4,
@@ -36483,12 +36483,20 @@ const worksData = [{
   "url": "https://sports-app-rinon.netlify.app",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
-  "id": 6,
-  "title": "Country Quiz",
-  "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
-  "requirement": "Build with React hooks",
-  "screenshot": "./images/shotsnapp-country-quiz.png",
-  "url": "https://rhino-quotegenerator.netlify.app/",
+  "id": 11,
+  "title": "Birthday app",
+  "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc.. Special features are planned and will be released as fundamentals are built. Users can edit and delete a list from the list of people.",
+  "requirement": "Build with Vanilla js",
+  "screenshot": "./images/shotsnapp-birthday-app.png",
+  "url": "https://birthtday-app-rinon.netlify.app/",
+  "codeUrl": "https://birthtday-app-rinon.netlify.app/"
+}, {
+  "id": 10,
+  "title": "WindBnb",
+  "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
+  "requirement": "Build with React",
+  "screenshot": "./images/airbnb-clone.png",
+  "url": "https://windbnb-rinon.netlify.app/",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }];
 exports.worksData = worksData;
@@ -36570,6 +36578,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Container = _styledComponents.default.header`
     background-color: #EDF7FA;
+    a {
+        text-decoration: none;
+    }
 `;
 exports.Container = Container;
 const HeadingContainer = _styledComponents.default.div`
@@ -36694,6 +36705,10 @@ const Item = _styledComponents.default.li`
     a:hover {
         color: #FF6464;
         text-decoration: underline;
+    }
+
+    a:focus {
+        color: #FF6464;
     }
 `;
 exports.Item = Item;
@@ -36822,11 +36837,13 @@ const Title = _styledComponents.default.h2`
     line-height: 60px; 
     color: #21243D;
     margin-top: 0;
+    padding-top: 16px;
 
     @media(min-width: 1114px) {
         font-size: 22px;
         margin-bottom: 0;
         line-height: 40px;
+        padding-top: 32px;
     }
 `;
 exports.Title = Title;
@@ -37704,6 +37721,8 @@ var _components = require("../components");
 
 var _pageMenu = _interopRequireDefault(require("./pageMenu"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -37720,14 +37739,16 @@ function HeaderContainer() {
     setShowMenu(!showMenu);
   };
 
-  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.HeadingContainer, null, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Avatar, {
+  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.HeadingContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Avatar, {
     src: "./images/my-image.jpg",
     alt: "my image"
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.Heading, null, "Rinon")), /*#__PURE__*/_react.default.createElement(_components.Header.DisplayMenuButton, {
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.Heading, null, "Rinon"))), /*#__PURE__*/_react.default.createElement(_components.Header.DisplayMenuButton, {
     onClick: toggleMenu
   }), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, null), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
 }
-},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./pageMenu":"../containers/pageMenu.js"}],"../containers/works.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./pageMenu":"../containers/pageMenu.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../containers/works.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37846,9 +37867,21 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FooterContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Article, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Title, null, "Let's work together"), /*#__PURE__*/_react.default.createElement(_components.Footer.Text, null, "Have a project you'd like to discuss?"), /*#__PURE__*/_react.default.createElement(_components.Footer.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, null, "Get in Touch"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, "fb"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Article, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Title, null, "Let's work together"), /*#__PURE__*/_react.default.createElement(_components.Footer.Text, null, "Have a project you'd like to discuss?"), /*#__PURE__*/_react.default.createElement(_components.Footer.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, null, "Get in Touch"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "20",
+    height: "16",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    fill: "none",
+    "fill-rule": "evenodd"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M-2-4h24v24H-2z"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z",
+    fill: "#FFF"
+  })))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "facebook"
-  }, /*#__PURE__*/_react.default.createElement(_components.Footer.Span, null, "On facebook"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, "twt"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, /*#__PURE__*/_react.default.createElement(_components.Footer.Span, null, "Email"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "twitter"
   }, /*#__PURE__*/_react.default.createElement(_components.Footer.Span, null, "On Twitter"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, "Inst"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "instagram"
@@ -38020,7 +38053,7 @@ var _app = _interopRequireDefault(require("./app"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_globalContext.GlobalContext, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_globalStyles.GlobalStyles, null), /*#__PURE__*/_react.default.createElement(_app.default, null))), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../globalStyles":"../globalStyles.js","../contexts/globalContext":"../contexts/globalContext.js","./app":"app.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../globalStyles":"../globalStyles.js","../contexts/globalContext":"../contexts/globalContext.js","./app":"app.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -38048,7 +38081,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54263" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61073" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -38224,5 +38257,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/webroot.e31bb0bc.js.map

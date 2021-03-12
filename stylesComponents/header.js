@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const Container = styled.header`
     background-color: #EDF7FA;
+    a {
+        text-decoration: none;
+    }
 `;
 const HeadingContainer = styled.div`
     display: flex;
@@ -121,6 +124,10 @@ const Item = styled.li`
     a:hover {
         color: #FF6464;
         text-decoration: underline;
+    }
+
+    a:focus {
+        color: #FF6464;
     }
 `;
 

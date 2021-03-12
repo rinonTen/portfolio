@@ -1,16 +1,25 @@
-import React, { useContext} from 'react'
-import WorksComponent from '../Components/WorksComponent'
-import {Context} from '../GlobalContext';
+import React, { useContext } from 'react';
+import { Context } from '../contexts/globalContext';
+import { Works } from '../components';
+import { WorksContainer } from '../containers';
 
-export default function Works() {
-    const {state, dispatch} = useContext(Context);
-    const {worksArr} = state;
-     const worksElements = worksArr.map(work => {
-         return <WorksComponent key={work.id} {...work} />
-     })
+export default function WorksPage() {
+
+    const { works } = useContext(Context);
+    const worksElements = works && works.map(work => <WorksContainer key={work.id} {...work} />)
+
     return (
-        <div className="page_container works_container">
-            {worksElements}
-        </div>
+        <Works>
+            <Works.Group>
+                <Works.Section>
+                    <Works.SectionContainer>
+                        <Works.SectionHeader>
+                            <Works.Title>Featured works</Works.Title>
+                        </Works.SectionHeader>
+                        {worksElements}
+                    </Works.SectionContainer>
+                </Works.Section>
+            </Works.Group>
+        </Works>
     )
 }

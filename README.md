@@ -1,2 +1,2 @@
-# portfolio
-All the work that I have done
+# personal-portfolio
+Design my own portfolio with React

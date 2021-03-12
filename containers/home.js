@@ -4,9 +4,6 @@ import { Home, Skills, Works } from '../components';
 import SkillsContainer  from './skills'; 
 import WorksContainer  from './works';
  
-
-
-
 export default function HomeContainer() {
     const { works, technologies } = useContext(Context);
     const worksElements = works && works.slice(0, 3).map(work => <WorksContainer key={work.id} {...work}/>)

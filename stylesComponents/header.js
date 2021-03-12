@@ -56,7 +56,7 @@ const Nav = styled.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 40%;
+        width: 30%;
         height: unset;
         background-color: unset;
         padding-top: 0;

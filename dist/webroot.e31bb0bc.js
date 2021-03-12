@@ -36463,7 +36463,7 @@ const worksData = [{
   "title": "Fotograph",
   "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
   "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
-  "screenshot": "./images/photograf.png",
+  "screenshot": "./images/shotsnapp-fotograph.png",
   "url": "https://photograph-rinon.netlify.app/",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
@@ -36471,7 +36471,7 @@ const worksData = [{
   "title": "Netflix Clone",
   "description": "A clone of the netflix website. Coded in the classroom",
   "requirement": "",
-  "screenshot": "./images/netflix-clone.png",
+  "screenshot": "./images/shotsnapp-netflix.png",
   "url": "https://netflix-clone-rinon.netlify.app/",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
@@ -36479,7 +36479,7 @@ const worksData = [{
   "title": "Sports App",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
   "requirement": "Build only with HTML and SASS",
-  "screenshot": "./images/sports-app.png",
+  "screenshot": "./images/shotsnapp-sports-app.png",
   "url": "https://sports-app-rinon.netlify.app",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }, {
@@ -36487,7 +36487,7 @@ const worksData = [{
   "title": "Country Quiz",
   "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
   "requirement": "Build with React hooks",
-  "screenshot": "./images/country-quiz.png",
+  "screenshot": "./images/shotsnapp-country-quiz.png",
   "url": "https://rhino-quotegenerator.netlify.app/",
   "codeUrl": "https://windbnb-rinon.netlify.app/"
 }];
@@ -36628,7 +36628,7 @@ const Nav = _styledComponents.default.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 40%;
+        width: 30%;
         height: unset;
         background-color: unset;
         padding-top: 0;

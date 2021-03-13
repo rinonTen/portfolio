@@ -35263,7 +35263,7 @@ var index = (0, _memoize.default)(function (prop) {
 );
 var _default = index;
 exports.default = _default;
-},{"@emotion/memoize":"../node_modules/@emotion/memoize/dist/memoize.browser.esm.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
+},{"@emotion/memoize":"../node_modules/@emotion/memoize/dist/memoize.browser.esm.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -36413,7 +36413,7 @@ exports.ServerStyleSheet = Ue;
 "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
 var _default = qe;
 exports.default = _default;
-},{"react-is":"../node_modules/react-is/index.js","react":"../node_modules/react/index.js","shallowequal":"../node_modules/shallowequal/index.js","@emotion/stylis":"../node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"../globalStyles.js":[function(require,module,exports) {
+},{"react-is":"../node_modules/react-is/index.js","react":"../node_modules/react/index.js","shallowequal":"../node_modules/shallowequal/index.js","@emotion/stylis":"../node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../node_modules/process/browser.js"}],"../globalStyles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36457,7 +36457,7 @@ const worksData = [{
   "requirement": "Build with React hooks",
   "screenshot": "./images/shotsnapp-country-quiz.png",
   "url": "https://rhino-quotegenerator.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/country-quiz"
 }, {
   "id": 4,
   "title": "Fotograph",
@@ -36465,7 +36465,7 @@ const worksData = [{
   "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
   "screenshot": "./images/shotsnapp-fotograph.png",
   "url": "https://photograph-rinon.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/photograf-page"
 }, {
   "id": 7,
   "title": "Netflix Clone",
@@ -36473,7 +36473,7 @@ const worksData = [{
   "requirement": "",
   "screenshot": "./images/shotsnapp-netflix.png",
   "url": "https://netflix-clone-rinon.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/netflix-clone"
 }, {
   "id": 3,
   "title": "Sports App",
@@ -36481,7 +36481,7 @@ const worksData = [{
   "requirement": "Build only with HTML and SASS",
   "screenshot": "./images/shotsnapp-sports-app.png",
   "url": "https://sports-app-rinon.netlify.app",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/birthday-app"
 }, {
   "id": 11,
   "title": "Birthday app",
@@ -36497,7 +36497,7 @@ const worksData = [{
   "requirement": "Build with React",
   "screenshot": "./images/airbnb-clone.png",
   "url": "https://windbnb-rinon.netlify.app/",
-  "codeUrl": "https://windbnb-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/airbnb-clone"
 }];
 exports.worksData = worksData;
 const skills = [{
@@ -36895,17 +36895,20 @@ const WorkTitle = _styledComponents.default.h3`
         color: #21243D;
         margin: 0;
     }
-`; // @media(min-width: 1114px) {
-// }
-
+`;
 exports.WorkTitle = WorkTitle;
 const Link = _styledComponents.default.a``;
 exports.Link = Link;
 const WorkDescription = _styledComponents.default.p``;
 exports.WorkDescription = WorkDescription;
 const ButtonContainer = _styledComponents.default.div`
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 16px;
+
     @media(min-width: 1114px) {
+        width: 50%;
         position: absolute;
         bottom: 0;
         margin-bottom: 5px;
@@ -36924,6 +36927,12 @@ const Button = _styledComponents.default.button`
     border: transparent;
     outline: none;
     cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.5;
+        color: red;
+    }
 `;
 exports.Button = Button;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/works.js":[function(require,module,exports) {
@@ -37767,7 +37776,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function WorksContainer({
   title,
   description,
-  requirement,
+  codeUrl,
   screenshot,
   url
 }) {
@@ -37778,7 +37787,9 @@ function WorksContainer({
     alt: `${title}'screenshot`
   }))), /*#__PURE__*/_react.default.createElement(_components.Works.DescriptionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.WorkTitle, null, title), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, description), /*#__PURE__*/_react.default.createElement(_components.Works.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: url
-  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "See more")))));
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Demo")), /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
+    href: codeUrl
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code")))));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/skills.js":[function(require,module,exports) {
 "use strict";
@@ -37873,7 +37884,7 @@ function FooterContainer() {
     xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, /*#__PURE__*/_react.default.createElement("path", {
     d: "M-2-4h24v24H-2z"
   }), /*#__PURE__*/_react.default.createElement("path", {
@@ -38081,7 +38092,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61073" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58911" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

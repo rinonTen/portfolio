@@ -79,15 +79,17 @@ const WorkTitle = styled.h3`
         margin: 0;
     }
 `;
-
-// @media(min-width: 1114px) {
-
-// }
+ 
 const Link = styled.a``
 const WorkDescription = styled.p``;
 const ButtonContainer = styled.div`
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 16px;
+
     @media(min-width: 1114px) {
+        width: 50%;
         position: absolute;
         bottom: 0;
         margin-bottom: 5px;
@@ -105,6 +107,12 @@ const Button = styled.button`
     border: transparent;
     outline: none;
     cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.5;
+        color: red;
+    }
 `;
 export {
     Container,

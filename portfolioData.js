@@ -6,7 +6,7 @@ const worksData = [
         "requirement": "Build with React hooks",
         "screenshot": "./images/shotsnapp-country-quiz.png",
         "url": "https://rhino-quotegenerator.netlify.app/",
-        "codeUrl": "https://windbnb-rinon.netlify.app/"
+        "codeUrl": "https://github.com/ganamavo/country-quiz"
     },
     {
         "id": 4,
@@ -15,7 +15,7 @@ const worksData = [
         "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
         "screenshot": "./images/shotsnapp-fotograph.png",
         "url": "https://photograph-rinon.netlify.app/",
-        "codeUrl": "https://windbnb-rinon.netlify.app/"
+        "codeUrl": "https://github.com/ganamavo/photograf-page"
     },
     {
         "id": 7,
@@ -24,7 +24,7 @@ const worksData = [
         "requirement": "",
         "screenshot": "./images/shotsnapp-netflix.png",
         "url": "https://netflix-clone-rinon.netlify.app/",
-        "codeUrl": "https://windbnb-rinon.netlify.app/"
+        "codeUrl": "https://github.com/ganamavo/netflix-clone"
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@ const worksData = [
         "requirement": "Build only with HTML and SASS",
         "screenshot": "./images/shotsnapp-sports-app.png",
         "url": "https://sports-app-rinon.netlify.app",
-        "codeUrl": "https://windbnb-rinon.netlify.app/"
+        "codeUrl": "https://github.com/ganamavo/birthday-app"
     },
      {
         "id": 11,
@@ -51,7 +51,7 @@ const worksData = [
         "requirement": "Build with React",
         "screenshot": "./images/airbnb-clone.png",
         "url": "https://windbnb-rinon.netlify.app/",
-        "codeUrl": "https://windbnb-rinon.netlify.app/"
+        "codeUrl": "https://github.com/ganamavo/airbnb-clone"
     },
 
 ]

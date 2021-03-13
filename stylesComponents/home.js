@@ -11,7 +11,7 @@ const SectionContainer = styled.section`
   @media(min-width: 1114px) { 
          display: flex;
          justify-content: space-between;
-         padding-top: 130px;
+         padding-top: 100px;
          padding-bottom: 71px;
     } 
 `;
@@ -23,12 +23,16 @@ const Article = styled.article`
 `;
 
 const ImageContainer = styled.div`
+    /* background: #EDF7FA;
+    border-radius: 50%;
+    width: fit-content; */
     @media(min-width: 1114px) {
         text-align: center;
     }
 `;
 const Profile = styled.img`
     display: none;
+    
     @media(min-width: 1114px) {
         display: initial;
         max-width: 40%;

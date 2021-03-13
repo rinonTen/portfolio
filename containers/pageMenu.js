@@ -8,19 +8,14 @@ export default function PageMenu() {
             <Header.Lists>
                 <Header.Item>
                     <Link to='/'>
-                        Home
+                        About
                     </Link>
                 </Header.Item>
                 <Header.Item>
                     <Link to='/works'>
                         Works
                     </Link>
-                </Header.Item>
-                {/* <Header.Item>
-                    <Link to='/story'>
-                        My story
-                    </Link>
-                </Header.Item> */}
+                </Header.Item> 
                 <Header.Item>
                     <Link to='/contact'>
                         Contact

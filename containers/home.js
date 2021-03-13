@@ -1,15 +1,12 @@
 import React, { useContext } from 'react';
 import { Context } from '../contexts/globalContext';
-import { Home, Skills, Works } from '../components'; 
-import SkillsContainer  from './skills'; 
+import { Home, Works } from '../components';  
 import WorksContainer  from './works';
  
 export default function HomeContainer() {
-    const { works, technologies } = useContext(Context);
+    const { works } = useContext(Context);
     const worksElements = works && works.slice(0, 3).map(work => <WorksContainer key={work.id} {...work}/>)
-    const technologiesElements = technologies && technologies.map(skill => {
-       return <SkillsContainer key={skill.id} {...skill}/>
-    })
+     
      return (
         <Home>
             <Home.SectionContainer>
@@ -31,17 +28,7 @@ export default function HomeContainer() {
                 <Home.ImageContainer>
                     <Home.Profile src="./images/my-image.jpg" alt="my image"/>
                 </Home.ImageContainer>
-            </Home.SectionContainer>
-            <Skills>
-            <Skills.SectionContainer>
-                <Skills.Header>
-                    <Skills.Title>My tools</Skills.Title>
-                </Skills.Header>
-                {
-                     technologiesElements
-                }
-            </Skills.SectionContainer>
-            </Skills>
+            </Home.SectionContainer> 
             <Works>
             <Works.Group>
                 <Works.Section>

@@ -12,7 +12,6 @@ export default function WorksContainer({ title, description, codeUrl, screenshot
             </Works.ImageContainer>
             <Works.DescriptionContainer>
                 <Works.WorkTitle>{title}</Works.WorkTitle>
-                <Works.WorkDescription>{description}</Works.WorkDescription>
                 <Works.ButtonContainer>
                     <Works.Link href={url}>
                         <Works.Button>Demo</Works.Button>
@@ -21,6 +20,7 @@ export default function WorksContainer({ title, description, codeUrl, screenshot
                         <Works.Button>Code</Works.Button>
                     </Works.Link>
                 </Works.ButtonContainer>
+                <Works.WorkDescription>{description}</Works.WorkDescription>
             </Works.DescriptionContainer>
         </Works.Article>
     )

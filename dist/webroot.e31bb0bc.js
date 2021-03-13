@@ -36576,8 +36576,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Container = _styledComponents.default.header`
-    background-color: #EDF7FA;
+const Container = _styledComponents.default.header` 
     a {
         text-decoration: none;
     }
@@ -36639,7 +36638,7 @@ const Nav = _styledComponents.default.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 30%;
+        width: 25%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -36689,7 +36688,7 @@ const Lists = _styledComponents.default.ul`
 exports.Lists = Lists;
 const Item = _styledComponents.default.li`
     a {
-        font-style: normal;
+        font-style: normal; 
         font-weight: 600;
         font-size: 20px;
         line-height: 29px;
@@ -36807,13 +36806,17 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Container = _styledComponents.default.section`
-    background-color: hsl(0,0%,98%);
+const Container = _styledComponents.default.section` 
+    background-color: #EDF7FA;
 `;
 exports.Container = Container;
 const Group = _styledComponents.default.div``;
 exports.Group = Group;
 const Section = _styledComponents.default.div`
+    padding-bottom: 150px;
+    @media(min-width: 1114px) {
+        padding-bottom: 83px;
+    }
 `;
 exports.Section = Section;
 const SectionContainer = _styledComponents.default.div`
@@ -36852,9 +36855,8 @@ const Article = _styledComponents.default.article`
     border-bottom: 1px solid #E0E0E0;
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: 40% 55%;
-        column-gap: 48px;
-        display: grid;
+        grid-template-columns: 40% auto; 
+        column-gap: 18px;
         padding-top: 32px;
         padding-bottom: 32px; 
     }
@@ -36864,10 +36866,14 @@ const ImageContainer = _styledComponents.default.div``;
 exports.ImageContainer = ImageContainer;
 const Image = _styledComponents.default.img`
     margin-right: 16px;
-    width: 400px;
+    width: 100%;
     border-radius: 5px;
-    
+    @media(min-width: 500px) {
+        width: 400px;
+    }
     @media(min-width: 1114px) {
+        width: 100%;
+        margin-right: 0;
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
         &:hover {
         transition: transform 0.2s ease-out; 
@@ -36891,9 +36897,11 @@ const WorkTitle = _styledComponents.default.h3`
     @media(min-width: 1114px) {
         font-weight: bold;
         font-size: 30px;
+        line-height: 44px;
         line-height: unset; 
         color: #21243D;
         margin: 0;
+        margin-bottom: 20px;
     }
 `;
 exports.WorkTitle = WorkTitle;
@@ -36903,15 +36911,18 @@ const WorkDescription = _styledComponents.default.p``;
 exports.WorkDescription = WorkDescription;
 const ButtonContainer = _styledComponents.default.div`
     width: 90%;
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
     margin-bottom: 16px;
-
+    a:nth-of-type(2) button {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 29px; 
+        color: #8695A4;
+        background-color: transparent;
+    }
     @media(min-width: 1114px) {
-        width: 50%;
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 5px;
+        width: 50%; 
+        margin-bottom: 22px;
     }
 `;
 exports.ButtonContainer = ButtonContainer;
@@ -36921,6 +36932,7 @@ const Button = _styledComponents.default.button`
     font-size: 16px; 
     color: #FFFFFF;
     border-radius: 16px;
+    margin-right: 32px;
     padding: 6px;
     padding-left: 16px;
     padding-right: 16px;
@@ -36929,10 +36941,12 @@ const Button = _styledComponents.default.button`
     cursor: pointer;
     transition: 0.3s;
 
+
     &:hover {
         opacity: 0.5;
         color: red;
     }
+
 `;
 exports.Button = Button;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/works.js":[function(require,module,exports) {
@@ -37091,7 +37105,7 @@ const SectionContainer = _styledComponents.default.section`
   @media(min-width: 1114px) { 
          display: flex;
          justify-content: space-between;
-         padding-top: 130px;
+         padding-top: 100px;
          padding-bottom: 71px;
     } 
 `;
@@ -37104,6 +37118,9 @@ const Article = _styledComponents.default.article`
 `;
 exports.Article = Article;
 const ImageContainer = _styledComponents.default.div`
+    /* background: #EDF7FA;
+    border-radius: 50%;
+    width: fit-content; */
     @media(min-width: 1114px) {
         text-align: center;
     }
@@ -37111,6 +37128,7 @@ const ImageContainer = _styledComponents.default.div`
 exports.ImageContainer = ImageContainer;
 const Profile = _styledComponents.default.img`
     display: none;
+    
     @media(min-width: 1114px) {
         display: initial;
         max-width: 40%;
@@ -37437,127 +37455,37 @@ Skills.Text = function SkillsText({
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Span = exports.Logo = exports.ContactContainer = exports.ContactGroup = exports.Button = exports.ButtonContainer = exports.Text = exports.Title = exports.Article = exports.Container = exports.FooterEl = void 0;
+exports.Logo = exports.Link = exports.ContactContainer = exports.ContactGroup = exports.Container = exports.FooterEl = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const FooterEl = _styledComponents.default.footer`
-    background-color: #191a1d;
-    color: #5e5e5e;
-`;
+const FooterEl = _styledComponents.default.footer``;
 exports.FooterEl = FooterEl;
-const Container = _styledComponents.default.div`
-    padding: 16px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    @media(min-width: 1114px) {
-        max-width: 1114px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0;
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-`;
+const Container = _styledComponents.default.div``;
 exports.Container = Container;
-const Article = _styledComponents.default.article`
-`;
-exports.Article = Article;
-const Title = _styledComponents.default.h2`
-    font-size: 32px;
-    font-weight: 500;
-    color: #fff;
-    @media(min-width: 1114px) {
-        font-size: 48px; 
-        margin-bottom: 28px;
-    }
-`;
-exports.Title = Title;
-const Text = _styledComponents.default.p`
-    font-size: 22px;
-    color: rgba(255,255,255,.5);
-
-    @media(min-width: 1114px) {
-        font-size: 28px; 
-        margin-bottom: 40px;
-    }
-`;
-exports.Text = Text;
-const ButtonContainer = _styledComponents.default.div`
-    margin-top: 32px;
-`;
-exports.ButtonContainer = ButtonContainer;
-const Button = _styledComponents.default.button`
-    font-family: "Rubik",sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: #fff;
-    padding: 20px 32px;
-    display: inline-block;
-    cursor: pointer;
-    border: transparent;
-    border-radius: 1000px;
-    background: #4b6cc1;
-    transform: scale(1.075);
-
-    &:hover {
-        transform: scale(1.075);
-        box-shadow: inset 0 0 0 2px #4b6cc1;
-        background: none;
-    }
-`;
-exports.Button = Button;
-const ContactGroup = _styledComponents.default.div`
-    display: flex;
-    flex-direction: row; 
-    padding-top: 9px;
-    padding-bottom: 9px;
-    
-    &:nth-of-type(1) {
-        padding-top: 32px;
-    }
-
-    &:last-of-type {
-        padding-bottom: 32px;
-    }
-
-    a {
-        color: rgba(255,255,255,.5);
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: color ease .5s;
-    }
-
-    a:hover {
-        color: #fff;
-    }
-`;
-exports.ContactGroup = ContactGroup;
-const ContactContainer = _styledComponents.default.div`
-    @media(min-width: 1114px) {
-        margin-top: 32px;
-    }
+const ContactContainer = _styledComponents.default.nav`
+   padding-top: 50px;
+   padding-bottom: 100px;
 `;
 exports.ContactContainer = ContactContainer;
-const Logo = _styledComponents.default.figure`
-    margin: 0;
-`;
-exports.Logo = Logo;
-const Span = _styledComponents.default.span`
-    font-size: 16px;
-    margin-left: 9px;
+const ContactGroup = _styledComponents.default.ul`
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
     @media(min-width: 1114px) {
-        font-size: 24px; 
-        font-weight: 500;
-    }
+        max-width: 18%;
+    } 
 `;
-exports.Span = Span;
+exports.ContactGroup = ContactGroup;
+const Logo = _styledComponents.default.li``;
+exports.Logo = Logo;
+const Link = _styledComponents.default.a``;
+exports.Link = Link;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/footer.js":[function(require,module,exports) {
 "use strict";
 
@@ -37572,47 +37500,14 @@ var _footer = require("../stylesComponents/footer");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function Footer({
   children,
   ...restProps
 }) {
   return /*#__PURE__*/_react.default.createElement(_footer.FooterEl, null, /*#__PURE__*/_react.default.createElement(_footer.Container, restProps, children));
 }
-
-Footer.Article = function FooterArticle({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_footer.Article, restProps, children);
-};
-
-Footer.Title = function FooterTitle({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_footer.Title, restProps, children);
-};
-
-Footer.Text = function FooterText({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_footer.Text, restProps, children);
-};
-
-Footer.ButtonContainer = function FooterButtonContainer({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_footer.ButtonContainer, restProps, children);
-};
-
-Footer.Button = function FooterButton({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_footer.Button, restProps, children);
-};
 
 Footer.ContactGroup = function FooterContactGroup({
   children,
@@ -37628,18 +37523,21 @@ Footer.ContactContainer = function FooterContactContainer({
   return /*#__PURE__*/_react.default.createElement(_footer.ContactContainer, restProps, children);
 };
 
+Footer.Link = function FooterLink({
+  href,
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_footer.Link, _extends({
+    href: href
+  }, restProps), children);
+};
+
 Footer.Logo = function FooterLogo({
   children,
   restProps
 }) {
   return /*#__PURE__*/_react.default.createElement(_footer.Logo, restProps, children);
-};
-
-Footer.Span = function FooterSpan({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_footer.Span, restProps, children);
 };
 },{"react":"../node_modules/react/index.js","../stylesComponents/footer":"../stylesComponents/footer.js"}],"../components/index.js":[function(require,module,exports) {
 "use strict";
@@ -37708,7 +37606,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function PageMenu() {
   return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, "Home")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "About")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works"
   }, "Works")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/contact"
@@ -37750,10 +37648,7 @@ function HeaderContainer() {
 
   return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.HeadingContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Avatar, {
-    src: "./images/my-image.jpg",
-    alt: "my image"
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.Heading, null, "Rinon"))), /*#__PURE__*/_react.default.createElement(_components.Header.DisplayMenuButton, {
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.DisplayMenuButton, {
     onClick: toggleMenu
   }), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, null), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
 }
@@ -37785,13 +37680,49 @@ function WorksContainer({
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Image, {
     src: `${screenshot ? screenshot : "ajaf"}`,
     alt: `${title}'screenshot`
-  }))), /*#__PURE__*/_react.default.createElement(_components.Works.DescriptionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.WorkTitle, null, title), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, description), /*#__PURE__*/_react.default.createElement(_components.Works.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
+  }))), /*#__PURE__*/_react.default.createElement(_components.Works.DescriptionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.WorkTitle, null, title), /*#__PURE__*/_react.default.createElement(_components.Works.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: url
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Demo")), /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: codeUrl
-  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code")))));
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, description)));
 }
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/skills.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = HomeContainer;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _globalContext = require("../contexts/globalContext");
+
+var _components = require("../components");
+
+var _works = _interopRequireDefault(require("./works"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function HomeContainer() {
+  const {
+    works
+  } = (0, _react.useContext)(_globalContext.Context);
+  const worksElements = works && works.slice(0, 3).map(work => /*#__PURE__*/_react.default.createElement(_works.default, _extends({
+    key: work.id
+  }, work)));
+  return /*#__PURE__*/_react.default.createElement(_components.Home, null, /*#__PURE__*/_react.default.createElement(_components.Home.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Web developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
+    src: "./images/my-image.jpg",
+    alt: "my image"
+  }))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
+}
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js"}],"../containers/skills.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37817,51 +37748,7 @@ function SkillsContainer({
     alt: "skill logo"
   })), /*#__PURE__*/_react.default.createElement(_components.Skills.Heading, null, name), /*#__PURE__*/_react.default.createElement(_components.Skills.Text, null, text));
 }
-},{"react":"../node_modules/react/index.js","../components":"../components/index.js","../stylesComponents/works":"../stylesComponents/works.js"}],"../containers/home.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = HomeContainer;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _globalContext = require("../contexts/globalContext");
-
-var _components = require("../components");
-
-var _skills = _interopRequireDefault(require("./skills"));
-
-var _works = _interopRequireDefault(require("./works"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function HomeContainer() {
-  const {
-    works,
-    technologies
-  } = (0, _react.useContext)(_globalContext.Context);
-  const worksElements = works && works.slice(0, 3).map(work => /*#__PURE__*/_react.default.createElement(_works.default, _extends({
-    key: work.id
-  }, work)));
-  const technologiesElements = technologies && technologies.map(skill => {
-    return /*#__PURE__*/_react.default.createElement(_skills.default, _extends({
-      key: skill.id
-    }, skill));
-  });
-  return /*#__PURE__*/_react.default.createElement(_components.Home, null, /*#__PURE__*/_react.default.createElement(_components.Home.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Web developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
-    src: "./images/my-image.jpg",
-    alt: "my image"
-  }))), /*#__PURE__*/_react.default.createElement(_components.Skills, null, /*#__PURE__*/_react.default.createElement(_components.Skills.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Skills.Header, null, /*#__PURE__*/_react.default.createElement(_components.Skills.Title, null, "My tools")), technologiesElements)), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
-}
-},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./skills":"../containers/skills.js","./works":"../containers/works.js"}],"../containers/footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../components":"../components/index.js","../stylesComponents/works":"../stylesComponents/works.js"}],"../containers/footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37871,34 +37758,53 @@ exports.default = FooterContainer;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactRouterDom = require("react-router-dom");
-
 var _components = require("../components");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FooterContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Article, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Title, null, "Let's work together"), /*#__PURE__*/_react.default.createElement(_components.Footer.Text, null, "Have a project you'd like to discuss?"), /*#__PURE__*/_react.default.createElement(_components.Footer.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, null, "Get in Touch"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
-    width: "20",
-    height: "16",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/_react.default.createElement("g", {
+  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+    href: ""
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "30",
+    height: "30",
+    viewBox: "0 0 30 30",
     fill: "none",
-    fillRule: "evenodd"
+    xmlns: "http://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
-    d: "M-2-4h24v24H-2z"
+    d: "M25.6055 0H4.39453C1.97159 0 0 1.97159 0 4.39453V25.6055C0 28.0284 1.97159 30 4.39453 30H13.2422V19.3945H9.72656V14.1211H13.2422V10.5469C13.2422 7.63893 15.6077 5.27344 18.5156 5.27344H23.8477V10.5469H18.5156V14.1211H23.8477L22.9688 19.3945H18.5156V30H25.6055C28.0284 30 30 28.0284 30 25.6055V4.39453C30 1.97159 28.0284 0 25.6055 0Z",
+    fill: "#21243D"
+  })))), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+    href: ""
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "30",
+    height: "30",
+    viewBox: "0 0 30 30",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M21.7209 0H8.27874C3.71384 0 0 3.71402 0 8.27892V21.7211C0 26.2862 3.71384 30 8.27874 30H21.7209C26.2862 30 30 26.286 30 21.7211V8.27892C30.0002 3.71402 26.2862 0 21.7209 0ZM27.3384 21.7211C27.3384 24.8185 24.8185 27.3383 21.7211 27.3383H8.27874C5.18153 27.3384 2.66175 24.8185 2.66175 21.7211V8.27892C2.66175 5.18171 5.18153 2.66175 8.27874 2.66175H21.7209C24.8183 2.66175 27.3383 5.18171 27.3383 8.27892V21.7211H27.3384Z",
+    fill: "#21243D"
   }), /*#__PURE__*/_react.default.createElement("path", {
-    d: "M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z",
-    fill: "#FFF"
-  })))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "facebook"
-  }, /*#__PURE__*/_react.default.createElement(_components.Footer.Span, null, "Email"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "twitter"
-  }, /*#__PURE__*/_react.default.createElement(_components.Footer.Span, null, "On Twitter"))), /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, "Inst"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "instagram"
-  }, /*#__PURE__*/_react.default.createElement(_components.Footer.Span, null, "On instagram")))));
+    d: "M15 7.27014C10.7375 7.27014 7.26978 10.7379 7.26978 15.0004C7.26978 19.2627 10.7375 22.7303 15 22.7303C19.2625 22.7303 22.7303 19.2627 22.7303 15.0004C22.7303 10.7379 19.2625 7.27014 15 7.27014ZM15 20.0683C12.2054 20.0683 9.93152 17.7949 9.93152 15.0002C9.93152 12.2054 12.2052 9.93171 15 9.93171C17.7948 9.93171 20.0685 12.2054 20.0685 15.0002C20.0685 17.7949 17.7947 20.0683 15 20.0683Z",
+    fill: "#21243D"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M23.0545 5.01318C22.5417 5.01318 22.0379 5.2208 21.6757 5.58457C21.3118 5.94657 21.1025 6.45053 21.1025 6.96513C21.1025 7.47814 21.3119 7.98192 21.6757 8.34569C22.0377 8.70769 22.5417 8.91708 23.0545 8.91708C23.5691 8.91708 24.0713 8.70769 24.435 8.34569C24.7988 7.98192 25.0064 7.47796 25.0064 6.96513C25.0064 6.45053 24.7988 5.94657 24.435 5.58457C24.073 5.2208 23.5691 5.01318 23.0545 5.01318Z",
+    fill: "#21243D"
+  })))), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+    href: ""
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "37",
+    height: "30",
+    viewBox: "0 0 37 30",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M36.9231 3.55154C35.55 4.15385 34.0869 4.55308 32.5615 4.74692C34.1308 3.81 35.3285 2.33769 35.8915 0.563077C34.4285 1.43538 32.8131 2.05154 31.0915 2.39538C29.7023 0.916154 27.7223 0 25.5623 0C21.3715 0 17.9977 3.40154 17.9977 7.57154C17.9977 8.17154 18.0485 8.74846 18.1731 9.29769C11.88 8.99077 6.31154 5.97462 2.57077 1.38C1.91769 2.51308 1.53462 3.81 1.53462 5.20615C1.53462 7.82769 2.88462 10.1515 4.89692 11.4969C3.68077 11.4738 2.48769 11.1208 1.47692 10.5646C1.47692 10.5877 1.47692 10.6177 1.47692 10.6477C1.47692 14.3262 4.10077 17.3815 7.54154 18.0854C6.92538 18.2538 6.25385 18.3346 5.55692 18.3346C5.07231 18.3346 4.58308 18.3069 4.12385 18.2054C5.10462 21.2031 7.88769 23.4069 11.1969 23.4785C8.62154 25.4931 5.35154 26.7069 1.81154 26.7069C1.19077 26.7069 0.595385 26.6792 0 26.6031C3.35308 28.7654 7.32692 30 11.6123 30C25.5415 30 33.1569 18.4615 33.1569 8.46C33.1569 8.12538 33.1454 7.80231 33.1292 7.48154C34.6315 6.41538 35.8938 5.08385 36.9231 3.55154Z",
+    fill: "#21243D"
+  })))))));
 }
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38092,7 +37998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58911" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64445" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

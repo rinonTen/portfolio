@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.header`
-    background-color: #EDF7FA;
+const Container = styled.header` 
     a {
         text-decoration: none;
     }
@@ -59,7 +58,7 @@ const Nav = styled.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 30%;
+        width: 25%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -108,7 +107,7 @@ const Lists = styled.ul`
 `;
 const Item = styled.li`
     a {
-        font-style: normal;
+        font-style: normal; 
         font-weight: 600;
         font-size: 20px;
         line-height: 29px;

@@ -15,14 +15,16 @@ export default function HeaderContainer() {
         <Header>
             <Header.HeadingContainer>
                 <Link to="/">
-                    <Header.Group>
+                    {/* <Header.Group>
                             <Header.Avatar src="./images/my-image.jpg" alt="my image" />
                             <Header.Heading>
                                 Rinon
                             </Header.Heading>
-                    </Header.Group>
+                    </Header.Group> */}
                 </Link>
-                <Header.DisplayMenuButton onClick={toggleMenu}></Header.DisplayMenuButton>
+                <Header.DisplayMenuButton onClick={toggleMenu}>
+
+                </Header.DisplayMenuButton>
                 {showMenu && <PageMenu />}
                 <PageMenu />
             </Header.HeadingContainer>

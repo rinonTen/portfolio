@@ -35263,7 +35263,7 @@ var index = (0, _memoize.default)(function (prop) {
 );
 var _default = index;
 exports.default = _default;
-},{"@emotion/memoize":"../node_modules/@emotion/memoize/dist/memoize.browser.esm.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
+},{"@emotion/memoize":"../node_modules/@emotion/memoize/dist/memoize.browser.esm.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -36413,7 +36413,7 @@ exports.ServerStyleSheet = Ue;
 "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
 var _default = qe;
 exports.default = _default;
-},{"react-is":"../node_modules/react-is/index.js","react":"../node_modules/react/index.js","shallowequal":"../node_modules/shallowequal/index.js","@emotion/stylis":"../node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../node_modules/process/browser.js"}],"../globalStyles.js":[function(require,module,exports) {
+},{"react-is":"../node_modules/react-is/index.js","react":"../node_modules/react/index.js","shallowequal":"../node_modules/shallowequal/index.js","@emotion/stylis":"../node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"../node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"../node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"../node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"../globalStyles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36455,15 +36455,15 @@ const worksData = [{
   "title": "Country Quiz",
   "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
   "requirement": "Build with React hooks",
-  "screenshot": "./images/shotsnapp-country-quiz.png",
-  "url": "https://rhino-quotegenerator.netlify.app/",
+  "screenshot": "./images/countryquiz.png",
+  "url": "https://country-quiz-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/country-quiz"
 }, {
   "id": 4,
   "title": "Fotograph",
   "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
   "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
-  "screenshot": "./images/shotsnapp-fotograph.png",
+  "screenshot": "./images/shotsnapp-fotograph-modified.png",
   "url": "https://photograph-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/photograf-page"
 }, {
@@ -36471,7 +36471,7 @@ const worksData = [{
   "title": "Netflix Clone",
   "description": "A clone of the netflix website. Coded in the classroom",
   "requirement": "",
-  "screenshot": "./images/shotsnapp-netflix.png",
+  "screenshot": "./images/shotsnapp-netflix-modified.png",
   "url": "https://netflix-clone-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/netflix-clone"
 }, {
@@ -36479,7 +36479,7 @@ const worksData = [{
   "title": "Sports App",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
   "requirement": "Build only with HTML and SASS",
-  "screenshot": "./images/shotsnapp-sports-app.png",
+  "screenshot": "./images/shotsnapp-sports-app-modified.png",
   "url": "https://sports-app-rinon.netlify.app",
   "codeUrl": "https://github.com/ganamavo/birthday-app"
 }, {
@@ -36487,7 +36487,7 @@ const worksData = [{
   "title": "Birthday app",
   "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc.. Special features are planned and will be released as fundamentals are built. Users can edit and delete a list from the list of people.",
   "requirement": "Build with Vanilla js",
-  "screenshot": "./images/shotsnapp-birthday-app.png",
+  "screenshot": "./images/shotsnapp-birthday-app-modified.png",
   "url": "https://birthtday-app-rinon.netlify.app/",
   "codeUrl": "https://birthtday-app-rinon.netlify.app/"
 }, {
@@ -37998,7 +37998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64445" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53138" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

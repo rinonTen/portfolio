@@ -10,6 +10,9 @@ export default function HomeContainer() {
      return (
         <Home>
             <Home.SectionContainer>
+                 <Home.ImageContainer>
+                    <Home.Profile src="./images/my-image.jpg" alt="my image"/>
+                </Home.ImageContainer>
                 <Home.Article>
                     <Home.Header>
                         <Home.Heading>

@@ -7,18 +7,41 @@ const SectionContainer = styled.section`
     margin-right: auto;
     padding: 16px;
     padding-bottom: 58px;
-    
+    & div { 
+        text-align: center;
+            img { 
+                display: initial;
+                max-width: 40%;
+                border-radius: 50%;
+                margin-top: 40px; 
+                max-width: 40%;
+                border-radius: 50%; 
+            }
+    }
+
   @media(min-width: 1114px) { 
          display: flex;
          justify-content: space-between;
          padding-top: 100px;
          padding-bottom: 71px;
+
+         & div {
+        display: none;
+    }
     } 
 `;
 const Article = styled.article`
     text-align: center;
     @media(min-width: 1114px) {
         text-align: unset;
+    }
+
+    & ~ div {
+        display: none;
+
+        @media(min-width: 1114px) {
+            display: block;
+        }
     }
 `;
 
@@ -31,7 +54,7 @@ const ImageContainer = styled.div`
     }
 `;
 const Profile = styled.img`
-    display: none;
+    /* display: none; */
     
     @media(min-width: 1114px) {
         display: initial;

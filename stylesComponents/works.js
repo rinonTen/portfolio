@@ -60,8 +60,8 @@ const Image = styled.img`
     @media(min-width: 1114px) {
         width: 100%;
         margin-right: 0;
-        box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
         &:hover {
+        box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
         transition: transform 0.2s ease-out; 
         transform: scale(1.02);
     }

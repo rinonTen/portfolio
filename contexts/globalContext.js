@@ -1,15 +1,14 @@
 import React, { createContext, useState } from 'react';
-import { worksData, skills } from '../portfolioData';
+import { worksData } from '../portfolioData';
  
 const Context = createContext();
 
 function GlobalContext({children}) {
-    const [works, ] = useState(worksData);
-    const [technologies, ] = useState(skills);
+    const [works, ] = useState(worksData); 
     const [ showMenu, setShowMenu ] = useState(false); 
     
     return (
-        <Context.Provider value={{works, showMenu, setShowMenu, technologies}}>
+        <Context.Provider value={{works, showMenu, setShowMenu }}>
             {children}
         </Context.Provider>
     )

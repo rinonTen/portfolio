@@ -14,13 +14,7 @@ export default function HeaderContainer() {
     return (
         <Header>
             <Header.HeadingContainer>
-                <Link to="/">
-                    {/* <Header.Group>
-                            <Header.Avatar src="./images/my-image.jpg" alt="my image" />
-                            <Header.Heading>
-                                Rinon
-                            </Header.Heading>
-                    </Header.Group> */}
+                <Link to="/"> 
                 </Link>
                 <Header.DisplayMenuButton onClick={toggleMenu}>
 

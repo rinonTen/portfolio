@@ -4,7 +4,7 @@ const worksData = [
         "title": "Country Quiz",
         "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
         "requirement": "Build with React hooks",
-        "screenshot": "./images/countryquiz.png",
+        "screenshot": "./images/shotsnapp-country-quiz-modified.png",
         "url": "https://country-quiz-rinon.netlify.app/",
         "codeUrl": "https://github.com/ganamavo/country-quiz"
     },
@@ -55,41 +55,5 @@ const worksData = [
     },
 
 ]
-
-const skills = [
-    {
-        id: 1,
-        name: "HTML",
-        logo: "./images/html-logo.svg",
-        text: `the language that defines the structure of the web. Essentially every site is built using this language, which makes HTML absolutely vital for front-end developers.
-        If you want to built your website with HTML, we use an appropriate element for every content in your website`,
-    },
-    {
-        id: 2,
-        name: "SASS and CSS",
-        logo: "./images/sass-logo.svg",
-        text: `I create and define the page aesthetic, including your recommended layout, presentation, and formatting.
-        During our one-year training, we have built a lot of web pages from the simple ones to the most complicated ones with CSS/SASS`,
-    },
-    {
-        id: 5,
-        name: "Vanilla JS",
-        logo: "./images/vanilla-js-logo.svg",
-        text: "Allowing all the interactions that a website needs. I have built a lot of small web apps with vanilla javascript",
-    },
-    {
-        id: 3,
-        name: "React",
-        logo: "./images/react-logo.svg",
-        text: "Building user interfaces, compound components, working with testing and typescript that makes our web apps more reliable and flexible",
-    },
-    {
-        id: 4,
-        name: "Redux",
-        logo: "./images/redux-logo.svg",
-        text: "Let's manage our states with redux",
-    },
-   
-]
-
-export { worksData, skills };
+ 
+export { worksData };

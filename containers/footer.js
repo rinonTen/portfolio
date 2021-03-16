@@ -5,12 +5,7 @@ export default function FooterContainer() {
     return (
         <Footer>
             <Footer.ContactContainer>
-                <Footer.ContactGroup>
-                    {/* <Footer.Logo>
-                        <Footer.Link href="">
-                            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path d="M-2-4h24v24H-2z" /><path d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z" fill="#21243D" /></g></svg>
-                        </Footer.Link>
-                    </Footer.Logo> */}
+                <Footer.ContactGroup> 
                     <Footer.Logo>
                         <Footer.Link href="">
                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

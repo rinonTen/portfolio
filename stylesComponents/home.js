@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.main``;
+
 const SectionContainer = styled.section`
     max-width: 1114px;
     margin-left: auto;
@@ -11,7 +12,7 @@ const SectionContainer = styled.section`
         text-align: center;
             img { 
                 display: initial;
-                max-width: 40%;
+                max-width: 50%;
                 border-radius: 50%;
                 margin-top: 40px; 
                 max-width: 40%;
@@ -58,10 +59,10 @@ const Profile = styled.img`
     
     @media(min-width: 1114px) {
         display: initial;
-        max-width: 40%;
+        max-width: 100%;
         border-radius: 50%;
         margin-top: 40px;
-        margin-left: 70px;
+        margin-left: 114px;
     }
 `;
 const Header = styled.header``;

@@ -36466,15 +36466,16 @@ const worksData = [{
   "screenshot": "./images/shotsnapp-fotograph-modified.png",
   "url": "https://photograph-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/photograf-page"
-}, {
-  "id": 7,
-  "title": "Netflix Clone",
-  "description": "A clone of the netflix website. Coded in the classroom",
-  "requirement": "",
-  "screenshot": "./images/shotsnapp-netflix-modified.png",
-  "url": "https://netflix-clone-rinon.netlify.app/",
-  "codeUrl": "https://github.com/ganamavo/netflix-clone"
-}, {
+}, // {
+//     "id": 7,
+//     "title": "Netflix Clone",
+//     "description": "A clone of the netflix website. Coded in the classroom",
+//     "requirement": "",
+//     "screenshot": "./images/shotsnapp-netflix-modified.png",
+//     "url": "https://netflix-clone-rinon.netlify.app/",
+//     "codeUrl": "https://github.com/ganamavo/netflix-clone"
+// },
+{
   "id": 3,
   "title": "Sports App",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
@@ -36563,7 +36564,7 @@ const HeadingContainer = _styledComponents.default.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 100px;
+        padding-right: 120px;
     }
 `;
 exports.HeadingContainer = HeadingContainer;
@@ -36656,7 +36657,7 @@ const Lists = _styledComponents.default.ul`
 `;
 exports.Lists = Lists;
 const Item = _styledComponents.default.li`
-    a {
+    a { 
         font-style: normal; 
         font-weight: 600;
         font-size: 20px;
@@ -37074,7 +37075,7 @@ const SectionContainer = _styledComponents.default.section`
         text-align: center;
             img { 
                 display: initial;
-                max-width: 40%;
+                max-width: 50%;
                 border-radius: 50%;
                 margin-top: 40px; 
                 max-width: 40%;
@@ -37123,10 +37124,10 @@ const Profile = _styledComponents.default.img`
     
     @media(min-width: 1114px) {
         display: initial;
-        max-width: 40%;
+        max-width: 100%;
         border-radius: 50%;
         margin-top: 40px;
-        margin-left: 70px;
+        margin-left: 114px;
     }
 `;
 exports.Profile = Profile;
@@ -37750,7 +37751,7 @@ var _app = _interopRequireDefault(require("./app"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_globalContext.GlobalContext, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_globalStyles.GlobalStyles, null), /*#__PURE__*/_react.default.createElement(_app.default, null))), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../globalStyles":"../globalStyles.js","../contexts/globalContext":"../contexts/globalContext.js","./app":"app.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../globalStyles":"../globalStyles.js","../contexts/globalContext":"../contexts/globalContext.js","./app":"app.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -37778,7 +37779,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58468" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50000" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -37954,5 +37955,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/webroot.e31bb0bc.js.map

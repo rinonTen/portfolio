@@ -17,15 +17,15 @@ const worksData = [
         "url": "https://photograph-rinon.netlify.app/",
         "codeUrl": "https://github.com/ganamavo/photograf-page"
     },
-    {
-        "id": 7,
-        "title": "Netflix Clone",
-        "description": "A clone of the netflix website. Coded in the classroom",
-        "requirement": "",
-        "screenshot": "./images/shotsnapp-netflix-modified.png",
-        "url": "https://netflix-clone-rinon.netlify.app/",
-        "codeUrl": "https://github.com/ganamavo/netflix-clone"
-    },
+    // {
+    //     "id": 7,
+    //     "title": "Netflix Clone",
+    //     "description": "A clone of the netflix website. Coded in the classroom",
+    //     "requirement": "",
+    //     "screenshot": "./images/shotsnapp-netflix-modified.png",
+    //     "url": "https://netflix-clone-rinon.netlify.app/",
+    //     "codeUrl": "https://github.com/ganamavo/netflix-clone"
+    // },
     {
         "id": 3,
         "title": "Sports App",

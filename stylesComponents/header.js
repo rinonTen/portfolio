@@ -5,6 +5,7 @@ const Container = styled.header`
         text-decoration: none;
     }
 `;
+
 const HeadingContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -17,7 +18,7 @@ const HeadingContainer = styled.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 100px;
+        padding-right: 120px;
     }
 `;
 const Group = styled.div`
@@ -106,7 +107,7 @@ const Lists = styled.ul`
     }
 `;
 const Item = styled.li`
-    a {
+    a { 
         font-style: normal; 
         font-weight: 600;
         font-size: 20px;

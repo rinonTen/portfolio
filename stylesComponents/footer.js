@@ -21,7 +21,9 @@ const ContactGroup = styled.ul`
 
 const Logo = styled.li``; 
 
-const Link = styled.a``;
+const Link = styled.a`
+    color: "#21243D";
+`;
 
  export {
     FooterEl,

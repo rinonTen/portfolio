@@ -17,7 +17,6 @@ export default function HeaderContainer() {
                 <Link to="/"> 
                 </Link>
                 <Header.DisplayMenuButton onClick={toggleMenu}>
-
                 </Header.DisplayMenuButton>
                 {showMenu && <PageMenu />}
                 <PageMenu />

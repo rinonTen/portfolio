@@ -41,7 +41,7 @@ const Nav = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-    padding-top: 100px;
+    padding-top: 58px;
     
     &:last-of-type {
         display: none;
@@ -65,17 +65,26 @@ const Nav = styled.nav`
 `;
 
 const DisplayMenuButton = styled.button`
-    height: 30px;
+    font-size: 30px; 
     margin-top: 12px;
     margin-right: 16px;
     position: absolute;
     top: 12px;
     right: 2px;
     z-index: 1;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #21243D;
 
     @media(min-width: 1114px) {
         display: none;
     }
+`;
+
+const OpenMenu = styled.img`
+    width: 30px;
 `;
 
 const Lists = styled.ul`
@@ -127,6 +136,7 @@ export {
     HeadingContainer,
     Group,
     Avatar, 
+    OpenMenu,
     Nav,
     DisplayMenuButton,
     Lists,

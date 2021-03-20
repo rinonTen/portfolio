@@ -10,7 +10,7 @@ const ContactContainer = styled.nav`
 const ContactGroup = styled.ul`
     display: flex;
     justify-content: space-between;
-    max-width: 60%;
+    max-width: 37%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;

@@ -36535,7 +36535,7 @@ function GlobalContext({
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Item = exports.Lists = exports.DisplayMenuButton = exports.Nav = exports.Avatar = exports.Group = exports.HeadingContainer = exports.Container = void 0;
+exports.Item = exports.Lists = exports.DisplayMenuButton = exports.Nav = exports.OpenMenu = exports.Avatar = exports.Group = exports.HeadingContainer = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -36584,7 +36584,7 @@ const Nav = _styledComponents.default.nav`
     top: 0;
     left: 0;
     right: 0;
-    padding-top: 100px;
+    padding-top: 58px;
     
     &:last-of-type {
         display: none;
@@ -36608,19 +36608,28 @@ const Nav = _styledComponents.default.nav`
 `;
 exports.Nav = Nav;
 const DisplayMenuButton = _styledComponents.default.button`
-    height: 30px;
+    font-size: 30px; 
     margin-top: 12px;
     margin-right: 16px;
     position: absolute;
     top: 12px;
     right: 2px;
     z-index: 1;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #21243D;
 
     @media(min-width: 1114px) {
         display: none;
     }
 `;
 exports.DisplayMenuButton = DisplayMenuButton;
+const OpenMenu = _styledComponents.default.img`
+    width: 30px;
+`;
+exports.OpenMenu = OpenMenu;
 const Lists = _styledComponents.default.ul`
     background-color: gray;
     width: 90%;
@@ -36719,6 +36728,15 @@ Header.Avatar = function HeaderAvatar({
   }, restProps));
 };
 
+Header.OpenMenu = function HeaderOpenMenu({
+  src,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_header.OpenMenu, _extends({
+    src: src
+  }, restProps));
+};
+
 Header.Nav = function HeaderNav({
   children,
   restProps
@@ -36800,7 +36818,6 @@ const Title = _styledComponents.default.h2`
     @media(min-width: 1114px) {
         font-size: 22px;
         margin-bottom: 0;
-        line-height: 40px;
         padding-top: 32px;
     }
 `;
@@ -37300,7 +37317,7 @@ exports.ContactContainer = ContactContainer;
 const ContactGroup = _styledComponents.default.ul`
     display: flex;
     justify-content: space-between;
-    max-width: 60%;
+    max-width: 37%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -37475,7 +37492,10 @@ function HeaderContainer() {
     to: "/"
   }), /*#__PURE__*/_react.default.createElement(_components.Header.DisplayMenuButton, {
     onClick: toggleMenu
-  }), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, null), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
+  }, !showMenu ? /*#__PURE__*/_react.default.createElement(_components.Header.OpenMenu, {
+    src: "./images/icon_menu.svg",
+    alt: "Open menu icon"
+  }) : "X"), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, null), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
 }
 },{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./pageMenu":"../containers/pageMenu.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../containers/works.js":[function(require,module,exports) {
 "use strict";

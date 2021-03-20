@@ -17,6 +17,9 @@ export default function HeaderContainer() {
                 <Link to="/"> 
                 </Link>
                 <Header.DisplayMenuButton onClick={toggleMenu}>
+                {!showMenu ?
+                    <Header.OpenMenu src="./images/icon_menu.svg" alt="Open menu icon"/>
+                    : "X"}
                 </Header.DisplayMenuButton>
                 {showMenu && <PageMenu />}
                 <PageMenu />

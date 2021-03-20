@@ -5,6 +5,7 @@ import {
     Group,
     Avatar,
     Heading,
+    OpenMenu,
     Nav,
     DisplayMenuButton,
     Lists,
@@ -33,6 +34,10 @@ Header.Group = function HeaderGroup({children, restProps}) {
 
 Header.Avatar = function HeaderAvatar({src, restProps}) {
     return <Avatar src={src} {...restProps} />
+}
+
+Header.OpenMenu = function HeaderOpenMenu({src, restProps}) {
+    return <OpenMenu src={src} {...restProps} />
 }
 
 Header.Nav = function HeaderNav({children, restProps}) {

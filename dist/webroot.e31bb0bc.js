@@ -36425,12 +36425,16 @@ var _styledComponents = require("styled-components");
 
 const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
 html, body {
-    font-family: "", sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
     padding: 0;
     margin: 0;
+
+    p {
+        color: #21243D;
+    }
 
     ul {
         list-style: none;
@@ -36531,7 +36535,7 @@ function GlobalContext({
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Item = exports.Lists = exports.DisplayMenuButton = exports.Nav = exports.Heading = exports.Avatar = exports.Group = exports.HeadingContainer = exports.Container = void 0;
+exports.Item = exports.Lists = exports.DisplayMenuButton = exports.Nav = exports.Avatar = exports.Group = exports.HeadingContainer = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -36571,16 +36575,6 @@ const Avatar = _styledComponents.default.img`
     margin-right: 10px;
 `;
 exports.Avatar = Avatar;
-const Heading = _styledComponents.default.h1`
-    font-style: italic;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 50px; 
-    color: #000000;
-    margin-top: 0;
-
-`;
-exports.Heading = Heading;
 const Nav = _styledComponents.default.nav`
     position: absolute; 
     display: flex;
@@ -36868,7 +36862,14 @@ const WorkTitle = _styledComponents.default.h3`
 exports.WorkTitle = WorkTitle;
 const Link = _styledComponents.default.a``;
 exports.Link = Link;
-const WorkDescription = _styledComponents.default.p``;
+const WorkDescription = _styledComponents.default.p`
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px; 
+    color: #21243D;
+`;
 exports.WorkDescription = WorkDescription;
 const ButtonContainer = _styledComponents.default.div`
     width: 90%;
@@ -37133,7 +37134,6 @@ exports.Profile = Profile;
 const Header = _styledComponents.default.header``;
 exports.Header = Header;
 const Heading = _styledComponents.default.h2`
-    font-family: Heebo;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;

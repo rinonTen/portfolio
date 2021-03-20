@@ -32,15 +32,6 @@ const Avatar = styled.img`
     margin-right: 10px;
 `;
 
-const Heading = styled.h1`
-    font-style: italic;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 50px; 
-    color: #000000;
-    margin-top: 0;
-
-`;
 const Nav = styled.nav`
     position: absolute; 
     display: flex;
@@ -135,8 +126,7 @@ export {
     Container,
     HeadingContainer,
     Group,
-    Avatar,
-    Heading,
+    Avatar, 
     Nav,
     DisplayMenuButton,
     Lists,

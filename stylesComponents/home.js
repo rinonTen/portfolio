@@ -75,7 +75,6 @@ const Profile = styled.img`
 `;
 const Header = styled.header``;
 const Heading = styled.h2`
-    font-family: Heebo;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;

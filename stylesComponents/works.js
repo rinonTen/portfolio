@@ -90,7 +90,14 @@ const WorkTitle = styled.h3`
 `;
  
 const Link = styled.a``
-const WorkDescription = styled.p``;
+const WorkDescription = styled.p`
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px; 
+    color: #21243D;
+`;
 const ButtonContainer = styled.div`
     width: 90%;
     display: flex; 

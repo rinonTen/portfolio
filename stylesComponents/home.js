@@ -11,13 +11,21 @@ const SectionContainer = styled.section`
     & div { 
         text-align: center;
             img { 
-                display: initial;
-                max-width: 50%;
+                max-width: 40%;
+                display: initial; 
                 border-radius: 50%;
                 margin-top: 40px; 
-                max-width: 40%;
                 border-radius: 50%; 
             }
+             @media(min-width: 1114px) { 
+                 text-align: left;
+                 img {
+                      max-width: 46%;
+                      margin-top: 0;
+                      margin-left: 150px;
+                 }
+
+                }
     }
 
   @media(min-width: 1114px) { 
@@ -51,7 +59,7 @@ const ImageContainer = styled.div`
     border-radius: 50%;
     width: fit-content; */
     @media(min-width: 1114px) {
-        text-align: center;
+        text-align: left;
     }
 `;
 const Profile = styled.img`

@@ -11,14 +11,14 @@ const HeadingContainer = styled.div`
     justify-content: space-between;
     position: relative;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 50px;
     padding-left: 16px; 
 
     @media(min-width: 1114px) {
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 120px;
+        padding-right: 165px;
     }
 `;
 const Group = styled.div`
@@ -50,7 +50,7 @@ const Nav = styled.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 26%;
+        width: 20%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -65,11 +65,10 @@ const Nav = styled.nav`
 `;
 
 const DisplayMenuButton = styled.button`
-    font-size: 30px; 
-    margin-top: 12px;
+    font-size: 30px;  
     margin-right: 16px;
     position: absolute;
-    top: 12px;
+    top: 16px;
     right: 2px;
     z-index: 1;
     background-color: unset;
@@ -88,7 +87,7 @@ const OpenMenu = styled.img`
 `;
 
 const Lists = styled.ul`
-    background-color: gray;
+    background-color: lightgrey;
     width: 90%;
     height: 50%;
     display: flex;

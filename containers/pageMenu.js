@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components';
 
-export default function PageMenu() {
+export default function PageMenu({showMenuFunction, showMenu}) {
     return (
         <Header.Nav>
             <Header.Lists>
@@ -15,12 +15,7 @@ export default function PageMenu() {
                     <Link to='/works'>
                         Works
                     </Link>
-                </Header.Item> 
-                <Header.Item>
-                    <Link to='/contact'>
-                        Contact
-                    </Link>
-                </Header.Item>
+                </Header.Item>  
             </Header.Lists>
         </Header.Nav>
     )

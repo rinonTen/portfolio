@@ -36552,14 +36552,14 @@ const HeadingContainer = _styledComponents.default.div`
     justify-content: space-between;
     position: relative;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 50px;
     padding-left: 16px; 
 
     @media(min-width: 1114px) {
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 120px;
+        padding-right: 165px;
     }
 `;
 exports.HeadingContainer = HeadingContainer;
@@ -36593,7 +36593,7 @@ const Nav = _styledComponents.default.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 26%;
+        width: 20%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -36608,11 +36608,10 @@ const Nav = _styledComponents.default.nav`
 `;
 exports.Nav = Nav;
 const DisplayMenuButton = _styledComponents.default.button`
-    font-size: 30px; 
-    margin-top: 12px;
+    font-size: 30px;  
     margin-right: 16px;
     position: absolute;
-    top: 12px;
+    top: 16px;
     right: 2px;
     z-index: 1;
     background-color: unset;
@@ -36631,7 +36630,7 @@ const OpenMenu = _styledComponents.default.img`
 `;
 exports.OpenMenu = OpenMenu;
 const Lists = _styledComponents.default.ul`
-    background-color: gray;
+    background-color: lightgrey;
     width: 90%;
     height: 50%;
     display: flex;
@@ -37445,14 +37444,15 @@ var _components = require("../components");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function PageMenu() {
+function PageMenu({
+  showMenuFunction,
+  showMenu
+}) {
   return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "About")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works"
-  }, "Works")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/contact"
-  }, "Contact"))));
+  }, "Works"))));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/header.js":[function(require,module,exports) {
 "use strict";
@@ -37495,7 +37495,11 @@ function HeaderContainer() {
   }, !showMenu ? /*#__PURE__*/_react.default.createElement(_components.Header.OpenMenu, {
     src: "./images/icon_menu.svg",
     alt: "Open menu icon"
-  }) : "X"), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, null), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
+  }) : "X"), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, {
+    showMenuFunction: toggleMenu,
+    showMenu: showMenu,
+    setShowMenuFunction: setShowMenu
+  }), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
 }
 },{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./pageMenu":"../containers/pageMenu.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../containers/works.js":[function(require,module,exports) {
 "use strict";
@@ -37590,7 +37594,7 @@ function FooterContainer() {
     href: "mailto:rinon.ten@onja.org"
   }, "Email me")), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
     href: "https://github.com/ganamavo"
-  }, "Github")))));
+  }, "github")))));
 }
 },{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/index.js":[function(require,module,exports) {
 "use strict";
@@ -37778,7 +37782,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64778" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

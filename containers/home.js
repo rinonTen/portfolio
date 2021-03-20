@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Context } from '../contexts/globalContext';
 import { Home, Works } from '../components';  
 import WorksContainer  from './works';
- 
+
 export default function HomeContainer() {
     const { works } = useContext(Context);
     const worksElements = works && works.slice(0, 3).map(work => <WorksContainer key={work.id} {...work}/>)
@@ -23,7 +23,7 @@ export default function HomeContainer() {
                     <Home.Text>
                         We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have.
                         Open for everyone, work for everyone!
-                    </Home.Text>
+                    </Home.Text> 
                     <Home.ResumeButton>
                         See resume
                     </Home.ResumeButton>

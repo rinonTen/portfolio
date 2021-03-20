@@ -1,6 +1,5 @@
 import React from 'react';
-import { Footer } from '../components';
-
+import { Footer } from '../components'; 
 export default function FooterContainer() {
     return (
         <Footer>
@@ -13,7 +12,7 @@ export default function FooterContainer() {
                     </Footer.Logo>
                     <Footer.Logo>
                         <Footer.Link href="https://github.com/ganamavo">
-                           Github
+                            github
                         </Footer.Link>
                     </Footer.Logo> 
                 </Footer.ContactGroup>

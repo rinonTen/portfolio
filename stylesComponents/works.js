@@ -69,6 +69,14 @@ const Image = styled.img`
 `;
 const DescriptionContainer = styled.div`
     position: relative;
+    @media(min-width: 1114px) {
+        p:nth-of-type(2) { 
+            font-size: 18px;
+            line-height: 30px; 
+            margin-top: 24px;
+        }
+    }
+  
 `;
 const WorkTitle = styled.h3`
     font-weight: bold;

@@ -36839,6 +36839,14 @@ const Image = _styledComponents.default.img`
 exports.Image = Image;
 const DescriptionContainer = _styledComponents.default.div`
     position: relative;
+    @media(min-width: 1114px) {
+        p:nth-of-type(2) { 
+            font-size: 18px;
+            line-height: 30px; 
+            margin-top: 24px;
+        }
+    }
+  
 `;
 exports.DescriptionContainer = DescriptionContainer;
 const WorkTitle = _styledComponents.default.h3`
@@ -37304,7 +37312,11 @@ exports.ContactGroup = ContactGroup;
 const Logo = _styledComponents.default.li``;
 exports.Logo = Logo;
 const Link = _styledComponents.default.a`
-    color: "#21243D";
+     color: #21243D;
+
+     &:hover {
+         color: #FF6464;
+     }
 `;
 exports.Link = Link;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/footer.js":[function(require,module,exports) {

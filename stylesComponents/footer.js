@@ -22,7 +22,11 @@ const ContactGroup = styled.ul`
 const Logo = styled.li``; 
 
 const Link = styled.a`
-    color: "#21243D";
+     color: #21243D;
+
+     &:hover {
+         color: #FF6464;
+     }
 `;
 
  export {

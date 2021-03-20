@@ -36454,7 +36454,7 @@ const worksData = [{
   "id": 6,
   "title": "Country Quiz",
   "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
-  "requirement": "Build with React hooks",
+  "requirement": "Built with React",
   "screenshot": "./images/shotsnapp-country-quiz.png",
   "url": "https://country-quiz-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/country-quiz"
@@ -36462,7 +36462,7 @@ const worksData = [{
   "id": 4,
   "title": "Fotograph",
   "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
-  "requirement": "Build with only html, SASS and a little bit of Javascript for the images slideshow",
+  "requirement": "Built with SASS and Javascript for the images slideshow",
   "screenshot": "./images/shotsnapp-fotograph.png",
   "url": "https://photograph-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/photograf-page"
@@ -36470,7 +36470,7 @@ const worksData = [{
   "id": 3,
   "title": "Sports App",
   "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
-  "requirement": "Build only with HTML and SASS",
+  "requirement": "Built with HTML and SASS",
   "screenshot": "./images/shotsnapp-sports-app.png",
   "url": "https://sports-app-rinon.netlify.app",
   "codeUrl": "https://github.com/ganamavo/birthday-app"
@@ -36478,7 +36478,7 @@ const worksData = [{
   "id": 11,
   "title": "Birthday app",
   "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc.. Special features are planned and will be released as fundamentals are built. Users can edit and delete a list from the list of people.",
-  "requirement": "Build with Vanilla js",
+  "requirement": "Built with Vanilla js",
   "screenshot": "./images/shotsnapp-birthday-app.png",
   "url": "https://birthtday-app-rinon.netlify.app/",
   "codeUrl": "https://birthtday-app-rinon.netlify.app/"
@@ -36486,7 +36486,7 @@ const worksData = [{
   "id": 10,
   "title": "WindBnb",
   "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
-  "requirement": "Build with React",
+  "requirement": "Built with React",
   "screenshot": "./images/airbnb-clone.png",
   "url": "https://windbnb-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/airbnb-clone"
@@ -37476,6 +37476,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function WorksContainer({
   title,
   description,
+  requirement,
   codeUrl,
   screenshot,
   url
@@ -37489,7 +37490,7 @@ function WorksContainer({
     href: url
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Demo")), /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: codeUrl
-  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, description)));
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, description), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, requirement)));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/home.js":[function(require,module,exports) {
 "use strict";

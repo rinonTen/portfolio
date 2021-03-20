@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Works } from '../components';
 
-export default function WorksContainer({ title, description, codeUrl, screenshot, url }) {
+export default function WorksContainer({ title, description, requirement, codeUrl, screenshot, url }) {
     return (
         <Works.Article>
             <Works.ImageContainer>
@@ -21,6 +21,7 @@ export default function WorksContainer({ title, description, codeUrl, screenshot
                     </Works.Link>
                 </Works.ButtonContainer>
                 <Works.WorkDescription>{description}</Works.WorkDescription>
+                <Works.WorkDescription>{requirement}</Works.WorkDescription>
             </Works.DescriptionContainer>
         </Works.Article>
     )

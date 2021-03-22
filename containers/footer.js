@@ -15,6 +15,11 @@ export default function FooterContainer() {
                             github
                         </Footer.Link>
                     </Footer.Logo> 
+                    <Footer.Logo>
+                        <Footer.Link href="https://onja.org">
+                           See organisation
+                        </Footer.Link>
+                    </Footer.Logo> 
                 </Footer.ContactGroup>
             </Footer.ContactContainer>
         </Footer>

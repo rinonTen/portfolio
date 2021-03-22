@@ -97,9 +97,7 @@ const WorkTitle = styled.h3`
 `;
  
 const Link = styled.a``
-const WorkDescription = styled.p`
-    font-family: Heebo;
-    font-style: normal;
+const WorkDescription = styled.p`  
     font-weight: normal;
     font-size: 16px;
     line-height: 23px; 

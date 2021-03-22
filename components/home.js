@@ -4,6 +4,7 @@ import {
     Article,
     SectionContainer,
     ImageContainer,
+    ImgShadow,
     Profile,
     Header,
     Heading,
@@ -34,9 +35,15 @@ Home.Text = function HomeText({ children, restProps }) {
 Home.ResumeButton = function HomeResumeButton({ children, restProps }) {
     return <ResumeButton {...restProps}>{children}</ResumeButton>
 }
+
 Home.ImageContainer = function HomeImageContainer({ children, restProps }) {
     return <ImageContainer {...restProps}>{children}</ImageContainer>
 }
+
+Home.ImgShadow = function HomeImgShadow({ children, restProps }) {
+    return <ImgShadow {...restProps}>{children}</ImgShadow>
+}
+
 Home.Profile = function HomeProfile({ src, restProps }) {
     return <Profile src={src} {...restProps} />  
 }

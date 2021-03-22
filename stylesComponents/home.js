@@ -39,6 +39,10 @@ const SectionContainer = styled.section`
     }
     } 
 `;
+const ImgShadow = styled.div`
+    width: 284px;
+    border-raduis: 50%;
+`;
 const Article = styled.article`
     text-align: center;
     @media(min-width: 1114px) {
@@ -134,6 +138,7 @@ export {
     ImageContainer,
     Profile,
     Header,
+    ImgShadow,
     Heading,
     Text,
     ResumeButton

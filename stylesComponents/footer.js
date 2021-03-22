@@ -15,7 +15,7 @@ const ContactGroup = styled.ul`
     margin-right: auto;
     padding: 0;
     @media(min-width: 1114px) {
-        max-width: 18%;
+        max-width: 25%;
     } 
 `;
 

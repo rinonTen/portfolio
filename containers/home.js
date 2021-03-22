@@ -30,6 +30,7 @@ export default function HomeContainer() {
                 </Home.Article>
                 <Home.ImageContainer>
                     <Home.Profile src="./images/my-image.jpg" alt="my image"/>
+                    <Home.ImgShadow/>
                 </Home.ImageContainer>
             </Home.SectionContainer> 
             <Works>

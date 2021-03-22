@@ -36886,9 +36886,7 @@ const WorkTitle = _styledComponents.default.h3`
 exports.WorkTitle = WorkTitle;
 const Link = _styledComponents.default.a``;
 exports.Link = Link;
-const WorkDescription = _styledComponents.default.p`
-    font-family: Heebo;
-    font-style: normal;
+const WorkDescription = _styledComponents.default.p`  
     font-weight: normal;
     font-size: 16px;
     line-height: 23px; 
@@ -37073,7 +37071,7 @@ Works.Button = function WorksButton({
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ResumeButton = exports.Text = exports.Heading = exports.Header = exports.Profile = exports.ImageContainer = exports.Article = exports.SectionContainer = exports.Container = void 0;
+exports.ResumeButton = exports.Text = exports.Heading = exports.ImgShadow = exports.Header = exports.Profile = exports.ImageContainer = exports.Article = exports.SectionContainer = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -37119,6 +37117,11 @@ const SectionContainer = _styledComponents.default.section`
     } 
 `;
 exports.SectionContainer = SectionContainer;
+const ImgShadow = _styledComponents.default.div`
+    width: 284px;
+    border-raduis: 50%;
+`;
+exports.ImgShadow = ImgShadow;
 const Article = _styledComponents.default.article`
     text-align: center;
     @media(min-width: 1114px) {
@@ -37284,6 +37287,13 @@ Home.ImageContainer = function HomeImageContainer({
   return /*#__PURE__*/_react.default.createElement(_home.ImageContainer, restProps, children);
 };
 
+Home.ImgShadow = function HomeImgShadow({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.ImgShadow, restProps, children);
+};
+
 Home.Profile = function HomeProfile({
   src,
   restProps
@@ -37321,7 +37331,7 @@ const ContactGroup = _styledComponents.default.ul`
     margin-right: auto;
     padding: 0;
     @media(min-width: 1114px) {
-        max-width: 18%;
+        max-width: 25%;
     } 
 `;
 exports.ContactGroup = ContactGroup;
@@ -37573,7 +37583,7 @@ function HomeContainer() {
   })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Web developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my-image.jpg",
     alt: "my image"
-  }))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
+  }), /*#__PURE__*/_react.default.createElement(_components.Home.ImgShadow, null))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
 }
 },{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js"}],"../containers/footer.js":[function(require,module,exports) {
 "use strict";
@@ -37594,7 +37604,9 @@ function FooterContainer() {
     href: "mailto:rinon.ten@onja.org"
   }, "Email me")), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
     href: "https://github.com/ganamavo"
-  }, "github")))));
+  }, "github")), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+    href: "https://onja.org"
+  }, "See organisation")))));
 }
 },{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/index.js":[function(require,module,exports) {
 "use strict";

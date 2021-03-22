@@ -12,6 +12,11 @@ export default function PageMenu({showMenuFunction, showMenu}) {
                     </Link>
                 </Header.Item>
                 <Header.Item>
+                    <Link to='/'>
+                        About me
+                    </Link>
+                </Header.Item>  
+                <Header.Item>
                     <Link to='/works'>
                         Works
                     </Link>

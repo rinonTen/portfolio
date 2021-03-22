@@ -36559,7 +36559,7 @@ const HeadingContainer = _styledComponents.default.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 165px;
+        padding-right: 110px;
     }
 `;
 exports.HeadingContainer = HeadingContainer;
@@ -36593,7 +36593,7 @@ const Nav = _styledComponents.default.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 20%;
+        width: 25%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -37461,6 +37461,8 @@ function PageMenu({
   return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "About")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "About me")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works"
   }, "Works"))));
 }
@@ -37794,7 +37796,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64778" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55781" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

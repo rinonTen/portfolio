@@ -46,5 +46,5 @@ const worksData = [
     },
 
 ]
- 
-export { worksData };
+
+export { worksData }

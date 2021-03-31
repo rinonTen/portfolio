@@ -17,7 +17,7 @@ export default function HomeContainer() {
                     <Home.Header>
                         <Home.Heading>
                             Hi, I am Rinon,
-                            Web developer
+                            Front-end developer
                         </Home.Heading>
                     </Home.Header>
                     <Home.Text>

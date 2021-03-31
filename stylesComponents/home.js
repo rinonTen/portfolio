@@ -9,28 +9,31 @@ const SectionContainer = styled.section`
     padding: 16px;
     padding-bottom: 58px;
     & div { 
+        height: 215px;
+        /* background-image: url("../images/ellipse-mobile.png"); */
+        background-repeat: no-repeat;
+        background-position-y: 80%;
+        background-position-x: 46%;
         text-align: center;
-            img { 
-                max-width: 40%;
+            img {  
                 display: initial; 
                 border-radius: 50%;
-                margin-top: 40px; 
-                border-radius: 50%; 
+                margin-top: 20px;  
             }
              @media(min-width: 1114px) { 
+                height: unset;
+                background-image: url("../images/ellipse-desktop.png");
+                background-repeat: no-repeat;
+                background-position-y: 31%;
+                background-position-x: 78%;
+                padding-left: 10px;
                  text-align: left;
-                 img {
-                      max-width: 46%;
-                      margin-top: 0;
-                      margin-left: 150px;
-                 }
-
                 }
     }
 
   @media(min-width: 1114px) { 
-         display: flex;
-         justify-content: space-between;
+         display: flex; 
+         column-gap: 100px;
          padding-top: 100px;
          padding-bottom: 71px;
 
@@ -40,12 +43,12 @@ const SectionContainer = styled.section`
     } 
 `;
 const ImgShadow = styled.div`
-    width: 284px;
-    border-raduis: 50%;
+    width: 284px; 
 `;
 const Article = styled.article`
     text-align: center;
     @media(min-width: 1114px) {
+        max-width: 58%;
         text-align: unset;
     }
 
@@ -59,22 +62,20 @@ const Article = styled.article`
 `;
 
 const ImageContainer = styled.div`
-    /* background: #EDF7FA;
-    border-radius: 50%;
-    width: fit-content; */
     @media(min-width: 1114px) {
         text-align: left;
     }
 `;
-const Profile = styled.img`
-    /* display: none; */
-    
+const Profile = styled.img` 
+    width: 174px;
+    height: 180px;
+
     @media(min-width: 1114px) {
+        width: 243px;
+        height: 243px;
         display: initial;
         max-width: 100%;
         border-radius: 50%;
-        margin-top: 40px;
-        margin-left: 114px;
     }
 `;
 const Header = styled.header``;
@@ -87,7 +88,7 @@ const Heading = styled.h2`
     color: #21243D;
 
     @media(min-width: 1114px) { 
-        width: 350px;
+        width: 415px;
         font-size: 44px;
         line-height: 60px;  
         text-align: unset;
@@ -101,8 +102,7 @@ const Text = styled.p`
     margin-bottom: 27px;
     color: #21243D;
 
-    @media(min-width: 1114px) {
-        width: 497px;
+    @media(min-width: 1114px) { 
         text-align: unset; 
         margin-bottom: 38px;
     }

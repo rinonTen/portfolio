@@ -8,15 +8,11 @@ const ContactContainer = styled.nav`
 `;
   
 const ContactGroup = styled.ul`
-    display: flex;
-    justify-content: space-between;
-    max-width: 37%;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;  
+    justify-content: center;
+    column-gap: 35px;
     padding: 0;
-    @media(min-width: 1114px) {
-        max-width: 25%;
-    } 
+     
 `;
 
 const Logo = styled.li``; 
@@ -29,6 +25,7 @@ const Link = styled.a`
      }
 `;
 
+const Icon = styled.img``;
  export {
     FooterEl,
     Container,  
@@ -36,4 +33,5 @@ const Link = styled.a`
     ContactContainer,
     Link,
     Logo, 
+    Icon
 }

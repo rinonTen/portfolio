@@ -5,7 +5,7 @@ const Container = styled.section`
 `;
 const Group = styled.div``;
 const Section = styled.div`
-    padding-bottom: 150px;
+    padding-bottom: 0;
     @media(min-width: 1114px) {
         padding-bottom: 83px;
     }
@@ -38,17 +38,18 @@ const Title = styled.h2`
     }
 `;
 const Article = styled.article`
-    padding-top: 12px;
+    padding-top: 22px;
     border-bottom: 1px solid #E0E0E0;
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: 40% auto; 
+        grid-template-columns: auto auto; 
         column-gap: 18px;
         padding-top: 32px;
         padding-bottom: 32px; 
     }
 `;
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+`;
 const Image = styled.img`
     margin-right: 16px;
     width: 100%;

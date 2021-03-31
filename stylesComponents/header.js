@@ -18,7 +18,7 @@ const HeadingContainer = styled.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 110px;
+        padding-right: 60px;
     }
 `;
 const Group = styled.div`

@@ -36559,7 +36559,7 @@ const HeadingContainer = _styledComponents.default.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 110px;
+        padding-right: 60px;
     }
 `;
 exports.HeadingContainer = HeadingContainer;
@@ -36766,7 +36766,244 @@ Header.Item = function HeaderItem({
 }) {
   return /*#__PURE__*/_react.default.createElement(_header.Item, restProps, children);
 };
-},{"react":"../node_modules/react/index.js","../stylesComponents/header":"../stylesComponents/header.js"}],"../stylesComponents/works.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../stylesComponents/header":"../stylesComponents/header.js"}],"../stylesComponents/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ResumeButton = exports.Text = exports.Heading = exports.ImgShadow = exports.Header = exports.Profile = exports.ImageContainer = exports.Article = exports.SectionContainer = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.main``;
+exports.Container = Container;
+const SectionContainer = _styledComponents.default.section`
+    max-width: 1114px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    padding-bottom: 58px;
+    & div { 
+        height: 215px;
+        /* background-image: url("../images/ellipse-mobile.png"); */
+        background-repeat: no-repeat;
+        background-position-y: 80%;
+        background-position-x: 46%;
+        text-align: center;
+            img {  
+                display: initial; 
+                border-radius: 50%;
+                margin-top: 20px;  
+            }
+             @media(min-width: 1114px) { 
+                height: unset;
+                background-image: url("../images/ellipse-desktop.png");
+                background-repeat: no-repeat;
+                background-position-y: 31%;
+                background-position-x: 78%;
+                padding-left: 10px;
+                 text-align: left;
+                }
+    }
+
+  @media(min-width: 1114px) { 
+         display: flex; 
+         column-gap: 100px;
+         padding-top: 100px;
+         padding-bottom: 71px;
+
+         & div {
+        display: none;
+    }
+    } 
+`;
+exports.SectionContainer = SectionContainer;
+const ImgShadow = _styledComponents.default.div`
+    width: 284px; 
+`;
+exports.ImgShadow = ImgShadow;
+const Article = _styledComponents.default.article`
+    text-align: center;
+    @media(min-width: 1114px) {
+        max-width: 58%;
+        text-align: unset;
+    }
+
+    & ~ div {
+        display: none;
+
+        @media(min-width: 1114px) {
+            display: block;
+        }
+    }
+`;
+exports.Article = Article;
+const ImageContainer = _styledComponents.default.div`
+    @media(min-width: 1114px) {
+        text-align: left;
+    }
+`;
+exports.ImageContainer = ImageContainer;
+const Profile = _styledComponents.default.img` 
+    width: 174px;
+    height: 180px;
+
+    @media(min-width: 1114px) {
+        width: 243px;
+        height: 243px;
+        display: initial;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+`;
+exports.Profile = Profile;
+const Header = _styledComponents.default.header``;
+exports.Header = Header;
+const Heading = _styledComponents.default.h2`
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px; 
+    text-align: center; 
+    color: #21243D;
+
+    @media(min-width: 1114px) { 
+        width: 415px;
+        font-size: 44px;
+        line-height: 60px;  
+        text-align: unset;
+    } 
+`;
+exports.Heading = Heading;
+const Text = _styledComponents.default.p`
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center; 
+    margin-bottom: 27px;
+    color: #21243D;
+
+    @media(min-width: 1114px) { 
+        text-align: unset; 
+        margin-bottom: 38px;
+    }
+`;
+exports.Text = Text;
+const ResumeButton = _styledComponents.default.button`
+    background-color: #FF6464;
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: transparent;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: all ease .3s;
+
+    &:hover {
+        background-color: lightpink;
+        transform: scale(1.075);
+        box-shadow: inset 0 0 0 2px #4b6cc1;
+    }
+`;
+exports.ResumeButton = ResumeButton;
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Home;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _home = require("../stylesComponents/home");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function Home({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.Container, restProps, children);
+}
+
+Home.SectionContainer = function HomeSectionContainer({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.SectionContainer, restProps, children);
+};
+
+Home.Article = function HomeArticle({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.Article, restProps, children);
+};
+
+Home.Header = function HomeHeader({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.Header, restProps, children);
+};
+
+Home.Heading = function HomeHeading({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.Heading, restProps, children);
+};
+
+Home.Text = function HomeText({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.Text, restProps, children);
+};
+
+Home.ResumeButton = function HomeResumeButton({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.ResumeButton, restProps, children);
+};
+
+Home.ImageContainer = function HomeImageContainer({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.ImageContainer, restProps, children);
+};
+
+Home.ImgShadow = function HomeImgShadow({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.ImgShadow, restProps, children);
+};
+
+Home.Profile = function HomeProfile({
+  src,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_home.Profile, _extends({
+    src: src
+  }, restProps));
+};
+},{"react":"../node_modules/react/index.js","../stylesComponents/home":"../stylesComponents/home.js"}],"../stylesComponents/works.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36785,7 +37022,7 @@ exports.Container = Container;
 const Group = _styledComponents.default.div``;
 exports.Group = Group;
 const Section = _styledComponents.default.div`
-    padding-bottom: 150px;
+    padding-bottom: 0;
     @media(min-width: 1114px) {
         padding-bottom: 83px;
     }
@@ -36822,18 +37059,19 @@ const Title = _styledComponents.default.h2`
 `;
 exports.Title = Title;
 const Article = _styledComponents.default.article`
-    padding-top: 12px;
+    padding-top: 22px;
     border-bottom: 1px solid #E0E0E0;
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: 40% auto; 
+        grid-template-columns: auto auto; 
         column-gap: 18px;
         padding-top: 32px;
         padding-bottom: 32px; 
     }
 `;
 exports.Article = Article;
-const ImageContainer = _styledComponents.default.div``;
+const ImageContainer = _styledComponents.default.div`
+`;
 exports.ImageContainer = ImageContainer;
 const Image = _styledComponents.default.img`
     margin-right: 16px;
@@ -37065,250 +37303,123 @@ Works.Button = function WorksButton({
 }) {
   return /*#__PURE__*/_react.default.createElement(_works.Button, restProps, children);
 };
-},{"react":"../node_modules/react/index.js","../stylesComponents/works":"../stylesComponents/works.js"}],"../stylesComponents/home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../stylesComponents/works":"../stylesComponents/works.js"}],"../stylesComponents/about.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ResumeButton = exports.Text = exports.Heading = exports.ImgShadow = exports.Header = exports.Profile = exports.ImageContainer = exports.Article = exports.SectionContainer = exports.Container = void 0;
+exports.Text = exports.SubHeading = exports.Article = exports.Container = exports.Heading = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Container = _styledComponents.default.main``;
-exports.Container = Container;
-const SectionContainer = _styledComponents.default.section`
+const Heading = _styledComponents.default.h2`
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 60px;
+    color: #21243D;
+    margin: 0;
+    margin-bottom: 18px;
+    @media(min-width: 1114px) {
+        font-size: 44px;
+        line-height: 60px; 
+        margin-bottom: 55px;
+    }
+`;
+exports.Heading = Heading;
+const Container = _styledComponents.default.div`
     max-width: 1114px;
     margin-left: auto;
     margin-right: auto;
-    padding: 16px;
-    padding-bottom: 58px;
-    & div { 
-        text-align: center;
-            img { 
-                max-width: 40%;
-                display: initial; 
-                border-radius: 50%;
-                margin-top: 40px; 
-                border-radius: 50%; 
-            }
-             @media(min-width: 1114px) { 
-                 text-align: left;
-                 img {
-                      max-width: 46%;
-                      margin-top: 0;
-                      margin-left: 150px;
-                 }
+    padding-left: 18px;
+    padding-right: 18px;
 
-                }
-    }
-
-  @media(min-width: 1114px) { 
-         display: flex;
-         justify-content: space-between;
-         padding-top: 100px;
-         padding-bottom: 71px;
-
-         & div {
-        display: none;
-    }
-    } 
-`;
-exports.SectionContainer = SectionContainer;
-const ImgShadow = _styledComponents.default.div`
-    width: 284px;
-    border-raduis: 50%;
-`;
-exports.ImgShadow = ImgShadow;
-const Article = _styledComponents.default.article`
-    text-align: center;
     @media(min-width: 1114px) {
-        text-align: unset;
+        padding-left: 0;
+        padding-right: 0;
     }
-
-    & ~ div {
-        display: none;
-
-        @media(min-width: 1114px) {
-            display: block;
-        }
-    }
+`;
+exports.Container = Container;
+const Article = _styledComponents.default.article`
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E0E0E0;
 `;
 exports.Article = Article;
-const ImageContainer = _styledComponents.default.div`
-    /* background: #EDF7FA;
-    border-radius: 50%;
-    width: fit-content; */
-    @media(min-width: 1114px) {
-        text-align: left;
-    }
-`;
-exports.ImageContainer = ImageContainer;
-const Profile = _styledComponents.default.img`
-    /* display: none; */
-    
-    @media(min-width: 1114px) {
-        display: initial;
-        max-width: 100%;
-        border-radius: 50%;
-        margin-top: 40px;
-        margin-left: 114px;
-    }
-`;
-exports.Profile = Profile;
-const Header = _styledComponents.default.header``;
-exports.Header = Header;
-const Heading = _styledComponents.default.h2`
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 40px; 
-    text-align: center; 
+const SubHeading = _styledComponents.default.h3`
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 38px;
     color: #21243D;
-
-    @media(min-width: 1114px) { 
-        width: 350px;
-        font-size: 44px;
-        line-height: 60px;  
-        text-align: unset;
-    } 
+    @media(min-width: 1114px) {
+        font-size: 30px;
+        line-height: 44px; 
+    }
 `;
-exports.Heading = Heading;
+exports.SubHeading = SubHeading;
 const Text = _styledComponents.default.p`
     font-weight: normal;
     font-size: 16px;
-    line-height: 23px;
-    text-align: center; 
-    margin-bottom: 27px;
+    line-height: 23px; 
     color: #21243D;
-
-    @media(min-width: 1114px) {
-        width: 497px;
-        text-align: unset; 
-        margin-bottom: 38px;
-    }
 `;
 exports.Text = Text;
-const ResumeButton = _styledComponents.default.button`
-    background-color: #FF6464;
-    font-family: Heebo;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 29px;
-    color: #FFFFFF;
-    padding: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
-    border: transparent;
-    border-radius: 50px;
-    outline: none;
-    cursor: pointer;
-    transition: all ease .3s;
-
-    &:hover {
-        background-color: lightpink;
-        transform: scale(1.075);
-        box-shadow: inset 0 0 0 2px #4b6cc1;
-    }
-`;
-exports.ResumeButton = ResumeButton;
-},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/home.js":[function(require,module,exports) {
+},{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/about.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Home;
+exports.default = About;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _home = require("../stylesComponents/home");
+var _about = require("../stylesComponents/about");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function Home({
+function About({
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_home.Container, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_about.Container, restProps, children);
 }
 
-Home.SectionContainer = function HomeSectionContainer({
+About.Article = function AboutArticle({
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_home.SectionContainer, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_about.Article, restProps, children);
 };
 
-Home.Article = function HomeArticle({
+About.Heading = function AboutHeading({
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_home.Article, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_about.Heading, restProps, children);
 };
 
-Home.Header = function HomeHeader({
+About.SubHeading = function AboutSubHeading({
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_home.Header, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_about.SubHeading, restProps, children);
 };
 
-Home.Heading = function HomeHeading({
+About.Text = function AboutText({
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_home.Heading, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_about.Text, restProps, children);
 };
-
-Home.Text = function HomeText({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_home.Text, restProps, children);
-};
-
-Home.ResumeButton = function HomeResumeButton({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_home.ResumeButton, restProps, children);
-};
-
-Home.ImageContainer = function HomeImageContainer({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_home.ImageContainer, restProps, children);
-};
-
-Home.ImgShadow = function HomeImgShadow({
-  children,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_home.ImgShadow, restProps, children);
-};
-
-Home.Profile = function HomeProfile({
-  src,
-  restProps
-}) {
-  return /*#__PURE__*/_react.default.createElement(_home.Profile, _extends({
-    src: src
-  }, restProps));
-};
-},{"react":"../node_modules/react/index.js","../stylesComponents/home":"../stylesComponents/home.js"}],"../stylesComponents/footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../stylesComponents/about":"../stylesComponents/about.js"}],"../stylesComponents/footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Logo = exports.Link = exports.ContactContainer = exports.ContactGroup = exports.Container = exports.FooterEl = void 0;
+exports.Icon = exports.Logo = exports.Link = exports.ContactContainer = exports.ContactGroup = exports.Container = exports.FooterEl = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -37324,15 +37435,11 @@ const ContactContainer = _styledComponents.default.nav`
 `;
 exports.ContactContainer = ContactContainer;
 const ContactGroup = _styledComponents.default.ul`
-    display: flex;
-    justify-content: space-between;
-    max-width: 37%;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;  
+    justify-content: center;
+    column-gap: 35px;
     padding: 0;
-    @media(min-width: 1114px) {
-        max-width: 25%;
-    } 
+     
 `;
 exports.ContactGroup = ContactGroup;
 const Logo = _styledComponents.default.li``;
@@ -37345,6 +37452,8 @@ const Link = _styledComponents.default.a`
      }
 `;
 exports.Link = Link;
+const Icon = _styledComponents.default.img``;
+exports.Icon = Icon;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/footer.js":[function(require,module,exports) {
 "use strict";
 
@@ -37398,6 +37507,15 @@ Footer.Logo = function FooterLogo({
 }) {
   return /*#__PURE__*/_react.default.createElement(_footer.Logo, restProps, children);
 };
+
+Footer.Icon = function FooterIcon({
+  src,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_footer.Icon, _extends({}, restProps, {
+    src: src
+  }));
+};
 },{"react":"../node_modules/react/index.js","../stylesComponents/footer":"../stylesComponents/footer.js"}],"../components/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -37410,16 +37528,22 @@ Object.defineProperty(exports, "Header", {
     return _header.default;
   }
 });
+Object.defineProperty(exports, "Home", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
 Object.defineProperty(exports, "Works", {
   enumerable: true,
   get: function () {
     return _works.default;
   }
 });
-Object.defineProperty(exports, "Home", {
+Object.defineProperty(exports, "About", {
   enumerable: true,
   get: function () {
-    return _home.default;
+    return _about.default;
   }
 });
 Object.defineProperty(exports, "Footer", {
@@ -37431,14 +37555,16 @@ Object.defineProperty(exports, "Footer", {
 
 var _header = _interopRequireDefault(require("./header"));
 
+var _home = _interopRequireDefault(require("./home"));
+
 var _works = _interopRequireDefault(require("./works"));
 
-var _home = _interopRequireDefault(require("./home"));
+var _about = _interopRequireDefault(require("./about"));
 
 var _footer = _interopRequireDefault(require("./footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"../components/header.js","./works":"../components/works.js","./home":"../components/home.js","./footer":"../components/footer.js"}],"../containers/pageMenu.js":[function(require,module,exports) {
+},{"./header":"../components/header.js","./home":"../components/home.js","./works":"../components/works.js","./about":"../components/about.js","./footer":"../components/footer.js"}],"../containers/pageMenu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37461,7 +37587,7 @@ function PageMenu({
   return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "About")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
+    to: "/about"
   }, "About me")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works"
   }, "Works"))));
@@ -37582,12 +37708,29 @@ function HomeContainer() {
   return /*#__PURE__*/_react.default.createElement(_components.Home, null, /*#__PURE__*/_react.default.createElement(_components.Home.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my-image.jpg",
     alt: "my image"
-  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Web developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
+  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my-image.jpg",
     alt: "my image"
   }), /*#__PURE__*/_react.default.createElement(_components.Home.ImgShadow, null))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
 }
-},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js"}],"../containers/footer.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js"}],"../containers/about.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = AboutContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function AboutContainer() {
+  return /*#__PURE__*/_react.default.createElement(_components.About, null, /*#__PURE__*/_react.default.createElement(_components.About.Heading, null, "Small brief about me"), /*#__PURE__*/_react.default.createElement(_components.About.Article, null, /*#__PURE__*/_react.default.createElement(_components.About.SubHeading, null, "A Short story"), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I am Rinon. I come from a Vodiriana Moramanga but I am currently living in Mahanoro which is a small town in Madagascar where Onja is located. I finished high school in 2016 at the age of 18. Then started wondering what to do next."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I had an ambition to go on to study at the university but I couldn't because I had a financial problem. As most people in my hometown do, I was working as a farmer dispite the knowledge and kills that I have gained from school. It is not easy to ear your living from agriculture. Imagine bearing the hot weather or rain the whole day. I enjoyed it though but I had to leave my village in 2017 in order to look for a different life by working in a small company in the city but it could not really help me and my familly because I have to help my younger siblings as well with their studies."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "While wondering what to do next after quiting this job, I received a letter from Onja to take the first test to be part of the students who are going to study english for two years and programming for a year. I passed it and went on to the next steps. Then I met all of the requirements that Onja set. Now, I have been studying english for two years and programming for over a year.I never spoke english or used a computer before coming to Onja but now, I can have smooth conversations with any english native speaker and I can build a lot of web projects with the technoliogies that I have learned. My life has been ectic but enjoyable as well. We have to work hard in order to get into the level that is aimed."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "Onja is a great opportunity for me and for other future students too. My duty is to help Onja unlock other people's potential by being diligent and accomplishing my jobs appropriately.")));
+}
+},{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37604,11 +37747,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function FooterContainer() {
   return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactContainer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ContactGroup, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
     href: "mailto:rinon.ten@onja.org"
-  }, "Email me")), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    height: "30",
+    viewBox: "0 0 24 24",
+    width: "30"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M0 0h24v24H0z",
+    fill: "none"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+  })))), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
     href: "https://github.com/ganamavo"
-  }, "github")), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
-    href: "https://onja.org"
-  }, "See organisation")))));
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "30",
+    height: "30"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"
+  })))))));
 }
 },{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/index.js":[function(require,module,exports) {
 "use strict";
@@ -37622,16 +37783,22 @@ Object.defineProperty(exports, "HeaderContainer", {
     return _header.default;
   }
 });
-Object.defineProperty(exports, "WorksContainer", {
-  enumerable: true,
-  get: function () {
-    return _works.default;
-  }
-});
 Object.defineProperty(exports, "HomeContainer", {
   enumerable: true,
   get: function () {
     return _home.default;
+  }
+});
+Object.defineProperty(exports, "AboutContainer", {
+  enumerable: true,
+  get: function () {
+    return _about.default;
+  }
+});
+Object.defineProperty(exports, "WorksContainer", {
+  enumerable: true,
+  get: function () {
+    return _works.default;
   }
 });
 Object.defineProperty(exports, "FooterContainer", {
@@ -37643,14 +37810,50 @@ Object.defineProperty(exports, "FooterContainer", {
 
 var _header = _interopRequireDefault(require("./header"));
 
-var _works = _interopRequireDefault(require("./works"));
-
 var _home = _interopRequireDefault(require("./home"));
+
+var _about = _interopRequireDefault(require("./about"));
+
+var _works = _interopRequireDefault(require("./works"));
 
 var _footer = _interopRequireDefault(require("./footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"../containers/header.js","./works":"../containers/works.js","./home":"../containers/home.js","./footer":"../containers/footer.js"}],"../pages/works.js":[function(require,module,exports) {
+},{"./header":"../containers/header.js","./home":"../containers/home.js","./about":"../containers/about.js","./works":"../containers/works.js","./footer":"../containers/footer.js"}],"../pages/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Home;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _containers = require("../containers");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Home() {
+  return /*#__PURE__*/_react.default.createElement(_containers.HomeContainer, null);
+}
+},{"react":"../node_modules/react/index.js","../containers":"../containers/index.js"}],"../pages/About.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = About;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _containers = require("../containers");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function About() {
+  return /*#__PURE__*/_react.default.createElement(_containers.AboutContainer, null);
+}
+},{"react":"../node_modules/react/index.js","../containers":"../containers/index.js"}],"../pages/works.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37681,34 +37884,11 @@ function WorksPage() {
   }, work)));
   return /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements))));
 }
-},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","../containers":"../containers/index.js"}],"../pages/home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","../containers":"../containers/index.js"}],"../pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
-exports.default = Home;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _containers = require("../containers");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Home() {
-  return /*#__PURE__*/_react.default.createElement(_containers.HomeContainer, null);
-}
-},{"react":"../node_modules/react/index.js","../containers":"../containers/index.js"}],"../pages/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Works", {
-  enumerable: true,
-  get: function () {
-    return _works.default;
-  }
 });
 Object.defineProperty(exports, "Home", {
   enumerable: true,
@@ -37716,13 +37896,27 @@ Object.defineProperty(exports, "Home", {
     return _home.default;
   }
 });
-
-var _works = _interopRequireDefault(require("./works"));
+Object.defineProperty(exports, "About", {
+  enumerable: true,
+  get: function () {
+    return _About.default;
+  }
+});
+Object.defineProperty(exports, "Works", {
+  enumerable: true,
+  get: function () {
+    return _works.default;
+  }
+});
 
 var _home = _interopRequireDefault(require("./home"));
 
+var _About = _interopRequireDefault(require("./About"));
+
+var _works = _interopRequireDefault(require("./works"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./works":"../pages/works.js","./home":"../pages/home.js"}],"app.js":[function(require,module,exports) {
+},{"./home":"../pages/home.js","./About":"../pages/About.js","./works":"../pages/works.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37747,8 +37941,8 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_pages.Home, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/works"
   }, /*#__PURE__*/_react.default.createElement(_pages.Works, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/contact"
-  })), /*#__PURE__*/_react.default.createElement(_containers.FooterContainer, null));
+    path: "/about"
+  }, /*#__PURE__*/_react.default.createElement(_pages.About, null))), /*#__PURE__*/_react.default.createElement(_containers.FooterContainer, null));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../containers":"../containers/index.js","../pages":"../pages/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -37796,7 +37990,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55781" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50076" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

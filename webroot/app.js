@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { HeaderContainer, FooterContainer } from '../containers';
-import { Home, Works } from '../pages';
+import { Home, About, Works } from '../pages';
 
 
 export default function App() {
@@ -15,7 +15,8 @@ export default function App() {
                 <Route path="/works" >
                     <Works />
                 </Route>
-                <Route path="/contact" >
+                <Route path="/about" >
+                    <About /> 
                 </Route>
             </Switch>
             <FooterContainer />

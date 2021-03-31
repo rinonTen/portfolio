@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-     FooterEl,
+    FooterEl,
     Container,  
     ContactGroup,
     ContactContainer,
     Link,
     Logo, 
+    Icon
 } from '../stylesComponents/footer';
 
 export default function Footer({children, ...restProps}) {
@@ -31,3 +32,6 @@ Footer.Logo = function FooterLogo({children, restProps}) {
     return <Logo {...restProps}>{children}</Logo>
 }
  
+Footer.Icon = function FooterIcon({src, restProps}) {
+    return <Icon {...restProps} src={src}/>
+}

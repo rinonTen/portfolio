@@ -36533,9 +36533,9 @@ function GlobalContext({
   const [showMenu, setShowMenu] = (0, _react.useState)(false);
 
   if (showMenu) {
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector("body").style.overflowY = "hidden";
   } else {
-    document.querySelector("body").style.overflow = "scroll";
+    document.querySelector("body").style.overflowY = "scroll";
   }
 
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {

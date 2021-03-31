@@ -7,9 +7,9 @@ function GlobalContext({children}) {
     const [works, ] = useState(worksData); 
     const [ showMenu, setShowMenu ] = useState(false);
     if (showMenu) {
-        document.querySelector("body").style.overflow = "hidden";
+        document.querySelector("body").style.overflowY = "hidden";
     } else {
-        document.querySelector("body").style.overflow = "scroll";
+        document.querySelector("body").style.overflowY = "scroll";
     }
 
     return (

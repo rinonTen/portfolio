@@ -29,10 +29,16 @@ const SectionContainer = styled.section`
                 height: unset;
                 background-image: url("../images/ellipse-desktop.png");
                 background-repeat: no-repeat;
-                background-position-y: 31%;
-                background-position-x: 78%;
+                background-position-y: -75%;
+                background-position-x: 85%;
+                padding-top: 100px;
+                padding-bottom: 30px;
                 padding-left: 10px;
-                 text-align: left;
+                text-align: left;
+
+                 img {
+                    margin-top: -123px;
+                 }
                 }
     }
 

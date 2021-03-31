@@ -36937,7 +36937,6 @@ const ResumeButton = _styledComponents.default.button`
     font-weight: 500;
     font-size: 20px;
     line-height: 29px;
-    color: #FFFFFF;
     padding: 16px;
     padding-left: 32px;
     padding-right: 32px;
@@ -36946,7 +36945,10 @@ const ResumeButton = _styledComponents.default.button`
     outline: none;
     cursor: pointer;
     transition: all ease .3s;
-
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
     &:hover {
         background-color: lightpink;
         transform: scale(1.075);
@@ -37748,6 +37750,8 @@ var _components = require("../components");
 
 var _works = _interopRequireDefault(require("./works"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -37766,14 +37770,16 @@ function HomeContainer() {
   return /*#__PURE__*/_react.default.createElement(_components.Home, null, /*#__PURE__*/_react.default.createElement(_components.Home.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my_image.JPG",
     alt: "my image"
-  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
+  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/works"
+  }, "See projects"))), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my_image.JPG",
     alt: "my image"
   }), /*#__PURE__*/_react.default.createElement(_components.Home.ImgShadow, null))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, {
     className: "showOneWork"
   }, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
 }
-},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js"}],"../containers/about.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../containers/about.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38062,7 +38068,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59897" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62565" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

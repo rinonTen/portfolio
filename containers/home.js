@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { Context } from '../contexts/globalContext';
 import { Home, Works } from '../components';  
 import WorksContainer  from './works';
+import { Link } from 'react-router-dom';
 
 export default function HomeContainer() {
     const { works } = useContext(Context);
     const worksElements = works && works.slice(0, 3).map(work => <WorksContainer key={work.id} {...work}/>)
-     
+
      return (
         <Home>
             <Home.SectionContainer>
@@ -25,7 +26,9 @@ export default function HomeContainer() {
                         Open for everyone, work for everyone!
                     </Home.Text> 
                     <Home.ResumeButton>
-                        See resume
+                        <Link to="/works">
+                            See projects
+                        </Link>
                     </Home.ResumeButton>
                 </Home.Article>
                 <Home.ImageContainer>

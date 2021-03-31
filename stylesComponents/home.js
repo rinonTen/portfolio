@@ -131,7 +131,6 @@ const ResumeButton = styled.button`
     font-weight: 500;
     font-size: 20px;
     line-height: 29px;
-    color: #FFFFFF;
     padding: 16px;
     padding-left: 32px;
     padding-right: 32px;
@@ -140,7 +139,10 @@ const ResumeButton = styled.button`
     outline: none;
     cursor: pointer;
     transition: all ease .3s;
-
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
     &:hover {
         background-color: lightpink;
         transform: scale(1.075);

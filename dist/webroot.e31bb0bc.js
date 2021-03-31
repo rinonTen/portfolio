@@ -36805,14 +36805,18 @@ const SectionContainer = _styledComponents.default.section`
     max-width: 1114px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 16px;
     padding-bottom: 58px;
     & div { 
+        width: fit-content;
         height: 215px;
-        /* background-image: url("../images/ellipse-mobile.png"); */
+        background-image: url("../images/ellipse-mobile.png");
         background-repeat: no-repeat;
-        background-position-y: 80%;
-        background-position-x: 46%;
+        background-position-y: 85%;
+        background-position-x: 39%;
         text-align: center;
             img {  
                 display: initial; 
@@ -36820,6 +36824,7 @@ const SectionContainer = _styledComponents.default.section`
                 margin-top: 20px;  
             }
              @media(min-width: 1114px) { 
+                width: unset;
                 height: unset;
                 background-image: url("../images/ellipse-desktop.png");
                 background-repeat: no-repeat;
@@ -36884,15 +36889,18 @@ exports.Profile = Profile;
 const Header = _styledComponents.default.header``;
 exports.Header = Header;
 const Heading = _styledComponents.default.h2`
+    max-width: 95%;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 40px; 
     text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
     color: #21243D;
 
     @media(min-width: 1114px) { 
-        width: 415px;
+        max-width: 415px;
         font-size: 44px;
         line-height: 60px;  
         text-align: unset;

@@ -29,7 +29,7 @@ const worksData = [
      {
         "id": 11,
         "title": "Birthday app",
-        "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc.. Special features are planned and will be released as fundamentals are built. Users can edit and delete a list from the list of people.",
+        "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc... Users can edit and delete a list from the list of people.",
         "requirement": "Built with Vanilla js",
         "screenshot": "./images/shotsnapp-birthday-app.png",
         "url": "https://birthtday-app-rinon.netlify.app/",

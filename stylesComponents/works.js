@@ -39,26 +39,27 @@ const Title = styled.h2`
 `;
 const Article = styled.article`
     padding-top: 22px;
+    padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: auto auto; 
+        grid-template-columns: 246px auto; 
         column-gap: 18px;
-        padding-top: 32px;
-        padding-bottom: 32px; 
+        padding-top: 31px;
     }
 `;
 const ImageContainer = styled.div`
 `;
 const Image = styled.img`
-    margin-right: 16px;
+    margin-right: 16px; 
     width: 100%;
     border-radius: 5px;
     @media(min-width: 500px) {
         width: 400px;
     }
     @media(min-width: 1114px) {
-        width: 100%;
+        width: 246px;
+        height: 180px;
         margin-right: 0;
         &:hover {
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
@@ -71,9 +72,8 @@ const DescriptionContainer = styled.div`
     position: relative;
     @media(min-width: 1114px) {
         p:nth-of-type(2) { 
-            font-size: 18px;
-            line-height: 30px; 
-            margin-top: 24px;
+            font-size: 18px; 
+            margin-top: 0;
         }
     }
   
@@ -83,7 +83,7 @@ const WorkTitle = styled.h3`
     font-size: 24px;
     line-height: 30px; 
     color: #21243D;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-bottom: 16px;
 
     @media(min-width: 1114px) {
@@ -93,7 +93,7 @@ const WorkTitle = styled.h3`
         line-height: unset; 
         color: #21243D;
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 `;
  
@@ -103,11 +103,12 @@ const WorkDescription = styled.p`
     font-size: 16px;
     line-height: 23px; 
     color: #21243D;
+    margin: 0;
 `;
 const ButtonContainer = styled.div`
     width: 90%;
     display: flex; 
-    margin-bottom: 16px;
+    margin-bottom: 23px;
     a:nth-of-type(2) button {
         font-size: 20px;
         font-weight: normal;
@@ -117,7 +118,7 @@ const ButtonContainer = styled.div`
     }
     @media(min-width: 1114px) {
         width: 50%; 
-        margin-bottom: 22px;
+        margin-bottom: 17px;
     }
 `;
 const Button = styled.button`
@@ -125,17 +126,16 @@ const Button = styled.button`
     font-weight: 900;
     font-size: 16px; 
     color: #FFFFFF;
-    border-radius: 16px;
-    margin-right: 32px;
-    padding: 6px;
-    padding-left: 16px;
-    padding-right: 16px;
+    border-radius: 16px; 
+    padding: 3px;
+    margin-right: 12px;
+    padding-left: 13px;
+    padding-right: 13px;
     border: transparent;
     outline: none;
     cursor: pointer;
     transition: 0.3s;
-
-
+ 
     &:hover {
         opacity: 0.5;
         color: red;

@@ -36481,7 +36481,7 @@ const worksData = [{
 }, {
   "id": 11,
   "title": "Birthday app",
-  "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc.. Special features are planned and will be released as fundamentals are built. Users can edit and delete a list from the list of people.",
+  "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc... Users can edit and delete a list from the list of people.",
   "requirement": "Built with Vanilla js",
   "screenshot": "./images/shotsnapp-birthday-app.png",
   "url": "https://birthtday-app-rinon.netlify.app/",
@@ -37060,13 +37060,13 @@ const Title = _styledComponents.default.h2`
 exports.Title = Title;
 const Article = _styledComponents.default.article`
     padding-top: 22px;
+    padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: auto auto; 
+        grid-template-columns: 246px auto; 
         column-gap: 18px;
-        padding-top: 32px;
-        padding-bottom: 32px; 
+        padding-top: 31px;
     }
 `;
 exports.Article = Article;
@@ -37074,14 +37074,15 @@ const ImageContainer = _styledComponents.default.div`
 `;
 exports.ImageContainer = ImageContainer;
 const Image = _styledComponents.default.img`
-    margin-right: 16px;
+    margin-right: 16px; 
     width: 100%;
     border-radius: 5px;
     @media(min-width: 500px) {
         width: 400px;
     }
     @media(min-width: 1114px) {
-        width: 100%;
+        width: 246px;
+        height: 180px;
         margin-right: 0;
         &:hover {
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
@@ -37095,9 +37096,8 @@ const DescriptionContainer = _styledComponents.default.div`
     position: relative;
     @media(min-width: 1114px) {
         p:nth-of-type(2) { 
-            font-size: 18px;
-            line-height: 30px; 
-            margin-top: 24px;
+            font-size: 18px; 
+            margin-top: 0;
         }
     }
   
@@ -37108,7 +37108,7 @@ const WorkTitle = _styledComponents.default.h3`
     font-size: 24px;
     line-height: 30px; 
     color: #21243D;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-bottom: 16px;
 
     @media(min-width: 1114px) {
@@ -37118,7 +37118,7 @@ const WorkTitle = _styledComponents.default.h3`
         line-height: unset; 
         color: #21243D;
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 `;
 exports.WorkTitle = WorkTitle;
@@ -37129,12 +37129,13 @@ const WorkDescription = _styledComponents.default.p`
     font-size: 16px;
     line-height: 23px; 
     color: #21243D;
+    margin: 0;
 `;
 exports.WorkDescription = WorkDescription;
 const ButtonContainer = _styledComponents.default.div`
     width: 90%;
     display: flex; 
-    margin-bottom: 16px;
+    margin-bottom: 23px;
     a:nth-of-type(2) button {
         font-size: 20px;
         font-weight: normal;
@@ -37144,7 +37145,7 @@ const ButtonContainer = _styledComponents.default.div`
     }
     @media(min-width: 1114px) {
         width: 50%; 
-        margin-bottom: 22px;
+        margin-bottom: 17px;
     }
 `;
 exports.ButtonContainer = ButtonContainer;
@@ -37153,17 +37154,16 @@ const Button = _styledComponents.default.button`
     font-weight: 900;
     font-size: 16px; 
     color: #FFFFFF;
-    border-radius: 16px;
-    margin-right: 32px;
-    padding: 6px;
-    padding-left: 16px;
-    padding-right: 16px;
+    border-radius: 16px; 
+    padding: 3px;
+    margin-right: 12px;
+    padding-left: 13px;
+    padding-right: 13px;
     border: transparent;
     outline: none;
     cursor: pointer;
     transition: 0.3s;
-
-
+ 
     &:hover {
         opacity: 0.5;
         color: red;

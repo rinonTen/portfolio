@@ -37062,11 +37062,18 @@ const Article = _styledComponents.default.article`
     padding-top: 22px;
     padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
+
+    &:not(:nth-of-type(1)) {
+        display: none;
+    }
     @media(min-width: 1114px) {
         display: grid;
         grid-template-columns: 246px auto; 
         column-gap: 18px;
         padding-top: 31px;
+        &:not(:nth-of-type(1)) {
+        display: grid;
+    }
     }
 `;
 exports.Article = Article;

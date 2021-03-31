@@ -11,7 +11,7 @@ export default function HomeContainer() {
         <Home>
             <Home.SectionContainer>
                  <Home.ImageContainer>
-                    <Home.Profile src="./images/my-image.jpg" alt="my image"/>
+                    <Home.Profile src="./images/my_image.JPG" alt="my image"/>
                 </Home.ImageContainer>
                 <Home.Article>
                     <Home.Header>
@@ -29,7 +29,7 @@ export default function HomeContainer() {
                     </Home.ResumeButton>
                 </Home.Article>
                 <Home.ImageContainer>
-                    <Home.Profile src="./images/my-image.jpg" alt="my image"/>
+                    <Home.Profile src="./images/my_image.JPG" alt="my image"/>
                     <Home.ImgShadow/>
                 </Home.ImageContainer>
             </Home.SectionContainer> 

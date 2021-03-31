@@ -38,6 +38,7 @@ const SectionContainer = styled.section`
 
   @media(min-width: 1114px) { 
          display: flex; 
+         flex-direction: row;
          column-gap: 100px;
          padding-top: 100px;
          padding-bottom: 71px;
@@ -100,6 +101,8 @@ const Heading = styled.h2`
         font-size: 44px;
         line-height: 60px;  
         text-align: unset;
+        margin-left: unset;
+        margin-right: unset;
     } 
 `;
 const Text = styled.p`

@@ -2,22 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components';
 
-export default function PageMenu({showMenuFunction, showMenu}) {
+export default function PageMenu({showMenuFunction }) { 
+    
     return (
         <Header.Nav>
             <Header.Lists>
-                <Header.Item>
+                <Header.Item onClick={showMenuFunction}>
                     <Link to='/'>
                         About
                     </Link>
                 </Header.Item>
                 <Header.Item>
-                    <Link to='/about'>
+                    <Link to='/about' onClick={showMenuFunction}>
                         About me
                     </Link>
                 </Header.Item>  
                 <Header.Item>
-                    <Link to='/works'>
+                    <Link to='/works' onClick={showMenuFunction}>
                         Works
                     </Link>
                 </Header.Item>  

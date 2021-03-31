@@ -44,6 +44,10 @@ const Text = styled.p`
     font-size: 16px;
     line-height: 23px; 
     color: #21243D;
+     
+     a {
+         text-decoration: none;
+     }
 `;
 
 export {Heading, Container, Article, SubHeading, Text}

@@ -8,7 +8,6 @@ html, body {
     font-weight: normal;
     padding: 0;
     margin: 0;
-
     p {
         color: #21243D;
     }

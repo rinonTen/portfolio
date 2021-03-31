@@ -5,8 +5,13 @@ const Context = createContext();
 
 function GlobalContext({children}) {
     const [works, ] = useState(worksData); 
-    const [ showMenu, setShowMenu ] = useState(false); 
-    
+    const [ showMenu, setShowMenu ] = useState(false);
+    if (showMenu) {
+        document.querySelector("body").style.overflow = "hidden";
+    } else {
+        document.querySelector("body").style.overflow = "scroll";
+    }
+
     return (
         <Context.Provider value={{works, showMenu, setShowMenu }}>
             {children}

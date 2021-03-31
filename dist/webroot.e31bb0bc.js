@@ -36431,7 +36431,6 @@ html, body {
     font-weight: normal;
     padding: 0;
     margin: 0;
-
     p {
         color: #21243D;
     }
@@ -36521,6 +36520,13 @@ function GlobalContext({
 }) {
   const [works] = (0, _react.useState)(_portfolioData.worksData);
   const [showMenu, setShowMenu] = (0, _react.useState)(false);
+
+  if (showMenu) {
+    document.querySelector("body").style.overflow = "hidden";
+  } else {
+    document.querySelector("body").style.overflow = "scroll";
+  }
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       works,
@@ -36638,7 +36644,8 @@ const Lists = _styledComponents.default.ul`
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
-
+    margin-top: 8px;
+    
     @media(min-width: 1114px) { 
         flex-direction: row;
         justify-content: space-between;
@@ -36761,10 +36768,13 @@ Header.Lists = function HeaderLists({
 };
 
 Header.Item = function HeaderItem({
+  onClick,
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_header.Item, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_header.Item, _extends({
+    onClick: onClick
+  }, restProps), children);
 };
 },{"react":"../node_modules/react/index.js","../stylesComponents/header":"../stylesComponents/header.js"}],"../stylesComponents/home.js":[function(require,module,exports) {
 "use strict";
@@ -37370,6 +37380,10 @@ const Text = _styledComponents.default.p`
     font-size: 16px;
     line-height: 23px; 
     color: #21243D;
+     
+     a {
+         text-decoration: none;
+     }
 `;
 exports.Text = Text;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/about.js":[function(require,module,exports) {
@@ -37588,15 +37602,18 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function PageMenu({
-  showMenuFunction,
-  showMenu
+  showMenuFunction
 }) {
-  return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, {
+    onClick: showMenuFunction
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "About")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/about"
+    to: "/about",
+    onClick: showMenuFunction
   }, "About me")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/works"
+    to: "/works",
+    onClick: showMenuFunction
   }, "Works"))));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/header.js":[function(require,module,exports) {
@@ -37630,13 +37647,15 @@ function HeaderContainer() {
   } = (0, _react.useContext)(_globalContext.Context);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setTimeout(() => {
+      setShowMenu(!showMenu);
+    }, 500);
   };
 
   return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.HeadingContainer, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }), /*#__PURE__*/_react.default.createElement(_components.Header.DisplayMenuButton, {
-    onClick: toggleMenu
+    onClick: () => setShowMenu(!showMenu)
   }, !showMenu ? /*#__PURE__*/_react.default.createElement(_components.Header.OpenMenu, {
     src: "./images/icon_menu.svg",
     alt: "Open menu icon"
@@ -37735,7 +37754,19 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function AboutContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.About, null, /*#__PURE__*/_react.default.createElement(_components.About.Heading, null, "Small brief about me"), /*#__PURE__*/_react.default.createElement(_components.About.Article, null, /*#__PURE__*/_react.default.createElement(_components.About.SubHeading, null, "A Short story"), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I am Rinon. I come from a Vodiriana Moramanga but I am currently living in Mahanoro which is a small town in Madagascar where Onja is located. I finished high school in 2016 at the age of 18. Then started wondering what to do next."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I had an ambition to go on to study at the university but I couldn't because I had a financial problem. As most people in my hometown do, I was working as a farmer dispite the knowledge and kills that I have gained from school. It is not easy to ear your living from agriculture. Imagine bearing the hot weather or rain the whole day. I enjoyed it though but I had to leave my village in 2017 in order to look for a different life by working in a small company in the city but it could not really help me and my familly because I have to help my younger siblings as well with their studies."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "While wondering what to do next after quiting this job, I received a letter from Onja to take the first test to be part of the students who are going to study english for two years and programming for a year. I passed it and went on to the next steps. Then I met all of the requirements that Onja set. Now, I have been studying english for two years and programming for over a year.I never spoke english or used a computer before coming to Onja but now, I can have smooth conversations with any english native speaker and I can build a lot of web projects with the technoliogies that I have learned. My life has been ectic but enjoyable as well. We have to work hard in order to get into the level that is aimed."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "Onja is a great opportunity for me and for other future students too. My duty is to help Onja unlock other people's potential by being diligent and accomplishing my jobs appropriately.")));
+  return /*#__PURE__*/_react.default.createElement(_components.About, null, /*#__PURE__*/_react.default.createElement(_components.About.Heading, null, "Small brief about me"), /*#__PURE__*/_react.default.createElement(_components.About.Article, null, /*#__PURE__*/_react.default.createElement(_components.About.SubHeading, null, "A short story"), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I am Rinon. I come from a small town called Vodiriana in Moramanga's district, but I am currently living in Mahanoro, which is a town on the east cost of Madagascar, where ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://onja.org/"
+  }, "Onja"), " is located. I grew up in a hard working familly that earns their living from agriculture and selling the products in the market. I finished high school in 2016 at the age of 18. Then started wondering what to do next."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I had an ambition to go on to study at the university but I couldn't because I had a financial problem. As most people in my hometown do, I was working as a farmer dispite the knowledge and kills that I have gained from school. It is not easy to ear your living from agriculture. Imagine bearing the hot weather or rain the whole day. I enjoyed it though but I had to leave my village in 2017 in order to look for a different life by working in a small company in the city but it could not really help me and my familly because I have to help my younger siblings as well with their studies."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "While wondering what to do next after quiting this job, I received a letter from ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://onja.org/"
+  }, "Onja"), " to take the first test to be part of the students who are going to study english for two years and programming for a year. I passed it and went on to the next steps. Then I met all of the requirements that ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://onja.org/"
+  }, "Onja"), " set. Now, I have been studying english for two years and programming for over a year.I never spoke english or used a computer before coming to ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://onja.org/"
+  }, "Onja"), " but now, I can have smooth conversations with any english native speaker and I can build a lot of web projects with the technoliogies that I have learned. My life has been ectic but enjoyable as well. We have to work hard in order to get into the level that is aimed."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://onja.org/"
+  }, "Onja"), " is a great opportunity for me and for other future students too. My duty is to help ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://onja.org/"
+  }, "Onja"), " unlock other people's potential by being diligent and accomplishing my jobs appropriately.")));
 }
 },{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/footer.js":[function(require,module,exports) {
 "use strict";

@@ -52,8 +52,8 @@ Header.Lists = function HeaderLists({children, restProps}) {
     return <Lists {...restProps}>{children}</Lists>
 }
 
-Header.Item = function HeaderItem({children, restProps}) {
-    return <Item {...restProps}>{children}</Item>
+Header.Item = function HeaderItem({onClick, children, restProps}) {
+    return <Item onClick={onClick} {...restProps}>{children}</Item>
 }
 
   

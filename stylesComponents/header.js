@@ -95,7 +95,8 @@ const Lists = styled.ul`
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
-
+    margin-top: 8px;
+    
     @media(min-width: 1114px) { 
         flex-direction: row;
         justify-content: space-between;

@@ -8,15 +8,17 @@ export default function HeaderContainer() {
     const { showMenu, setShowMenu } = useContext(Context);
 
     const toggleMenu = () => {
-        setShowMenu(!showMenu)
+        setTimeout(() => {
+            setShowMenu(!showMenu)
+        }, 500);
     }
 
     return (
         <Header>
             <Header.HeadingContainer>
                 <Link to="/"> 
-                </Link>
-                <Header.DisplayMenuButton onClick={toggleMenu}>
+                </Link> 
+                <Header.DisplayMenuButton onClick={() =>setShowMenu(!showMenu)}>
                 {!showMenu ?
                     <Header.OpenMenu src="./images/icon_menu.svg" alt="Open menu icon"/>
                     : "X"}

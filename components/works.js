@@ -28,8 +28,8 @@ Works.Group = function WorksGroup({ children, restProps }) {
 Works.Section = function WorksSection({ children, restProps }) {
     return <Section {...restProps}>{children}</Section>
 }
-Works.SectionContainer = function WorksSectionContainer({ children, restProps }) {
-    return <SectionContainer {...restProps}>{children}</SectionContainer>
+Works.SectionContainer = function WorksSectionContainer({className, children, restProps }) {
+    return <SectionContainer className={className} {...restProps}>{children}</SectionContainer>
 }
 Works.SectionHeader = function WorksSectionHeader({ children, restProps }) {
     return <SectionHeader {...restProps}>{children}</SectionHeader>

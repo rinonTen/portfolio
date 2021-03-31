@@ -41,18 +41,13 @@ const Article = styled.article`
     padding-top: 22px;
     padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
-
-    &:not(:nth-of-type(1)) {
-        display: none;
-    }
+ 
     @media(min-width: 1114px) {
         display: grid;
         grid-template-columns: 246px auto; 
         column-gap: 18px;
         padding-top: 31px;
-        &:not(:nth-of-type(1)) {
-        display: grid;
-    }
+         
     }
 `;
 const ImageContainer = styled.div`
@@ -117,12 +112,18 @@ const ButtonContainer = styled.div`
     display: flex; 
     margin-bottom: 23px;
     a:nth-of-type(2) button {
-        font-size: 20px;
         font-weight: normal;
-        line-height: 29px; 
+        font-size: 16px;
+        line-height: 23px;
         color: #8695A4;
         background-color: transparent;
+
+        @media(min-width: 1114px) {
+            font-size: 20px; 
+            line-height: 29px; 
+        }
     }
+
     @media(min-width: 1114px) {
         width: 50%; 
         margin-bottom: 17px;

@@ -36,7 +36,7 @@ export default function HomeContainer() {
             <Works>
             <Works.Group>
                 <Works.Section>
-                    <Works.SectionContainer>
+                    <Works.SectionContainer className="showOneWork">
                         <Works.SectionHeader>
                             <Works.Title>Featured works</Works.Title>
                         </Works.SectionHeader>

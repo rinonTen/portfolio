@@ -8,6 +8,7 @@ html, body {
     font-weight: normal;
     padding: 0;
     margin: 0;
+
     p {
         color: #21243D;
     }
@@ -19,6 +20,16 @@ html, body {
      a {
          text-decoration: none;
      }
+
+    }
+    .showOneWork article:not(:nth-of-type(1)) {
+        display: none
+    }
+
+    @media(min-width: 1114px) {
+        .showOneWork article:not(:nth-of-type(1)) {
+            display: grid;
+        }
     }
 }
 `;

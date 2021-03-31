@@ -36431,6 +36431,7 @@ html, body {
     font-weight: normal;
     padding: 0;
     margin: 0;
+
     p {
         color: #21243D;
     }
@@ -36442,6 +36443,16 @@ html, body {
      a {
          text-decoration: none;
      }
+
+    }
+    .showOneWork article:not(:nth-of-type(1)) {
+        display: none
+    }
+
+    @media(min-width: 1114px) {
+        .showOneWork article:not(:nth-of-type(1)) {
+            display: grid;
+        }
     }
 }
 `;
@@ -37072,18 +37083,13 @@ const Article = _styledComponents.default.article`
     padding-top: 22px;
     padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
-
-    &:not(:nth-of-type(1)) {
-        display: none;
-    }
+ 
     @media(min-width: 1114px) {
         display: grid;
         grid-template-columns: 246px auto; 
         column-gap: 18px;
         padding-top: 31px;
-        &:not(:nth-of-type(1)) {
-        display: grid;
-    }
+         
     }
 `;
 exports.Article = Article;
@@ -37154,12 +37160,18 @@ const ButtonContainer = _styledComponents.default.div`
     display: flex; 
     margin-bottom: 23px;
     a:nth-of-type(2) button {
-        font-size: 20px;
         font-weight: normal;
-        line-height: 29px; 
+        font-size: 16px;
+        line-height: 23px;
         color: #8695A4;
         background-color: transparent;
+
+        @media(min-width: 1114px) {
+            font-size: 20px; 
+            line-height: 29px; 
+        }
     }
+
     @media(min-width: 1114px) {
         width: 50%; 
         margin-bottom: 17px;
@@ -37226,10 +37238,13 @@ Works.Section = function WorksSection({
 };
 
 Works.SectionContainer = function WorksSectionContainer({
+  className,
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_works.SectionContainer, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_works.SectionContainer, _extends({
+    className: className
+  }, restProps), children);
 };
 
 Works.SectionHeader = function WorksSectionHeader({
@@ -37737,7 +37752,9 @@ function HomeContainer() {
   })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, "See resume")), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my-image.jpg",
     alt: "my image"
-  }), /*#__PURE__*/_react.default.createElement(_components.Home.ImgShadow, null))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
+  }), /*#__PURE__*/_react.default.createElement(_components.Home.ImgShadow, null))), /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, {
+    className: "showOneWork"
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements)))));
 }
 },{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./works":"../containers/works.js"}],"../containers/about.js":[function(require,module,exports) {
 "use strict";

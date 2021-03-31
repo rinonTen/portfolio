@@ -12,7 +12,7 @@ export default function WorksPage() {
         <Works>
             <Works.Group>
                 <Works.Section>
-                    <Works.SectionContainer>
+                    <Works.SectionContainer >
                         <Works.SectionHeader>
                             <Works.Title>Featured works</Works.Title>
                         </Works.SectionHeader>

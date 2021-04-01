@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import { Works } from '../components';
 
 export default function WorksContainer({ title, description, requirement, codeUrl, screenshot, url }) {
+    function createMarkup() {
+        return {
+           __html: description};
+     }; 
     return (
         <Works.Article>
             <Works.ImageContainer>
                 <Works.Link href={url}>
-                    <Works.Image src={`${screenshot ? screenshot : "ajaf"}`} alt={`${title}'screenshot`} />
+                    <Works.Image src={`${screenshot && screenshot }`} alt={`${title}'screenshot`} />
                 </Works.Link>
             </Works.ImageContainer>
             <Works.DescriptionContainer>
@@ -19,9 +23,11 @@ export default function WorksContainer({ title, description, requirement, codeUr
                     <Works.Link href={codeUrl}>
                         <Works.Button>Code</Works.Button>
                     </Works.Link>
-                </Works.ButtonContainer>
-                <div dangerouslySetInnerHTML={description} > </div>
-                <Works.WorkDescription>{requirement}</Works.WorkDescription>
+                </Works.ButtonContainer> 
+                {
+                    description.map(item => <Works.WorkDescription key={item}>{item}</Works.WorkDescription>)
+                }
+                {/* <Works.WorkDescription>{requirement}</Works.WorkDescription> */}
             </Works.DescriptionContainer>
         </Works.Article>
     )

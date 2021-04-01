@@ -49,8 +49,8 @@ Works.Image = function WorksImage({ src, restProps }) {
 Works.Group = function WorksGroup({ children, restProps }) {
     return <Group {...restProps}>{children}</Group>
 }
-Works.DescriptionContainer = function WorksDescriptionContainer({dangerouslySetInnerHTML, children, restProps }) {
-    return <DescriptionContainer dangerouslySetInnerHTML={dangerouslySetInnerHTML} {...restProps}>{children}</DescriptionContainer>
+Works.DescriptionContainer = function WorksDescriptionContainer({children, restProps }) {
+    return <DescriptionContainer {...restProps}>{children}</DescriptionContainer>
 }
 
 Works.WorkDescription = function WorksWorkDescription({ children, restProps }) {

@@ -84,7 +84,7 @@ const Article = styled.article`
     
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: 246px auto; 
+        grid-template-columns: 36% auto; 
         column-gap: 18px;
         padding-top: 31px;
          
@@ -100,8 +100,6 @@ const Image = styled.img`
         width: 400px;
     }
     @media(min-width: 1114px) {
-        width: 246px;
-        height: 180px;
         margin-right: 0;
         &:hover {
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
@@ -114,8 +112,8 @@ const DescriptionContainer = styled.div`
     position: relative;
     @media(min-width: 1114px) {
         p:nth-of-type(2) { 
-            font-size: 18px; 
-            margin-top: 0;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
     }
   

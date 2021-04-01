@@ -36467,7 +36467,7 @@ exports.worksData = void 0;
 const worksData = [{
   "id": 11,
   "title": "Birthday app",
-  "description": "This app reminds the users of upcoming birthdays, so they never again have to apologize for forgetting it.\n I built the foundation of this website using HTML and CSS, while most of the visual components are generated using JavaScript. To retrieve and store data I used a mixture of API fetching and local storage. \n By doing this project, I improved my skills at using multiple filters in unison as well as manipulating complex date formats.\n I am especially proud of the way in which I resolved the issues that came up along the way, leading to a satisfying result.",
+  "description": ["This app reminds the users of upcoming birthdays, so they never again have to apologize for forgetting it.", "I built the foundation of this website using HTML and CSS, while most of the visual components are generated using JavaScript. To retrieve and store data I used a mixture of API fetching and local storage.", "By doing this project, I improved my skills at using multiple filters in unison as well as manipulating complex date formats. I am especially proud of the way in which I resolved the issues that came up along the way, leading to a satisfying result."],
   "requirement": ["HTML", "CSS", "Vanilla JS"],
   "screenshot": "./images/shotsnapp-birthday-app.png",
   "url": "htpps://birthtday-app-rinon.netlify.app/",
@@ -36475,7 +36475,7 @@ const worksData = [{
 }, {
   "id": 6,
   "title": "Country Quiz",
-  "description": "This app allows users to play a quiz about countries' flags and capitals in a fun and interactive way.\n In this project, I used React with global state management (useContext) which was necessary to simplify the code and keep it DRY. For styling, I used styled-components which is my favorite way of styling React components.\n I deepened my knowledge on the context API as well as randomising data. This project reinstated my confidence in my ability to find solutions even for problems that seem insurmountable at first.",
+  "description": ["This app allows users to play a quiz about countries' flags and capitals in a fun and interactive way", "In this project, I used React with global state management (useContext) which was necessary to simplify the code and keep it DRY. For styling, I used styled-components which is my favorite way of styling React components.", "I deepened my knowledge on the context API as well as randomising data. This project reinstated my confidence in my ability to find solutions even for problems that seem insurmountable at first."],
   "requirement": ["React", "styled-components", "CSS"],
   "screenshot": "./images/shotsnapp-country-quiz.png",
   "url": "https://country-quiz-rinon.netlify.app/",
@@ -36483,20 +36483,21 @@ const worksData = [{
 }, {
   "id": 4,
   "title": "Photograph",
-  "description": "This is one of my earlier projects that provides a porfolio that a photographer can use to present their work. \n I built this with SASS, HTML and JavaScript. Completing this project enhanced my skills at using CSS frameworks such as SASS as well as applying functionality to an image slider with JavaScript.\n This was one of the first times I used JavaScript in a project.",
+  "description": ["This is one of my earlier projects that provides a porfolio that a photographer can use to present their work.", "I built this with SASS, HTML and JavaScript. Completing this project enhanced my skills at using CSS frameworks such as SASS as well as applying functionality to an image slider with JavaScript.", "This was one of the first times I used JavaScript in a project."],
   "requirement": ["HTML", "SASS", "JavaScript"],
   "screenshot": "./images/shotsnapp-fotograph.png",
-  "url": "https://photograph-rinon.netlify.app/",
+  "url": "https://rinon-photograph-page.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/photograf-page"
-}, {
-  "id": 3,
-  "title": "Sports App",
-  "description": "My second frond end assessment which I was tasked to build a page that is for a sport organisation.",
-  "requirement": "Built with HTML and SASS",
-  "screenshot": "./images/shotsnapp-sports-app.png",
-  "url": "https://sports-app-rinon.netlify.app",
-  "codeUrl": "https://github.com/ganamavo/birthday-app"
 } // {
+//     "id": 3,
+//     "title": "Sports App",
+//     "description": ["My second frond end assessment which I was tasked to build a page that is for a sport organisation.",
+//     "requirement": "Built with HTML and SASS",
+//     "screenshot": "./images/shotsnapp-sports-app.png",
+//     "url": "https://sports-app-rinon.netlify.app",
+//     "codeUrl": "https://github.com/ganamavo/birthday-app"
+// },
+// {
 //     "id": 10,
 //     "title": "WindBnb",
 //     "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
@@ -36577,7 +36578,7 @@ const HeadingContainer = _styledComponents.default.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 60px;
+        padding-right: 100px;
     }
 `;
 exports.HeadingContainer = HeadingContainer;
@@ -36611,7 +36612,7 @@ const Nav = _styledComponents.default.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 25%;
+        width: 20%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -37148,7 +37149,7 @@ const Article = _styledComponents.default.article`
     
     @media(min-width: 1114px) {
         display: grid;
-        grid-template-columns: 246px auto; 
+        grid-template-columns: 36% auto; 
         column-gap: 18px;
         padding-top: 31px;
          
@@ -37166,8 +37167,6 @@ const Image = _styledComponents.default.img`
         width: 400px;
     }
     @media(min-width: 1114px) {
-        width: 246px;
-        height: 180px;
         margin-right: 0;
         &:hover {
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
@@ -37181,8 +37180,8 @@ const DescriptionContainer = _styledComponents.default.div`
     position: relative;
     @media(min-width: 1114px) {
         p:nth-of-type(2) { 
-            font-size: 18px; 
-            margin-top: 0;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
     }
   
@@ -37357,13 +37356,10 @@ Works.Group = function WorksGroup({
 };
 
 Works.DescriptionContainer = function WorksDescriptionContainer({
-  dangerouslySetInnerHTML,
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_works.DescriptionContainer, _extends({
-    dangerouslySetInnerHTML: dangerouslySetInnerHTML
-  }, restProps), children);
+  return /*#__PURE__*/_react.default.createElement(_works.DescriptionContainer, restProps, children);
 };
 
 Works.WorkDescription = function WorksWorkDescription({
@@ -37693,13 +37689,10 @@ function PageMenu({
     onClick: showMenuFunction
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, "About")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "Home")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/about",
     onClick: showMenuFunction
-  }, "About me")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/works",
-    onClick: showMenuFunction
-  }, "Works"))));
+  }, "About me"))));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/header.js":[function(require,module,exports) {
 "use strict";
@@ -37774,18 +37767,25 @@ function WorksContainer({
   screenshot,
   url
 }) {
+  function createMarkup() {
+    return {
+      __html: description
+    };
+  }
+
+  ;
   return /*#__PURE__*/_react.default.createElement(_components.Works.Article, null, /*#__PURE__*/_react.default.createElement(_components.Works.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: url
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Image, {
-    src: `${screenshot ? screenshot : "ajaf"}`,
+    src: `${screenshot && screenshot}`,
     alt: `${title}'screenshot`
   }))), /*#__PURE__*/_react.default.createElement(_components.Works.DescriptionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.WorkTitle, null, title), /*#__PURE__*/_react.default.createElement(_components.Works.ButtonContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: url
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Demo")), /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: codeUrl
-  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), /*#__PURE__*/_react.default.createElement("div", {
-    dangerouslySetInnerHTML: description
-  }, " "), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, requirement)));
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), description.map(item => /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, {
+    key: item
+  }, item))));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/home.js":[function(require,module,exports) {
 "use strict";
@@ -38117,7 +38117,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56425" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61018" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

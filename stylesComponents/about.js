@@ -16,11 +16,13 @@ const Heading = styled.h2`
 const Container = styled.div`
     max-width: 1114px;
     margin-left: auto;
+    margin-top: 24px;
     margin-right: auto;
     padding-left: 18px;
     padding-right: 18px;
 
     @media(min-width: 1114px) {
+        margin-top: 43px;
         padding-left: 0;
         padding-right: 0;
     }

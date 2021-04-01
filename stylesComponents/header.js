@@ -11,7 +11,7 @@ const HeadingContainer = styled.div`
     justify-content: space-between;
     position: relative;
     padding-top: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 18px;
     padding-left: 16px; 
 
     @media(min-width: 1114px) {
@@ -66,12 +66,13 @@ const Nav = styled.nav`
 
 const DisplayMenuButton = styled.button`
     font-size: 30px;  
-    margin-right: 16px;
     position: absolute;
     top: 16px;
-    right: 2px;
+    right: 0;
     z-index: 1;
     background-color: unset;
+    margin-right: 12px;
+    padding-right: 0;
     border: none;
     cursor: pointer;
     outline: none;

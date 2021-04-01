@@ -34,16 +34,17 @@ const worksData = [
         "screenshot": "./images/shotsnapp-birthday-app.png",
         "url": "https://birthtday-app-rinon.netlify.app/",
         "codeUrl": "https://birthtday-app-rinon.netlify.app/"
-    },
-    {
-        "id": 10,
-        "title": "WindBnb",
-        "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
-        "requirement": "Built with React",
-        "screenshot": "./images/airbnb-clone.png",
-        "url": "https://windbnb-rinon.netlify.app/",
-        "codeUrl": "https://github.com/ganamavo/airbnb-clone"
-    },
+    }
+
+    // {
+    //     "id": 10,
+    //     "title": "WindBnb",
+    //     "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
+    //     "requirement": "Built with React",
+    //     "screenshot": "./images/airbnb-clone.png",
+    //     "url": "https://windbnb-rinon.netlify.app/",
+    //     "codeUrl": "https://github.com/ganamavo/airbnb-clone"
+    // },
 
 ]
 

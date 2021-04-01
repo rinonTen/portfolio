@@ -36496,15 +36496,16 @@ const worksData = [{
   "screenshot": "./images/shotsnapp-birthday-app.png",
   "url": "https://birthtday-app-rinon.netlify.app/",
   "codeUrl": "https://birthtday-app-rinon.netlify.app/"
-}, {
-  "id": 10,
-  "title": "WindBnb",
-  "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
-  "requirement": "Built with React",
-  "screenshot": "./images/airbnb-clone.png",
-  "url": "https://windbnb-rinon.netlify.app/",
-  "codeUrl": "https://github.com/ganamavo/airbnb-clone"
-}];
+} // {
+//     "id": 10,
+//     "title": "WindBnb",
+//     "description": "An app that shows a few stays in Finland. We can filter by the given city names and add number of guests.",
+//     "requirement": "Built with React",
+//     "screenshot": "./images/airbnb-clone.png",
+//     "url": "https://windbnb-rinon.netlify.app/",
+//     "codeUrl": "https://github.com/ganamavo/airbnb-clone"
+// },
+];
 exports.worksData = worksData;
 },{}],"../contexts/globalContext.js":[function(require,module,exports) {
 "use strict";
@@ -36569,7 +36570,7 @@ const HeadingContainer = _styledComponents.default.div`
     justify-content: space-between;
     position: relative;
     padding-top: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 18px;
     padding-left: 16px; 
 
     @media(min-width: 1114px) {
@@ -36626,12 +36627,13 @@ const Nav = _styledComponents.default.nav`
 exports.Nav = Nav;
 const DisplayMenuButton = _styledComponents.default.button`
     font-size: 30px;  
-    margin-right: 16px;
     position: absolute;
     top: 16px;
-    right: 2px;
+    right: 0;
     z-index: 1;
     background-color: unset;
+    margin-right: 12px;
+    padding-right: 0;
     border: none;
     cursor: pointer;
     outline: none;
@@ -36815,21 +36817,22 @@ const SectionContainer = _styledComponents.default.section`
         height: 215px;
         background-image: url("../images/ellipse-mobile.png");
         background-repeat: no-repeat;
-        background-position-y: 85%;
-        background-position-x: 39%;
+        background-position-y: 92%;
+        background-position-x: 24%;
+        padding-bottom: 12px;
         text-align: center;
             img {  
                 display: initial; 
                 border-radius: 50%;
-                margin-top: 20px;  
+                margin-top: 33px;  
             }
              @media(min-width: 1114px) { 
                 width: unset;
                 height: unset;
                 background-image: url("../images/ellipse-desktop.png");
                 background-repeat: no-repeat;
-                background-position-y: -75%;
-                background-position-x: 85%;
+                background-position-y: -88%;
+                background-position-x: 61%;
                 padding-top: 100px;
                 padding-bottom: 30px;
                 padding-left: 10px;
@@ -36845,7 +36848,7 @@ const SectionContainer = _styledComponents.default.section`
          display: flex; 
          flex-direction: row;
          column-gap: 100px;
-         padding-top: 100px;
+         padding-top: 83px;
          padding-bottom: 71px;
 
          & div {
@@ -37056,7 +37059,28 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Container = _styledComponents.default.section` 
+    margin-top: 32px;
     background-color: #EDF7FA;
+    @media(min-width: 1114px) {
+        margin-top: 0;
+
+        .showAllWorks {
+            article:not(:nth-of-type(1)) {
+                padding-top: 43px;
+                padding-bottom: 43px;
+            }
+
+            article:nth-of-type(1) {
+                padding-bottom: 47px;
+            }
+
+            article:last-of-type { 
+                padding-top: 35px;
+                padding-bottom: 53px;
+            }
+
+        }
+    }
 `;
 exports.Container = Container;
 const Group = _styledComponents.default.div``;
@@ -37074,10 +37098,24 @@ const SectionContainer = _styledComponents.default.div`
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px; 
+    .workspage_heading {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 60px; 
+        color: #21243D;
+        text-align: start;
+        margin-bottom: 12px;
+    }
 
     @media(min-width: 1114px) {
         padding-left: 0;
         padding-right: 0;
+
+        .workspage_heading {
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 60px;
+        }
     }
 `;
 exports.SectionContainer = SectionContainer;
@@ -37090,19 +37128,24 @@ const Title = _styledComponents.default.h2`
     color: #21243D;
     margin-top: 0;
     padding-top: 16px;
+    text-align: center;
 
     @media(min-width: 1114px) {
         font-size: 22px;
         margin-bottom: 0;
         padding-top: 32px;
+        text-align: unset;
     }
 `;
 exports.Title = Title;
 const Article = _styledComponents.default.article`
-    padding-top: 22px;
     padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
- 
+
+    &:not(:nth-of-type(1)) {
+        padding-top: 22px;
+    }
+    
     @media(min-width: 1114px) {
         display: grid;
         grid-template-columns: 246px auto; 
@@ -37274,10 +37317,13 @@ Works.SectionHeader = function WorksSectionHeader({
 };
 
 Works.Title = function WorksTitle({
+  className,
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_works.Title, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_works.Title, _extends({
+    className: className
+  }, restProps), children);
 };
 
 Works.Article = function WorksArticle({
@@ -37383,11 +37429,13 @@ exports.Heading = Heading;
 const Container = _styledComponents.default.div`
     max-width: 1114px;
     margin-left: auto;
+    margin-top: 24px;
     margin-right: auto;
     padding-left: 18px;
     padding-right: 18px;
 
     @media(min-width: 1114px) {
+        margin-top: 43px;
         padding-left: 0;
         padding-right: 0;
     }
@@ -37960,7 +38008,11 @@ function WorksPage() {
   const worksElements = works && works.map(work => /*#__PURE__*/_react.default.createElement(_containers.WorksContainer, _extends({
     key: work.id
   }, work)));
-  return /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, null, "Featured works")), worksElements))));
+  return /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, {
+    className: "showAllWorks"
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, {
+    className: "workspage_heading"
+  }, "Featured works")), worksElements))));
 }
 },{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","../containers":"../containers/index.js"}],"../pages/index.js":[function(require,module,exports) {
 "use strict";
@@ -38068,7 +38120,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62565" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50063" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

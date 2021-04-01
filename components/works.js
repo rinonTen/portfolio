@@ -34,8 +34,8 @@ Works.SectionContainer = function WorksSectionContainer({className, children, re
 Works.SectionHeader = function WorksSectionHeader({ children, restProps }) {
     return <SectionHeader {...restProps}>{children}</SectionHeader>
 }
-Works.Title = function WorksTitle({ children, restProps }) {
-    return <Title {...restProps}>{children}</Title>
+Works.Title = function WorksTitle({className, children, restProps }) {
+    return <Title className={className} {...restProps}>{children}</Title>
 }
 Works.Article = function WorksArticle({ children, restProps }) {
     return <Article {...restProps}>{children}</Article>

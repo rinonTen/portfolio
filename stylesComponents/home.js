@@ -16,21 +16,22 @@ const SectionContainer = styled.section`
         height: 215px;
         background-image: url("../images/ellipse-mobile.png");
         background-repeat: no-repeat;
-        background-position-y: 85%;
-        background-position-x: 39%;
+        background-position-y: 92%;
+        background-position-x: 24%;
+        padding-bottom: 12px;
         text-align: center;
             img {  
                 display: initial; 
                 border-radius: 50%;
-                margin-top: 20px;  
+                margin-top: 33px;  
             }
              @media(min-width: 1114px) { 
                 width: unset;
                 height: unset;
                 background-image: url("../images/ellipse-desktop.png");
                 background-repeat: no-repeat;
-                background-position-y: -75%;
-                background-position-x: 85%;
+                background-position-y: -88%;
+                background-position-x: 61%;
                 padding-top: 100px;
                 padding-bottom: 30px;
                 padding-left: 10px;
@@ -46,7 +47,7 @@ const SectionContainer = styled.section`
          display: flex; 
          flex-direction: row;
          column-gap: 100px;
-         padding-top: 100px;
+         padding-top: 83px;
          padding-bottom: 71px;
 
          & div {

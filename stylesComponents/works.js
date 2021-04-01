@@ -1,7 +1,28 @@
 import styled from 'styled-components';
 
 const Container = styled.section` 
+    margin-top: 32px;
     background-color: #EDF7FA;
+    @media(min-width: 1114px) {
+        margin-top: 0;
+
+        .showAllWorks {
+            article:not(:nth-of-type(1)) {
+                padding-top: 43px;
+                padding-bottom: 43px;
+            }
+
+            article:nth-of-type(1) {
+                padding-bottom: 47px;
+            }
+
+            article:last-of-type { 
+                padding-top: 35px;
+                padding-bottom: 53px;
+            }
+
+        }
+    }
 `;
 const Group = styled.div``;
 const Section = styled.div`
@@ -16,10 +37,24 @@ const SectionContainer = styled.div`
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px; 
+    .workspage_heading {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 60px; 
+        color: #21243D;
+        text-align: start;
+        margin-bottom: 12px;
+    }
 
     @media(min-width: 1114px) {
         padding-left: 0;
         padding-right: 0;
+
+        .workspage_heading {
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 60px;
+        }
     }
 `;
 const SectionHeader = styled.header``;
@@ -30,18 +65,23 @@ const Title = styled.h2`
     color: #21243D;
     margin-top: 0;
     padding-top: 16px;
+    text-align: center;
 
     @media(min-width: 1114px) {
         font-size: 22px;
         margin-bottom: 0;
         padding-top: 32px;
+        text-align: unset;
     }
 `;
 const Article = styled.article`
-    padding-top: 22px;
     padding-bottom: 10px; 
     border-bottom: 1px solid #E0E0E0;
- 
+
+    &:not(:nth-of-type(1)) {
+        padding-top: 22px;
+    }
+    
     @media(min-width: 1114px) {
         display: grid;
         grid-template-columns: 246px auto; 

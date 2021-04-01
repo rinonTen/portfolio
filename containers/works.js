@@ -20,7 +20,7 @@ export default function WorksContainer({ title, description, requirement, codeUr
                         <Works.Button>Code</Works.Button>
                     </Works.Link>
                 </Works.ButtonContainer>
-                <Works.WorkDescription>{description}</Works.WorkDescription>
+                <div dangerouslySetInnerHTML={description} > </div>
                 <Works.WorkDescription>{requirement}</Works.WorkDescription>
             </Works.DescriptionContainer>
         </Works.Article>

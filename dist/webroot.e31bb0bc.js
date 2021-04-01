@@ -36467,24 +36467,24 @@ exports.worksData = void 0;
 const worksData = [{
   "id": 11,
   "title": "Birthday app",
-  "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc... Users can edit and delete a list from the list of people.",
-  "requirement": "Built with Vanilla js",
+  "description": "This app reminds the users of upcoming birthdays, so they never again have to apologize for forgetting it.\n I built the foundation of this website using HTML and CSS, while most of the visual components are generated using JavaScript. To retrieve and store data I used a mixture of API fetching and local storage. \n By doing this project, I improved my skills at using multiple filters in unison as well as manipulating complex date formats.\n I am especially proud of the way in which I resolved the issues that came up along the way, leading to a satisfying result.",
+  "requirement": ["HTML", "CSS", "Vanilla JS"],
   "screenshot": "./images/shotsnapp-birthday-app.png",
-  "url": "https://birthtday-app-rinon.netlify.app/",
+  "url": "htpps://birthtday-app-rinon.netlify.app/",
   "codeUrl": "https://birthtday-app-rinon.netlify.app/"
 }, {
   "id": 6,
   "title": "Country Quiz",
-  "description": "A quiz that shows users either the capital or the flag of a country, and enables them to choose which country that belongs to.",
-  "requirement": "Built with React",
+  "description": "This app allows users to play a quiz about countries' flags and capitals in a fun and interactive way.\n In this project, I used React with global state management (useContext) which was necessary to simplify the code and keep it DRY. For styling, I used styled-components which is my favorite way of styling React components.\n I deepened my knowledge on the context API as well as randomising data. This project reinstated my confidence in my ability to find solutions even for problems that seem insurmountable at first.",
+  "requirement": ["React", "styled-components", "CSS"],
   "screenshot": "./images/shotsnapp-country-quiz.png",
   "url": "https://country-quiz-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/country-quiz"
 }, {
   "id": 4,
-  "title": "Fotograph",
-  "description": "This website is about a photographic company. It Shows us samples of their projects, portfolio and how to contact them.",
-  "requirement": "Built with SASS and Javascript for the images slideshow",
+  "title": "Photograph",
+  "description": "This is one of my earlier projects that provides a porfolio that a photographer can use to present their work. \n I built this with SASS, HTML and JavaScript. Completing this project enhanced my skills at using CSS frameworks such as SASS as well as applying functionality to an image slider with JavaScript.\n This was one of the first times I used JavaScript in a project.",
+  "requirement": ["HTML", "SASS", "JavaScript"],
   "screenshot": "./images/shotsnapp-fotograph.png",
   "url": "https://photograph-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/photograf-page"
@@ -37357,10 +37357,13 @@ Works.Group = function WorksGroup({
 };
 
 Works.DescriptionContainer = function WorksDescriptionContainer({
+  dangerouslySetInnerHTML,
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_works.DescriptionContainer, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_works.DescriptionContainer, _extends({
+    dangerouslySetInnerHTML: dangerouslySetInnerHTML
+  }, restProps), children);
 };
 
 Works.WorkDescription = function WorksWorkDescription({
@@ -37780,7 +37783,9 @@ function WorksContainer({
     href: url
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Demo")), /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: codeUrl
-  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, description), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, requirement)));
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), /*#__PURE__*/_react.default.createElement("div", {
+    dangerouslySetInnerHTML: description
+  }, " "), /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, null, requirement)));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/home.js":[function(require,module,exports) {
 "use strict";
@@ -37818,7 +37823,7 @@ function HomeContainer() {
   return /*#__PURE__*/_react.default.createElement(_components.Home, null, /*#__PURE__*/_react.default.createElement(_components.Home.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my_image.JPG",
     alt: "my image"
-  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make the world a much better place through programming. Your website will look stunning by combining all the experience that I have. I am open for everyone and work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "I believe we can make the world a much better place through building products that solve people's problems. If you align with that vision, we should work together!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works"
   }, "See projects"))), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my_image.JPG",
@@ -37842,19 +37847,11 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function AboutContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.About, null, /*#__PURE__*/_react.default.createElement(_components.About.Heading, null, "Small brief about me"), /*#__PURE__*/_react.default.createElement(_components.About.Article, null, /*#__PURE__*/_react.default.createElement(_components.About.SubHeading, null, "A short story"), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I am Rinon. I come from a small town called Vodiriana in Moramanga's district, but I am currently living in Mahanoro, which is a town on the east cost of Madagascar, where ", /*#__PURE__*/_react.default.createElement("a", {
+  return /*#__PURE__*/_react.default.createElement(_components.About, null, /*#__PURE__*/_react.default.createElement(_components.About.Heading, null, "A brief history about me"), /*#__PURE__*/_react.default.createElement(_components.About.Article, null, /*#__PURE__*/_react.default.createElement(_components.About.SubHeading, null, "From farm to functions"), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I come from a small town called Vodiriana in Moramanga's district in the center of Madagascar. Currently, I am living in Mahanoro, which is a peaceful town on the east cost of Madagascar, where ", /*#__PURE__*/_react.default.createElement("a", {
     href: "https://onja.org/"
-  }, "Onja"), " is located. I grew up in a hard working family that earns their living from agriculture and selling the products in the market. I finished high school in 2016 at the age of 18. But then started wondering what to do next."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I had an ambition to go on to study at the university but I couldn't because I had a financial problem. As most people in my hometown do, I was working as a farmer dispite the knowledge and kills that I have gained from school. It is not easy to ear your living from agriculture. Imagine bearing the hot weather or rain the whole day. I enjoyed it though but I had to leave my village in 2017 in order to look for a different life by working in a small workplace in the city but it could not really help me and my familly because I have to help my younger siblings as well with their studies."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "While wondering what to do next after quiting this job, I received a letter from ", /*#__PURE__*/_react.default.createElement("a", {
+  }, "Onja"), " is located. Growing up in a hard working family that earns their living from agriculture and selling the products in the market, I became accustomed to rural life in Madagascar which hasn't changed much in the last centuries. I finished high school in 2016 at the age of 18, but then started wondering what to do next:"), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I had the ambition to go on to study tourism at university but, like many other graduates, I couldn't afford it. As most people in my hometown do, I had to work as a farmer dispite the education and skills that I had gained from school. It is not easy to earn a living from agriculture: Imagine bearing the hot weather or rain the whole day while relying on physical labour in the abscence of modern machinery. While I enjoyed it, I chose to leave my village in 2017 in order to look for a different life by working in a small company in the city. However, I was split between the job and supporting my family with their studies which resulted in me having to quit my job."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "While wondering what to do next, I received a letter from ", /*#__PURE__*/_react.default.createElement("a", {
     href: "https://onja.org/"
-  }, "Onja"), " to take the first test to be part of the students who are going to study english for two years and programming for a year. I passed it and went on to the next steps. Then I met all of the requirements that ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://onja.org/"
-  }, "Onja"), " set. Now, I have been studying english for two years and programming for over a year.I never spoke english or used a computer before coming to ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://onja.org/"
-  }, "Onja"), " but now, I can have smooth conversations with any english native speaker and I can build a lot of web projects with the technologies that I have learned. My life has been ectic but enjoyable as well. We have to apply ourselves in order to get into the intended levelto work."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://onja.org/"
-  }, "Onja"), " is a great opportunity for me and for other future students too. My duty is to help ", /*#__PURE__*/_react.default.createElement("a", {
-    href: "https://onja.org/"
-  }, "Onja"), " unlock other people's potential by being diligent and accomplishing my jobs appropriately.")));
+  }, "Onja"), " to take a test mostly about maths to be part of the first class of students studying English and coding over a period of two years. When I passed it, I took part in the next step of the admission process which was a leadership camp at the school location which I passed successfully. Before coming to the school, I had never spoken English or used a computer but now, I can have smooth conversations with any English speaker and I can build a lot of web projects with the technologies that I have learnt. My daily life has certainly been hectic and packed as we learn six days a week, but enjoyable as well due the tide relationships I have with the other students and teachers."), /*#__PURE__*/_react.default.createElement(_components.About.Text, null, "I want to use this unique opportunity to both develop great products that solve demanding problems and support the development of Madagascar which I see as a country with huge pontential.")));
 }
 },{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/footer.js":[function(require,module,exports) {
 "use strict";
@@ -38120,7 +38117,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50063" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56425" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

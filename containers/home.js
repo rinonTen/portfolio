@@ -22,8 +22,7 @@ export default function HomeContainer() {
                         </Home.Heading>
                     </Home.Header>
                     <Home.Text>
-                        We can make the world a much better place through programming. Your website will look stunning by combining all the experience that I have.
-                        I am open for everyone and work for everyone!
+                        I believe we can make the world a much better place through building products that solve people's problems. If you align with that vision, we should work together!
                     </Home.Text> 
                     <Home.ResumeButton>
                         <Link to="/works">

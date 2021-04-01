@@ -36465,30 +36465,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.worksData = void 0;
 const worksData = [{
-  "id": 6,
-  "title": "Country Quiz",
-  "description": "A quiz that shows you either the capital or the flag of a country, and you choose which country that belongs to",
-  "requirement": "Built with React",
-  "screenshot": "./images/shotsnapp-country-quiz.png",
-  "url": "https://country-quiz-rinon.netlify.app/",
-  "codeUrl": "https://github.com/ganamavo/country-quiz"
-}, {
-  "id": 4,
-  "title": "Fotograph",
-  "description": "A website that is about a photographic company. it Shows us sample of their works, portfolio and their contact",
-  "requirement": "Built with SASS and Javascript for the images slideshow",
-  "screenshot": "./images/shotsnapp-fotograph.png",
-  "url": "https://photograph-rinon.netlify.app/",
-  "codeUrl": "https://github.com/ganamavo/photograf-page"
-}, {
-  "id": 3,
-  "title": "Sports App",
-  "description": "My second frond end assessment which I had to build a page that is for a sport organisation",
-  "requirement": "Built with HTML and SASS",
-  "screenshot": "./images/shotsnapp-sports-app.png",
-  "url": "https://sports-app-rinon.netlify.app",
-  "codeUrl": "https://github.com/ganamavo/birthday-app"
-}, {
   "id": 11,
   "title": "Birthday app",
   "description": "Reminding users when birthdays of family and friends are approaching, all the necessary functions for a contacts app, etc... Users can edit and delete a list from the list of people.",
@@ -36496,6 +36472,30 @@ const worksData = [{
   "screenshot": "./images/shotsnapp-birthday-app.png",
   "url": "https://birthtday-app-rinon.netlify.app/",
   "codeUrl": "https://birthtday-app-rinon.netlify.app/"
+}, {
+  "id": 6,
+  "title": "Country Quiz",
+  "description": "A quiz that shows users either the capital or the flag of a country, and enables them to choose which country that belongs to.",
+  "requirement": "Built with React",
+  "screenshot": "./images/shotsnapp-country-quiz.png",
+  "url": "https://country-quiz-rinon.netlify.app/",
+  "codeUrl": "https://github.com/ganamavo/country-quiz"
+}, {
+  "id": 4,
+  "title": "Fotograph",
+  "description": "This website is about a photographic company. It Shows us samples of their projects, portfolio and how to contact them.",
+  "requirement": "Built with SASS and Javascript for the images slideshow",
+  "screenshot": "./images/shotsnapp-fotograph.png",
+  "url": "https://photograph-rinon.netlify.app/",
+  "codeUrl": "https://github.com/ganamavo/photograf-page"
+}, {
+  "id": 3,
+  "title": "Sports App",
+  "description": "My second frond end assessment which I was tasked to build a page that is for a sport organisation.",
+  "requirement": "Built with HTML and SASS",
+  "screenshot": "./images/shotsnapp-sports-app.png",
+  "url": "https://sports-app-rinon.netlify.app",
+  "codeUrl": "https://github.com/ganamavo/birthday-app"
 } // {
 //     "id": 10,
 //     "title": "WindBnb",
@@ -37818,7 +37818,7 @@ function HomeContainer() {
   return /*#__PURE__*/_react.default.createElement(_components.Home, null, /*#__PURE__*/_react.default.createElement(_components.Home.SectionContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my_image.JPG",
     alt: "my image"
-  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have. Open for everyone, work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  })), /*#__PURE__*/_react.default.createElement(_components.Home.Article, null, /*#__PURE__*/_react.default.createElement(_components.Home.Header, null, /*#__PURE__*/_react.default.createElement(_components.Home.Heading, null, "Hi, I am Rinon, Front-end developer")), /*#__PURE__*/_react.default.createElement(_components.Home.Text, null, "We can make the world a much better place through programming. Your website will look stunning by combining all the experience that I have. I am open for everyone and work for everyone!"), /*#__PURE__*/_react.default.createElement(_components.Home.ResumeButton, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works"
   }, "See projects"))), /*#__PURE__*/_react.default.createElement(_components.Home.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Home.Profile, {
     src: "./images/my_image.JPG",

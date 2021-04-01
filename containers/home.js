@@ -22,8 +22,8 @@ export default function HomeContainer() {
                         </Home.Heading>
                     </Home.Header>
                     <Home.Text>
-                        We can make our world in a better place through programming. Your website will look stunning by combining all the experience that I have.
-                        Open for everyone, work for everyone!
+                        We can make the world a much better place through programming. Your website will look stunning by combining all the experience that I have.
+                        I am open for everyone and work for everyone!
                     </Home.Text> 
                     <Home.ResumeButton>
                         <Link to="/works">

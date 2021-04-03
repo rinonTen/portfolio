@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Works } from '../components';
 
 export default function WorksContainer({ title, description, technologies, codeUrl, screenshot, url }) {

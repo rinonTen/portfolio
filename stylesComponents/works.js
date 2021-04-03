@@ -98,7 +98,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
     margin-right: 16px; 
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px; 
     @media(min-width: 1114px) {
         height: 100%;
         margin-right: 0;

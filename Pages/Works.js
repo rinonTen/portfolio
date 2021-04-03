@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Context } from '../contexts/globalContext';
 import { Works } from '../components';
 import { WorksContainer } from '../containers';
 
 export default function WorksPage() {
-
-    const { works } = useContext(Context);
+    const { works, setHomeActive, setAboutActive, setWorksActive } = useContext(Context);
+ 
     const worksElements = works && works.map(work => <WorksContainer key={work.id} {...work} />)
+    function setWorksToActive() {
+        setHomeActive("");
+        setAboutActive("");
+        setWorksActive("worksActive");
+    } 
 
+    useEffect(() => {
+        setWorksToActive()
+    }, [])
     return (
         <Works className="works_section">
             <Works.Group>

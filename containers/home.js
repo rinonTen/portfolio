@@ -4,8 +4,9 @@ import { Home, Works } from '../components';
 import WorksContainer  from './works';
 import { Link } from 'react-router-dom';
 
-export default function HomeContainer() {
-    const { works } = useContext(Context);
+export default function HomeContainer() { 
+    const { works} = useContext(Context);
+
     const worksElements = works && works.slice(0, 3).map(work => <WorksContainer key={work.id} {...work}/>)
 
      return (

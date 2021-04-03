@@ -127,7 +127,7 @@ const Item = styled.li`
         text-decoration: underline;
     }
 
-    a:focus {
+    .homeActive, .aboutActive, .worksActive {
         color: #FF6464;
     }
 `;

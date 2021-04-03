@@ -36533,6 +36533,9 @@ function GlobalContext({
 }) {
   const [works] = (0, _react.useState)(_portfolioData.worksData);
   const [showMenu, setShowMenu] = (0, _react.useState)(false);
+  const [homeActive, setHomeActive] = (0, _react.useState)("");
+  const [aboutActive, setAboutActive] = (0, _react.useState)("");
+  const [worksActive, setWorksActive] = (0, _react.useState)("");
 
   if (showMenu) {
     document.querySelector("body").style.overflowY = "hidden";
@@ -36544,7 +36547,13 @@ function GlobalContext({
     value: {
       works,
       showMenu,
-      setShowMenu
+      setShowMenu,
+      homeActive,
+      setHomeActive,
+      aboutActive,
+      setAboutActive,
+      worksActive,
+      setWorksActive
     }
   }, children);
 }
@@ -36690,7 +36699,7 @@ const Item = _styledComponents.default.li`
         text-decoration: underline;
     }
 
-    a:focus {
+    .homeActive, .aboutActive, .worksActive {
         color: #FF6464;
     }
 `;
@@ -37165,7 +37174,7 @@ exports.ImageContainer = ImageContainer;
 const Image = _styledComponents.default.img`
     margin-right: 16px; 
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px; 
     @media(min-width: 1114px) {
         height: 100%;
         margin-right: 0;
@@ -37705,17 +37714,24 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function PageMenu({
-  showMenuFunction
+  showMenuFunction,
+  homeActive,
+  aboutActive,
+  worksActive
 }) {
   return /*#__PURE__*/_react.default.createElement(_components.Header.Nav, null, /*#__PURE__*/_react.default.createElement(_components.Header.Lists, null, /*#__PURE__*/_react.default.createElement(_components.Header.Item, {
     onClick: showMenuFunction
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: homeActive,
+    onClick: showMenuFunction,
     to: "/"
   }, "Home")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/about",
+    className: aboutActive,
     onClick: showMenuFunction
   }, "About me")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/works",
+    className: worksActive,
     onClick: showMenuFunction
   }, "Works"))));
 }
@@ -37746,7 +37762,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function HeaderContainer() {
   const {
     showMenu,
-    setShowMenu
+    setShowMenu,
+    homeActive,
+    aboutActive,
+    setAboutActive,
+    worksActive,
+    setWorksActive
   } = (0, _react.useContext)(_globalContext.Context);
 
   const toggleMenu = () => {
@@ -37765,8 +37786,16 @@ function HeaderContainer() {
   }) : "X"), showMenu && /*#__PURE__*/_react.default.createElement(_pageMenu.default, {
     showMenuFunction: toggleMenu,
     showMenu: showMenu,
-    setShowMenuFunction: setShowMenu
-  }), /*#__PURE__*/_react.default.createElement(_pageMenu.default, null)));
+    homeActive: homeActive,
+    showMenu: showMenu,
+    aboutActive: aboutActive,
+    worksActive: worksActive
+  }), /*#__PURE__*/_react.default.createElement(_pageMenu.default, {
+    homeActive: homeActive,
+    showMenu: showMenu,
+    aboutActive: aboutActive,
+    worksActive: worksActive
+  })));
 }
 },{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../components":"../components/index.js","./pageMenu":"../containers/pageMenu.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../containers/works.js":[function(require,module,exports) {
 "use strict";
@@ -37777,8 +37806,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = WorksContainer;
 
 var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
 
 var _components = require("../components");
 
@@ -37807,7 +37834,7 @@ function WorksContainer({
     key: item
   }, item))));
 }
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/home.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../components":"../components/index.js"}],"../containers/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37970,16 +37997,35 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Home;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
+
+var _globalContext = require("../contexts/globalContext");
 
 var _containers = require("../containers");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function Home() {
+  const {
+    setHomeActive,
+    setAboutActive,
+    setWorksActive
+  } = (0, _react.useContext)(_globalContext.Context);
+
+  function setHomeToActive() {
+    setHomeActive("homeActive");
+    setAboutActive("");
+    setWorksActive("");
+  }
+
+  (0, _react.useEffect)(() => {
+    setHomeToActive();
+  }, []);
   return /*#__PURE__*/_react.default.createElement(_containers.HomeContainer, null);
 }
-},{"react":"../node_modules/react/index.js","../containers":"../containers/index.js"}],"../pages/About.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../containers":"../containers/index.js"}],"../pages/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37987,16 +38033,35 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = About;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
+
+var _globalContext = require("../contexts/globalContext");
 
 var _containers = require("../containers");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function About() {
+  const {
+    setHomeActive,
+    setAboutActive,
+    setWorksActive
+  } = (0, _react.useContext)(_globalContext.Context);
+
+  function setAboutToActive() {
+    setHomeActive("");
+    setAboutActive("aboutActive");
+    setWorksActive("");
+  }
+
+  (0, _react.useEffect)(() => {
+    setAboutToActive();
+  }, []);
   return /*#__PURE__*/_react.default.createElement(_containers.AboutContainer, null);
 }
-},{"react":"../node_modules/react/index.js","../containers":"../containers/index.js"}],"../pages/works.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../contexts/globalContext":"../contexts/globalContext.js","../containers":"../containers/index.js"}],"../pages/works.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38020,11 +38085,24 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function WorksPage() {
   const {
-    works
+    works,
+    setHomeActive,
+    setAboutActive,
+    setWorksActive
   } = (0, _react.useContext)(_globalContext.Context);
   const worksElements = works && works.map(work => /*#__PURE__*/_react.default.createElement(_containers.WorksContainer, _extends({
     key: work.id
   }, work)));
+
+  function setWorksToActive() {
+    setHomeActive("");
+    setAboutActive("");
+    setWorksActive("worksActive");
+  }
+
+  (0, _react.useEffect)(() => {
+    setWorksToActive();
+  }, []);
   return /*#__PURE__*/_react.default.createElement(_components.Works, {
     className: "works_section"
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, {

@@ -1,24 +1,24 @@
-import React from 'react';
+import React from 'react'; 
 import { Link } from 'react-router-dom';
 import { Header } from '../components';
 
-export default function PageMenu({showMenuFunction }) { 
+export default function PageMenu({showMenuFunction, homeActive, aboutActive, worksActive }) { 
     
-    return (
+        return (
         <Header.Nav>
             <Header.Lists>
                 <Header.Item onClick={showMenuFunction}>
-                    <Link to='/'>
+                    <Link className={homeActive} onClick={showMenuFunction} to='/'>
                         Home
                     </Link>
                 </Header.Item>
                 <Header.Item>
-                    <Link to='/about' onClick={showMenuFunction}>
+                    <Link to='/about' className={aboutActive} onClick={showMenuFunction}>
                         About me
                     </Link>
                 </Header.Item>  
                 <Header.Item>
-                    <Link to='/works' onClick={showMenuFunction}>
+                    <Link to='/works' className={worksActive} onClick={showMenuFunction}>
                         Works
                     </Link>
                 </Header.Item>  

@@ -6,6 +6,10 @@ const Context = createContext();
 function GlobalContext({children}) {
     const [works, ] = useState(worksData); 
     const [ showMenu, setShowMenu ] = useState(false);
+    const [ homeActive, setHomeActive ] = useState("");
+    const [ aboutActive, setAboutActive ] = useState("");
+    const [ worksActive, setWorksActive ] = useState(""); 
+
     if (showMenu) {
         document.querySelector("body").style.overflowY = "hidden";
     } else {
@@ -13,7 +17,7 @@ function GlobalContext({children}) {
     }
 
     return (
-        <Context.Provider value={{works, showMenu, setShowMenu }}>
+        <Context.Provider value={{works, showMenu, setShowMenu, homeActive, setHomeActive, aboutActive, setAboutActive, worksActive, setWorksActive }}>
             {children}
         </Context.Provider>
     )

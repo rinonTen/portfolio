@@ -36471,7 +36471,7 @@ const worksData = [{
   "technologies": ["HTML", "CSS", "Vanilla JS"],
   "screenshot": "./images/birthday-app.png",
   "url": "https://birthtday-app-rinon.netlify.app/",
-  "codeUrl": "https://birthday-app-rinon.netlify.app/"
+  "codeUrl": "https://github.com/ganamavo/birthday-app"
 }, {
   "id": 6,
   "title": "Country Quiz",

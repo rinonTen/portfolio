@@ -93,7 +93,7 @@ const Profile = styled.img`
 `;
 const Header = styled.header``;
 const Heading = styled.h2`
-    max-width: 95%;
+    max-width: 94%;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;

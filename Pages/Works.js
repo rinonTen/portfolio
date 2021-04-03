@@ -9,7 +9,7 @@ export default function WorksPage() {
     const worksElements = works && works.map(work => <WorksContainer key={work.id} {...work} />)
 
     return (
-        <Works>
+        <Works className="works_section">
             <Works.Group>
                 <Works.Section>
                     <Works.SectionContainer className="showAllWorks">

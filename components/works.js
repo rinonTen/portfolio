@@ -14,11 +14,12 @@ import {
     WorkDescription,
     Link,
     ButtonContainer,
-    Button
+    Button,
+    Tech
 } from '../stylesComponents/works';
 
-export default function Works({ children, restProps }) {
-    return <Container {...restProps}>{children}</Container>
+export default function Works({ className, children, restProps }) {
+    return <Container className={className} {...restProps}>{children}</Container>
 }
 
 Works.Group = function WorksGroup({ children, restProps }) {
@@ -70,4 +71,8 @@ Works.ButtonContainer = function WorksButtonContainer({ children, restProps }) {
 
 Works.Button = function WorksButton({ children, restProps }) {
     return <Button {...restProps}>{children}</Button>
+}
+
+Works.Tech = function WorksTech({ children, restProps }) {
+    return <Tech {...restProps}>{children}</Tech>
 }

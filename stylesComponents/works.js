@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const Container = styled.section` 
     margin-top: 32px;
     background-color: #EDF7FA;
+    &.works_section {
+    background-color: unset;
+    }
     @media(min-width: 1114px) {
         margin-top: 0;
 
@@ -28,7 +31,7 @@ const Group = styled.div``;
 const Section = styled.div`
     padding-bottom: 0;
     @media(min-width: 1114px) {
-        padding-bottom: 83px;
+        padding-bottom: 58px;
     }
 `;
 const SectionContainer = styled.div`
@@ -96,10 +99,8 @@ const Image = styled.img`
     margin-right: 16px; 
     width: 100%;
     border-radius: 5px;
-    @media(min-width: 500px) {
-        width: 400px;
-    }
     @media(min-width: 1114px) {
+        height: 100%;
         margin-right: 0;
         &:hover {
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
@@ -110,12 +111,12 @@ const Image = styled.img`
 `;
 const DescriptionContainer = styled.div`
     position: relative;
-    @media(min-width: 1114px) {
-        p:nth-of-type(2) { 
+
+    p:nth-of-type(2) { 
             margin-top: 16px;
             margin-bottom: 16px;
-        }
     }
+    
   
 `;
 const WorkTitle = styled.h3`
@@ -144,6 +145,9 @@ const WorkDescription = styled.p`
     line-height: 23px; 
     color: #21243D;
     margin: 0;
+    &:last-of-type {
+        margin-bottom: 16px;
+    }
 `;
 const ButtonContainer = styled.div`
     width: 90%;
@@ -155,10 +159,12 @@ const ButtonContainer = styled.div`
         line-height: 23px;
         color: #8695A4;
         background-color: transparent;
+        padding-top: 2px;
 
         @media(min-width: 1114px) {
             font-size: 20px; 
             line-height: 29px; 
+            padding-top: 0;
         }
     }
 
@@ -188,6 +194,10 @@ const Button = styled.button`
     }
 
 `;
+const Tech = styled.span` 
+    margin-right: 16px;
+
+`;
 export {
     Container,
     Group,
@@ -203,5 +213,6 @@ export {
     WorkDescription,
     Link,
     ButtonContainer,
-    Button
+    Button,
+    Tech
 }

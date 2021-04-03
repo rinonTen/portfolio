@@ -36468,7 +36468,7 @@ const worksData = [{
   "id": 11,
   "title": "Birthday app",
   "description": ["This app reminds the users of upcoming birthdays, so they never again have to apologize for forgetting it.", "I built the foundation of this website using HTML and CSS, while most of the visual components are generated using JavaScript. To retrieve and store data I used a mixture of API fetching and local storage.", "By doing this project, I improved my skills at using multiple filters in unison as well as manipulating complex date formats. I am especially proud of the way in which I resolved the issues that came up along the way, leading to a satisfying result."],
-  "requirement": ["HTML", "CSS", "Vanilla JS"],
+  "technologies": ["HTML", "CSS", "Vanilla JS"],
   "screenshot": "./images/birthday-app.png",
   "url": "htpps://birthtday-app-rinon.netlify.app/",
   "codeUrl": "https://birthtday-app-rinon.netlify.app/"
@@ -36476,7 +36476,7 @@ const worksData = [{
   "id": 6,
   "title": "Country Quiz",
   "description": ["This app allows users to play a quiz about countries' flags and capitals in a fun and interactive way", "In this project, I used React with global state management (useContext) which was necessary to simplify the code and keep it DRY. For styling, I used styled-components which is my favorite way of styling React components.", "I deepened my knowledge on the context API as well as randomising data. This project reinstated my confidence in my ability to find solutions even for problems that seem insurmountable at first."],
-  "requirement": ["React", "styled-components", "CSS"],
+  "technologies": ["React", "CSS"],
   "screenshot": "./images/country-quiz.png",
   "url": "https://country-quiz-rinon.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/country-quiz"
@@ -36484,7 +36484,7 @@ const worksData = [{
   "id": 4,
   "title": "Photograph",
   "description": ["This is one of my earlier projects that provides a porfolio that a photographer can use to present their work.", "I built this with SASS, HTML and JavaScript. Completing this project enhanced my skills at using CSS frameworks such as SASS as well as applying functionality to an image slider with JavaScript.", "This was one of the first times I used JavaScript in a project."],
-  "requirement": ["HTML", "SASS", "JavaScript"],
+  "technologies": ["HTML", "SASS", "Vanilla JavaScript"],
   "screenshot": "./images/photograph.png",
   "url": "https://rinon-photograph-page.netlify.app/",
   "codeUrl": "https://github.com/ganamavo/photograf-page"
@@ -36578,7 +36578,7 @@ const HeadingContainer = _styledComponents.default.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 100px;
+        padding-right: 60px;
     }
 `;
 exports.HeadingContainer = HeadingContainer;
@@ -36612,7 +36612,7 @@ const Nav = _styledComponents.default.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 20%;
+        width: 23%;
         height: unset;
         background-color: unset;
         padding-top: 0;
@@ -36900,7 +36900,7 @@ exports.Profile = Profile;
 const Header = _styledComponents.default.header``;
 exports.Header = Header;
 const Heading = _styledComponents.default.h2`
-    max-width: 95%;
+    max-width: 94%;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -37053,7 +37053,7 @@ Home.Profile = function HomeProfile({
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.ButtonContainer = exports.Link = exports.WorkDescription = exports.WorkTitle = exports.DescriptionContainer = exports.Image = exports.ImageContainer = exports.Article = exports.Title = exports.SectionHeader = exports.SectionContainer = exports.Section = exports.Group = exports.Container = void 0;
+exports.Tech = exports.Button = exports.ButtonContainer = exports.Link = exports.WorkDescription = exports.WorkTitle = exports.DescriptionContainer = exports.Image = exports.ImageContainer = exports.Article = exports.Title = exports.SectionHeader = exports.SectionContainer = exports.Section = exports.Group = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -37062,6 +37062,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const Container = _styledComponents.default.section` 
     margin-top: 32px;
     background-color: #EDF7FA;
+    &.works_section {
+    background-color: unset;
+    }
     @media(min-width: 1114px) {
         margin-top: 0;
 
@@ -37089,7 +37092,7 @@ exports.Group = Group;
 const Section = _styledComponents.default.div`
     padding-bottom: 0;
     @media(min-width: 1114px) {
-        padding-bottom: 83px;
+        padding-bottom: 58px;
     }
 `;
 exports.Section = Section;
@@ -37163,10 +37166,8 @@ const Image = _styledComponents.default.img`
     margin-right: 16px; 
     width: 100%;
     border-radius: 5px;
-    @media(min-width: 500px) {
-        width: 400px;
-    }
     @media(min-width: 1114px) {
+        height: 100%;
         margin-right: 0;
         &:hover {
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 15px 1px; 
@@ -37178,12 +37179,12 @@ const Image = _styledComponents.default.img`
 exports.Image = Image;
 const DescriptionContainer = _styledComponents.default.div`
     position: relative;
-    @media(min-width: 1114px) {
-        p:nth-of-type(2) { 
+
+    p:nth-of-type(2) { 
             margin-top: 16px;
             margin-bottom: 16px;
-        }
     }
+    
   
 `;
 exports.DescriptionContainer = DescriptionContainer;
@@ -37214,6 +37215,9 @@ const WorkDescription = _styledComponents.default.p`
     line-height: 23px; 
     color: #21243D;
     margin: 0;
+    &:last-of-type {
+        margin-bottom: 16px;
+    }
 `;
 exports.WorkDescription = WorkDescription;
 const ButtonContainer = _styledComponents.default.div`
@@ -37226,10 +37230,12 @@ const ButtonContainer = _styledComponents.default.div`
         line-height: 23px;
         color: #8695A4;
         background-color: transparent;
+        padding-top: 2px;
 
         @media(min-width: 1114px) {
             font-size: 20px; 
             line-height: 29px; 
+            padding-top: 0;
         }
     }
 
@@ -37261,6 +37267,11 @@ const Button = _styledComponents.default.button`
 
 `;
 exports.Button = Button;
+const Tech = _styledComponents.default.span` 
+    margin-right: 16px;
+
+`;
+exports.Tech = Tech;
 },{"styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../components/works.js":[function(require,module,exports) {
 "use strict";
 
@@ -37278,10 +37289,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function Works({
+  className,
   children,
   restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_works.Container, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_works.Container, _extends({
+    className: className
+  }, restProps), children);
 }
 
 Works.Group = function WorksGroup({
@@ -37399,6 +37413,13 @@ Works.Button = function WorksButton({
 }) {
   return /*#__PURE__*/_react.default.createElement(_works.Button, restProps, children);
 };
+
+Works.Tech = function WorksTech({
+  children,
+  restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_works.Tech, restProps, children);
+};
 },{"react":"../node_modules/react/index.js","../stylesComponents/works":"../stylesComponents/works.js"}],"../stylesComponents/about.js":[function(require,module,exports) {
 "use strict";
 
@@ -37413,7 +37434,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Heading = _styledComponents.default.h2`
     font-weight: bold;
-    font-size: 30px;
+    font-size: 29px;
     line-height: 60px;
     color: #21243D;
     margin: 0;
@@ -37435,6 +37456,7 @@ const Container = _styledComponents.default.div`
 
     @media(min-width: 1114px) {
         margin-top: 43px;
+        padding-bottom: 58px;
         padding-left: 0;
         padding-right: 0;
     }
@@ -37692,7 +37714,10 @@ function PageMenu({
   }, "Home")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/about",
     onClick: showMenuFunction
-  }, "About me"))));
+  }, "About me")), /*#__PURE__*/_react.default.createElement(_components.Header.Item, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/works",
+    onClick: showMenuFunction
+  }, "Works"))));
 }
 },{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../components":"../components/index.js"}],"../containers/header.js":[function(require,module,exports) {
 "use strict";
@@ -37762,18 +37787,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function WorksContainer({
   title,
   description,
-  requirement,
+  technologies,
   codeUrl,
   screenshot,
   url
 }) {
-  function createMarkup() {
-    return {
-      __html: description
-    };
-  }
-
-  ;
   return /*#__PURE__*/_react.default.createElement(_components.Works.Article, null, /*#__PURE__*/_react.default.createElement(_components.Works.ImageContainer, null, /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: url
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Image, {
@@ -37784,6 +37802,8 @@ function WorksContainer({
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Demo")), /*#__PURE__*/_react.default.createElement(_components.Works.Link, {
     href: codeUrl
   }, /*#__PURE__*/_react.default.createElement(_components.Works.Button, null, "Code"))), description.map(item => /*#__PURE__*/_react.default.createElement(_components.Works.WorkDescription, {
+    key: item
+  }, item)), technologies.map(item => /*#__PURE__*/_react.default.createElement(_components.Works.Tech, {
     key: item
   }, item))));
 }
@@ -38005,7 +38025,9 @@ function WorksPage() {
   const worksElements = works && works.map(work => /*#__PURE__*/_react.default.createElement(_containers.WorksContainer, _extends({
     key: work.id
   }, work)));
-  return /*#__PURE__*/_react.default.createElement(_components.Works, null, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, {
+  return /*#__PURE__*/_react.default.createElement(_components.Works, {
+    className: "works_section"
+  }, /*#__PURE__*/_react.default.createElement(_components.Works.Group, null, /*#__PURE__*/_react.default.createElement(_components.Works.Section, null, /*#__PURE__*/_react.default.createElement(_components.Works.SectionContainer, {
     className: "showAllWorks"
   }, /*#__PURE__*/_react.default.createElement(_components.Works.SectionHeader, null, /*#__PURE__*/_react.default.createElement(_components.Works.Title, {
     className: "workspage_heading"
@@ -38117,7 +38139,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61018" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50068" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

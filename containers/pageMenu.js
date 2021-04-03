@@ -17,11 +17,11 @@ export default function PageMenu({showMenuFunction }) {
                         About me
                     </Link>
                 </Header.Item>  
-                {/* <Header.Item>
+                <Header.Item>
                     <Link to='/works' onClick={showMenuFunction}>
                         Works
                     </Link>
-                </Header.Item>   */}
+                </Header.Item>  
             </Header.Lists>
         </Header.Nav>
     )

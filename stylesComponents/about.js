@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Heading = styled.h2`
     font-weight: bold;
-    font-size: 30px;
+    font-size: 29px;
     line-height: 60px;
     color: #21243D;
     margin: 0;
@@ -23,6 +23,7 @@ const Container = styled.div`
 
     @media(min-width: 1114px) {
         margin-top: 43px;
+        padding-bottom: 58px;
         padding-left: 0;
         padding-right: 0;
     }

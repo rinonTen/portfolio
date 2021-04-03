@@ -2,11 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Works } from '../components';
 
-export default function WorksContainer({ title, description, requirement, codeUrl, screenshot, url }) {
-    function createMarkup() {
-        return {
-           __html: description};
-     }; 
+export default function WorksContainer({ title, description, technologies, codeUrl, screenshot, url }) {
+  
     return (
         <Works.Article>
             <Works.ImageContainer>
@@ -27,7 +24,9 @@ export default function WorksContainer({ title, description, requirement, codeUr
                 {
                     description.map(item => <Works.WorkDescription key={item}>{item}</Works.WorkDescription>)
                 }
-                {/* <Works.WorkDescription>{requirement}</Works.WorkDescription> */}
+                {
+                technologies.map(item => <Works.Tech key={item}>{item}</Works.Tech>)
+                }
             </Works.DescriptionContainer>
         </Works.Article>
     )

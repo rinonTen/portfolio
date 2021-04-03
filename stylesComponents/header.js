@@ -18,7 +18,7 @@ const HeadingContainer = styled.div`
         padding-top: 27px;
         padding-bottom: 27px;
         padding-left: 48px;
-        padding-right: 100px;
+        padding-right: 60px;
     }
 `;
 const Group = styled.div`
@@ -50,7 +50,7 @@ const Nav = styled.nav`
     @media(min-width: 1114px) {
         display: block;
         position: unset;
-        width: 20%;
+        width: 23%;
         height: unset;
         background-color: unset;
         padding-top: 0;

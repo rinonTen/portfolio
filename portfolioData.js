@@ -5,7 +5,7 @@ const worksData = [
             "description": ["This app reminds the users of upcoming birthdays, so they never again have to apologize for forgetting it.", "I built the foundation of this website using HTML and CSS, while most of the visual components are generated using JavaScript. To retrieve and store data I used a mixture of API fetching and local storage.", "By doing this project, I improved my skills at using multiple filters in unison as well as manipulating complex date formats. I am especially proud of the way in which I resolved the issues that came up along the way, leading to a satisfying result."],
             "technologies": ["HTML", "CSS", "Vanilla JS"],
             "screenshot": "./images/birthday-app.png",
-            "url": "https://birthtday-app-rinon.netlify.app/",  
+            "url": "https://birthday-app-rinon.netlify.app/",  
             "codeUrl": "https://github.com/ganamavo/birthday-app"
         
     },

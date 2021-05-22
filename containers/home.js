@@ -15,7 +15,7 @@ export default function HomeContainer() {
     <Home>
       <Home.SectionContainer>
         <Home.ImageContainer>
-          <Home.Profile src='./images/my_image.JPG' alt='my image' />
+          <Home.Profile src='./images/my-image.webp' alt='my image' />
         </Home.ImageContainer>
         <Home.Article>
           <Home.Header>

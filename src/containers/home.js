@@ -19,7 +19,7 @@ export default function HomeContainer() {
         </Home.ImageContainer>
         <Home.Article>
           <Home.Header>
-            <Home.Heading>Hi, I am Rinon, Front-end developer</Home.Heading>
+            <Home.Heading>Hi, I am Rinon, Inspiring developer</Home.Heading>
           </Home.Header>
           <Home.Text>
             I believe we can make the world a much better place through building

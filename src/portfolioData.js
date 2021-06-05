@@ -9,7 +9,7 @@ const worksData = [
     ],
     technologies: ['HTML', 'CSS', 'Vanilla JS'],
     screenshot: './images/birthday_app.webp',
-    url: 'https://birthday-app-rinon.netlify.app/',
+    url: 'http://birthday-app.rinon.onja.org/',
     codeUrl: 'https://github.com/ganamavo/birthday-app',
   },
   {
@@ -35,7 +35,7 @@ const worksData = [
     ],
     technologies: ['HTML', 'SASS', 'Vanilla JavaScript'],
     screenshot: './images/photograph.webp',
-    url: 'https://rinon-photograph-page.netlify.app/',
+    url: 'http://photograph.rinon.onja.org/',
     codeUrl: 'https://github.com/ganamavo/photograf-page',
   },
 ]

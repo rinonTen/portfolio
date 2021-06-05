@@ -10,11 +10,11 @@ This is my personal portfolio.
 ## Screenshots
 
 1. Homepage in mobile
-   ![Homepage in mobile](./src/assets/homepage-mobile.png)
+   ![Homepage in mobile](./src/assets/homepage-mobile.webp)
 1. Homepage in desktop
-   ![Homepage in desktop](./src/assets/homepage.png)
+   ![Homepage in desktop](./src/assets/homepage.webp)
 1. Works in desktop
-   ![works in desktop](./src/assets/works.png)
+   ![works in desktop](./src/assets/works.webp)
 
 ## Demo
 

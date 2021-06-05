@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { HeaderContainer, FooterContainer } from '../containers'
-import { Home, About, Works } from '../Pages'
+import { HeaderContainer, FooterContainer } from './containers'
+import { Home, About, Works } from './Pages'
 
 export default function App() {
   return (

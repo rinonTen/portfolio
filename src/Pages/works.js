@@ -17,6 +17,7 @@ export default function WorksPage() {
 
   useEffect(() => {
     setWorksToActive()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <Works className='works_section'>

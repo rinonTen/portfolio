@@ -1,26 +1,41 @@
-import React, { createContext, useState } from 'react';
-import { worksData } from '../portfolioData';
- 
-const Context = createContext();
+import React, { createContext, useEffect, useState } from 'react'
+import { worksData } from '../portfolioData'
 
-function GlobalContext({children}) {
-    const [works, ] = useState(worksData); 
-    const [ showMenu, setShowMenu ] = useState(false);
-    const [ homeActive, setHomeActive ] = useState("");
-    const [ aboutActive, setAboutActive ] = useState("");
-    const [ worksActive, setWorksActive ] = useState(""); 
+const Context = createContext()
 
-    if (showMenu) {
-        document.querySelector("body").style.overflowY = "hidden";
-    } else {
-        document.querySelector("body").style.overflowY = "scroll";
-    }
+function GlobalContext({ children }) {
+  const [works, setWorks] = useState([])
+  const [showMenu, setShowMenu] = useState(false)
+  const [homeActive, setHomeActive] = useState('')
+  const [aboutActive, setAboutActive] = useState('')
+  const [worksActive, setWorksActive] = useState('')
 
-    return (
-        <Context.Provider value={{works, showMenu, setShowMenu, homeActive, setHomeActive, aboutActive, setAboutActive, worksActive, setWorksActive }}>
-            {children}
-        </Context.Provider>
-    )
+  useEffect(() => {
+    setWorks(worksData)
+  }, [])
+
+  if (showMenu) {
+    document.querySelector('body').style.overflowY = 'hidden'
+  } else {
+    document.querySelector('body').style.overflowY = 'scroll'
+  }
+
+  return (
+    <Context.Provider
+      value={{
+        works,
+        showMenu,
+        setShowMenu,
+        homeActive,
+        setHomeActive,
+        aboutActive,
+        setAboutActive,
+        worksActive,
+        setWorksActive,
+      }}>
+      {children}
+    </Context.Provider>
+  )
 }
 
-export { GlobalContext, Context};
+export { GlobalContext, Context }

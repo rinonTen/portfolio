@@ -13,9 +13,11 @@ export default function WorksContainer({ title, description, technologies, codeU
             <Works.DescriptionContainer>
                 <Works.WorkTitle>{title}</Works.WorkTitle>
                 <Works.ButtonContainer>
-                    <Works.Link href={url}>
+                    {
+                    url && <Works.Link href={url}>
                         <Works.Button>Demo</Works.Button>
                     </Works.Link>
+                    }
                     <Works.Link href={codeUrl}>
                         <Works.Button>Code</Works.Button>
                     </Works.Link>

@@ -22,7 +22,7 @@ const worksData = [
     ],
     technologies: ['React', 'CSS'],
     screenshot: './images/country_quiz.webp',
-    url: 'https://country-quiz-rinon.netlify.app/',
+    url: null,
     codeUrl: 'https://github.com/ganamavo/country-quiz',
   },
   {
